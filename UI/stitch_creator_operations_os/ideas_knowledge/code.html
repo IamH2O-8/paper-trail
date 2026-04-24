@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500;600;700;800;900&amp;family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-primary": "#bac7de",
+                        "secondary-container": "#dce0ea",
+                        "primary": "#091627",
+                        "surface": "#fef8f3",
+                        "tertiary": "#201400",
+                        "primary-container": "#1e2b3c",
+                        "inverse-on-surface": "#f5f0eb",
+                        "secondary-fixed": "#dfe2ec",
+                        "on-secondary-fixed-variant": "#42474f",
+                        "secondary-fixed-dim": "#c2c6d0",
+                        "on-surface": "#1d1b19",
+                        "outline-variant": "#c5c6cd",
+                        "on-primary": "#ffffff",
+                        "surface-container-low": "#f8f3ee",
+                        "primary-fixed": "#d6e3fa",
+                        "inverse-surface": "#32302d",
+                        "surface-bright": "#fef8f3",
+                        "surface-tint": "#525f72",
+                        "surface-dim": "#ded9d4",
+                        "on-tertiary": "#ffffff",
+                        "on-surface-variant": "#44474c",
+                        "error": "#ba1a1a",
+                        "tertiary-container": "#37280d",
+                        "on-secondary-container": "#5e636b",
+                        "on-primary-fixed": "#0f1c2d",
+                        "on-tertiary-fixed-variant": "#564427",
+                        "on-tertiary-container": "#a58e6b",
+                        "outline": "#75777d",
+                        "on-secondary-fixed": "#171c23",
+                        "on-background": "#1d1b19",
+                        "error-container": "#ffdad6",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-highest": "#e6e2dd",
+                        "surface-container-high": "#ece7e2",
+                        "surface-container": "#f2ede8",
+                        "tertiary-fixed-dim": "#ddc39c",
+                        "primary-fixed-dim": "#bac7de",
+                        "on-error": "#ffffff",
+                        "surface-variant": "#e6e2dd",
+                        "on-secondary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-primary-container": "#8592a7",
+                        "on-tertiary-fixed": "#261902",
+                        "tertiary-fixed": "#fadfb7",
+                        "secondary": "#5a5f67",
+                        "on-primary-fixed-variant": "#3b485a",
+                        "background": "#fef8f3"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Epilogue"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Manrope', sans-serif; background-color: #fef8f3; }
+        h1, h2, h3, .headline { font-family: 'Epilogue', sans-serif; }
+    </style>
+</head>
+<body class="text-on-surface">
+<!-- TopNavBar -->
+<header class="sticky top-0 z-50 flex items-center justify-between px-8 py-4 w-full bg-[#fef8f3]/80 dark:bg-slate-950/80 backdrop-blur-3xl transition-all duration-300 ease-in-out">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-bold font-['Epilogue'] tracking-tight text-[#091627] dark:text-slate-100">Curator OS</span>
+<div class="hidden md:flex gap-6">
+<a class="text-[#091627] dark:text-white font-semibold border-b-2 border-[#091627] font-['Epilogue'] tracking-tight" href="#">Ideas</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-[#1e2b3c] transition-colors font-['Epilogue'] tracking-tight" href="#">Library</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-[#1e2b3c] transition-colors font-['Epilogue'] tracking-tight" href="#">Wiki</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative bg-surface-container-high px-4 py-2 rounded-full flex items-center gap-2">
+<span class="material-symbols-outlined text-outline">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-48" placeholder="Global search..." type="text"/>
+</div>
+<button class="p-2 text-on-surface-variant hover:bg-surface-container transition-colors rounded-full">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:bg-surface-container transition-colors rounded-full">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<div class="w-8 h-8 rounded-full overflow-hidden bg-surface-container-highest">
+<img alt="User profile" data-alt="close-up portrait of a professional woman with a minimalist aesthetic and soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDA8XYgSl8z2oXConcA4vjXnYM2bn_waX01xj9SLOZSx7naqCkOvKcE1OMxpJBp6wsxCjPdn5m777rn63LMUQh7PMbkg9H-nDJti-hv8ytSTCFf1RU_48-pMYuWxoNZYQDiivacrTBs6pH6-8LC1OEAI02D8Ekd6PwQy5vBQCUcm_YeDbQ_gyvlUCNHbP0DBXVAIvrkH2vLEJAIq60J51e4Fa7vAxO_UPdJ4i8n644VxMdSG3-0tF7j4U6olOfhNL1oU7RVHJNumm1B"/>
+</div>
+</div>
+</header>
+<div class="flex min-h-screen">
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-0 h-full w-72 bg-[#f8f3ee] dark:bg-slate-900 flex flex-col p-8 space-y-8 z-40 hidden lg:flex">
+<div class="flex flex-col gap-2">
+<div class="w-12 h-12 bg-primary rounded-xl flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">auto_awesome_motion</span>
+</div>
+<div>
+<h2 class="text-lg font-['Epilogue'] font-black text-[#091627] dark:text-slate-100">Content OS</h2>
+<p class="text-[10px] font-['Manrope'] font-medium uppercase tracking-widest text-slate-400 dark:text-slate-500">Premium Edition</p>
+</div>
+</div>
+<nav class="flex-1 flex flex-col space-y-2">
+<a class="flex items-center gap-4 py-3 text-slate-400 dark:text-slate-500 font-medium uppercase tracking-widest text-sm font-['Manrope'] hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined">book_4</span>
+<span>Library</span>
+</a>
+<a class="flex items-center gap-4 py-3 text-slate-400 dark:text-slate-500 font-medium uppercase tracking-widest text-sm font-['Manrope'] hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined">menu_book</span>
+<span>Wiki</span>
+</a>
+<a class="flex items-center gap-4 py-3 text-[#091627] dark:text-white font-bold font-['Manrope'] uppercase tracking-widest text-sm hover:translate-x-1 transition-transform duration-200 active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined">lightbulb</span>
+<span>Ideas</span>
+</a>
+<a class="flex items-center gap-4 py-3 text-slate-400 dark:text-slate-500 font-medium uppercase tracking-widest text-sm font-['Manrope'] hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined">alarm</span>
+<span>Reminders</span>
+</a>
+<a class="flex items-center gap-4 py-3 text-slate-400 dark:text-slate-500 font-medium uppercase tracking-widest text-sm font-['Manrope'] hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined">receipt_long</span>
+<span>Billing</span>
+</a>
+<a class="flex items-center gap-4 py-3 text-slate-400 dark:text-slate-500 font-medium uppercase tracking-widest text-sm font-['Manrope'] hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined">distance</span>
+<span>Mileage</span>
+</a>
+</nav>
+<button class="bg-primary text-on-primary py-4 rounded-full font-bold font-['Epilogue'] transition-all hover:shadow-xl hover:scale-[1.02] active:scale-95">
+                New Artifact
+            </button>
+</aside>
+<!-- Main Content Canvas -->
+<main class="flex-1 ml-0 lg:ml-72 p-8 lg:p-12">
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-12">
+<!-- Left: Ideas & Content Strategy -->
+<section class="xl:col-span-7 space-y-10">
+<header class="flex justify-between items-end">
+<div>
+<span class="label-md uppercase tracking-[0.1em] text-on-secondary-container text-xs font-bold font-['Manrope']">Creative Lab</span>
+<h1 class="text-4xl lg:text-5xl font-black mt-2 tracking-tight leading-none font-['Epilogue']">Content Ideas</h1>
+</div>
+<div class="flex gap-2">
+<button class="p-3 bg-surface-container rounded-full hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined">filter_list</span>
+</button>
+<button class="p-3 bg-primary text-on-primary rounded-full hover:shadow-lg transition-all">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+</header>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Idea Card 1 -->
+<div class="bg-surface-container-lowest p-8 rounded-xl flex flex-col justify-between transition-transform hover:scale-[1.01] group cursor-pointer border border-transparent hover:border-outline-variant/30">
+<div>
+<div class="flex justify-between items-start mb-6">
+<span class="px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full text-[10px] font-bold uppercase tracking-wider">YouTube</span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">arrow_outward</span>
+</div>
+<h3 class="text-xl font-bold leading-snug font-['Epilogue'] text-primary mb-4">The Evolution of Digital Minimalism in 2024</h3>
+<p class="text-on-surface-variant text-sm line-clamp-2 leading-relaxed">Exploring how physical studio spaces influence digital workflow efficiency and output quality.</p>
+</div>
+<div class="mt-8 flex flex-wrap gap-2">
+<span class="text-[11px] font-semibold text-outline px-2 py-1 bg-surface-container rounded">#productivity</span>
+<span class="text-[11px] font-semibold text-outline px-2 py-1 bg-surface-container rounded">#longform</span>
+</div>
+</div>
+<!-- Idea Card 2 (Image Focused) -->
+<div class="bg-primary text-on-primary p-8 rounded-xl flex flex-col justify-between relative overflow-hidden group cursor-pointer transition-all hover:shadow-2xl">
+<div class="absolute inset-0 opacity-20 transition-opacity group-hover:opacity-30">
+<img alt="Abstract Background" class="w-full h-full object-cover" data-alt="abstract architectural geometry with sharp shadows and brutalist concrete textures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjkiTBEOH7zcDZOrxEYjDXeyqGWncRMBsMJEb3dlrX2OJLfAkMml22oKatgJfXMM5Qc-CNMUKXXQCfKbJbQXlsPC_zryBmwj2GL6bbwuPIMMLVXKnvw0A0QiiglZDmVhDOv2sb_Iu5HHPuNr8lR3BND9THV3-t_itelAaO41HyomIRhNrDlOZpcHpfneWzaV22OT_HQMD7xVhIxm9wqdJwzY_AjCmYJX9O9QAk-O34ltvdzN4sIC4LHT47Dc_mdfyrNuQVmGHakHUC"/>
+</div>
+<div class="relative z-10">
+<div class="flex justify-between items-start mb-6">
+<span class="px-3 py-1 bg-white/20 backdrop-blur-md rounded-full text-[10px] font-bold uppercase tracking-wider">Twitter/X</span>
+<span class="material-symbols-outlined text-white">more_horiz</span>
+</div>
+<h3 class="text-xl font-bold leading-snug font-['Epilogue'] mb-4">10 Hard Truths About Scaling a Content Agency</h3>
+</div>
+<div class="relative z-10 mt-8 flex items-center justify-between">
+<div class="flex -space-x-2">
+<div class="w-6 h-6 rounded-full border-2 border-primary bg-surface-dim"></div>
+<div class="w-6 h-6 rounded-full border-2 border-primary bg-surface-variant"></div>
+</div>
+<span class="text-[11px] font-bold uppercase tracking-widest text-on-primary-container">Drafting</span>
+</div>
+</div>
+<!-- Idea Card 3 -->
+<div class="bg-surface-container-lowest p-8 rounded-xl flex flex-col justify-between border border-transparent hover:border-outline-variant/30 group cursor-pointer transition-all">
+<div>
+<div class="flex justify-between items-start mb-6">
+<span class="px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed rounded-full text-[10px] font-bold uppercase tracking-wider">Newsletter</span>
+<span class="material-symbols-outlined text-outline">calendar_today</span>
+</div>
+<h3 class="text-xl font-bold leading-snug font-['Epilogue'] text-primary mb-4">The Curated Life: Monthly Digest Concept</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">A deep dive into high-end tools, aesthetic workspaces, and editorial logic.</p>
+</div>
+<div class="mt-8 flex gap-2">
+<span class="text-[11px] font-semibold text-outline px-2 py-1 bg-surface-container rounded">#curation</span>
+<span class="text-[11px] font-semibold text-outline px-2 py-1 bg-surface-container rounded">#lifestyle</span>
+</div>
+</div>
+<!-- Idea Card 4 -->
+<div class="bg-surface-container-low p-8 rounded-xl flex flex-col justify-center items-center border-2 border-dashed border-outline-variant/50 hover:border-primary/30 transition-colors cursor-pointer text-outline hover:text-primary">
+<span class="material-symbols-outlined text-4xl mb-2">add_circle</span>
+<span class="text-sm font-bold uppercase tracking-widest">New Concept</span>
+</div>
+</div>
+</section>
+<!-- Right: Knowledge Wiki -->
+<section class="xl:col-span-5 bg-surface-container-low rounded-3xl p-8 lg:p-10 self-start">
+<header class="mb-10">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-primary">local_library</span>
+<h2 class="text-2xl font-bold font-['Epilogue']">Knowledge Wiki</h2>
+</div>
+<div class="relative">
+<input class="w-full bg-surface-container-lowest border-none rounded-xl py-4 pl-12 pr-4 text-sm focus:ring-2 focus:ring-primary/10 transition-all font-['Manrope']" placeholder="Search knowledge base..." type="text"/>
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline">search</span>
+</div>
+</header>
+<div class="space-y-6">
+<!-- Category 1 -->
+<div class="bg-surface-container-lowest rounded-2xl overflow-hidden">
+<button class="w-full flex items-center justify-between p-6 text-left hover:bg-surface-bright transition-colors group">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-lg bg-primary-container flex items-center justify-center text-on-primary-container">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">movie</span>
+</div>
+<div>
+<h4 class="font-bold text-primary font-['Epilogue']">Production Tips</h4>
+<p class="text-xs text-outline font-medium">24 Articles</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:translate-x-1 transition-transform">chevron_right</span>
+</button>
+<div class="px-6 pb-6 pt-2 grid grid-cols-1 gap-2">
+<a class="text-sm py-2 px-4 rounded-lg bg-surface-container text-on-surface-variant hover:text-primary transition-colors" href="#">Advanced Color Grading (Log)</a>
+<a class="text-sm py-2 px-4 rounded-lg bg-surface-container text-on-surface-variant hover:text-primary transition-colors" href="#">Minimalist Lighting Setups</a>
+<a class="text-sm py-2 px-4 rounded-lg bg-surface-container text-on-surface-variant hover:text-primary transition-colors" href="#">Microphone Positioning</a>
+</div>
+</div>
+<!-- Category 2 -->
+<div class="bg-surface-container-lowest rounded-2xl overflow-hidden">
+<button class="w-full flex items-center justify-between p-6 text-left hover:bg-surface-bright transition-colors group">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-lg bg-secondary-fixed-dim flex items-center justify-center text-on-secondary-fixed">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">insights</span>
+</div>
+<div>
+<h4 class="font-bold text-primary font-['Epilogue']">Platform Strategy</h4>
+<p class="text-xs text-outline font-medium">18 Articles</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:translate-x-1 transition-transform">chevron_right</span>
+</button>
+</div>
+<!-- Category 3 -->
+<div class="bg-surface-container-lowest rounded-2xl overflow-hidden">
+<button class="w-full flex items-center justify-between p-6 text-left hover:bg-surface-bright transition-colors group">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-lg bg-tertiary-fixed-dim flex items-center justify-center text-on-tertiary-fixed">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">account_balance_wallet</span>
+</div>
+<div>
+<h4 class="font-bold text-primary font-['Epilogue']">Monetization &amp; Ads</h4>
+<p class="text-xs text-outline font-medium">12 Articles</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:translate-x-1 transition-transform">chevron_right</span>
+</button>
+</div>
+<!-- Wiki Footer Action -->
+<div class="pt-6 border-t border-outline-variant/20">
+<div class="p-6 bg-primary-container rounded-2xl flex flex-col gap-4">
+<h5 class="text-on-primary-fixed font-bold font-['Epilogue']">Submit New Knowledge</h5>
+<p class="text-on-primary-container text-xs leading-relaxed">Discovered something new? Document it here to keep the operating system up to date.</p>
+<button class="w-full py-3 bg-white text-primary rounded-xl text-sm font-bold uppercase tracking-widest hover:bg-surface-dim transition-colors">
+                                    Add Article
+                                </button>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Contextual Stats Bar (Editorial Feel) -->
+<footer class="mt-20 border-t border-outline-variant/20 pt-12 grid grid-cols-2 md:grid-cols-4 gap-8">
+<div>
+<span class="block text-[10px] font-bold uppercase tracking-[0.2em] text-outline mb-2">Active Projects</span>
+<span class="text-3xl font-black font-['Epilogue'] text-primary">12</span>
+</div>
+<div>
+<span class="block text-[10px] font-bold uppercase tracking-[0.2em] text-outline mb-2">Backlog Ideas</span>
+<span class="text-3xl font-black font-['Epilogue'] text-primary">148</span>
+</div>
+<div>
+<span class="block text-[10px] font-bold uppercase tracking-[0.2em] text-outline mb-2">Wiki Nodes</span>
+<span class="text-3xl font-black font-['Epilogue'] text-primary">54</span>
+</div>
+<div>
+<span class="block text-[10px] font-bold uppercase tracking-[0.2em] text-outline mb-2">Storage Usage</span>
+<span class="text-3xl font-black font-['Epilogue'] text-primary">64%</span>
+</div>
+</footer>
+</main>
+</div>
+<!-- Mobile Nav -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full bg-[#fef8f3]/95 backdrop-blur-xl flex justify-around items-center py-4 px-6 z-50">
+<button class="text-primary flex flex-col items-center gap-1">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">lightbulb</span>
+<span class="text-[10px] font-bold uppercase">Ideas</span>
+</button>
+<button class="text-outline flex flex-col items-center gap-1">
+<span class="material-symbols-outlined">menu_book</span>
+<span class="text-[10px] font-bold uppercase">Wiki</span>
+</button>
+<button class="bg-primary text-on-primary p-3 rounded-full -mt-10 shadow-xl">
+<span class="material-symbols-outlined">add</span>
+</button>
+<button class="text-outline flex flex-col items-center gap-1">
+<span class="material-symbols-outlined">notifications</span>
+<span class="text-[10px] font-bold uppercase">Alerts</span>
+</button>
+<button class="text-outline flex flex-col items-center gap-1">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-[10px] font-bold uppercase">Admin</span>
+</button>
+</nav>
+</body></html>

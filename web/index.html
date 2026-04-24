@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paper Trail</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600;700;800;900&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="shell">
+      <aside class="sidebar">
+        <div class="sidebar-top">
+          <div class="brand">
+            <div class="brand-mark">
+              <span class="material-symbols-outlined">assistant</span>
+            </div>
+            <div>
+              <p class="eyebrow">Creator Business Memory</p>
+              <h1>Paper Trail</h1>
+            </div>
+          </div>
+
+          <button class="quick-add-button" id="openQuickAdd">
+            <span class="material-symbols-outlined">add</span>
+            <span>Log Something</span>
+          </button>
+
+          <nav id="nav" class="nav"></nav>
+        </div>
+
+        <div class="sidebar-bottom">
+          <button class="utility-link" id="openSettingsView" type="button">
+            <span class="material-symbols-outlined">settings</span>
+            <span>Settings</span>
+          </button>
+          <button class="utility-link" id="openSupportView" type="button">
+            <span class="material-symbols-outlined">help</span>
+            <span>Support</span>
+          </button>
+
+          <section class="sidebar-card">
+            <p class="eyebrow">Simple Loop</p>
+            <ol class="loop-list">
+              <li>Log it quickly</li>
+              <li>Review only when needed</li>
+              <li>Find it later without hunting</li>
+            </ol>
+          </section>
+
+          <div class="profile-chip">
+            <div class="profile-avatar" id="profileAvatar">AR</div>
+            <div>
+              <strong id="profileName">Alex River</strong>
+              <p id="profileRole">Lead Producer</p>
+            </div>
+          </div>
+          <button class="utility-link" id="logoutButton" type="button">
+            <span class="material-symbols-outlined">logout</span>
+            <span>Log out</span>
+          </button>
+        </div>
+      </aside>
+
+      <div class="workspace-shell">
+        <header class="topbar">
+          <div class="topbar-left">
+            <div class="topbar-intro">
+              <p class="eyebrow">Assistant-first workflow</p>
+              <strong>Save it once. Use it later.</strong>
+            </div>
+          </div>
+
+          <div class="topbar-right">
+            <label class="search-shell">
+              <span class="material-symbols-outlined">search</span>
+              <input id="globalSearch" type="text" placeholder="Find receipts, projects, ideas, notes, or files..." />
+            </label>
+            <button class="icon-button" id="openRemindersView" type="button">
+              <span class="material-symbols-outlined">notifications</span>
+            </button>
+            <button class="header-quick-add" id="openQuickAddHeader" type="button">
+              <span class="material-symbols-outlined">add_circle</span>
+              <span>Log</span>
+            </button>
+            <button class="avatar-button" id="openDashboardView" type="button">AR</button>
+          </div>
+        </header>
+
+        <main class="main">
+          <header class="page-header">
+            <div>
+              <p class="eyebrow" id="sectionEyebrow">Assistant Workspace</p>
+              <h2 id="sectionTitle">Home</h2>
+            </div>
+            <div class="topbar-meta">
+            <div class="meta-chip" id="workspaceChip"></div>
+            <div class="meta-chip" id="dateChip"></div>
+            </div>
+          </header>
+
+          <section id="hero" class="hero-grid"></section>
+          <section id="content" class="content-grid"></section>
+        </main>
+      </div>
+    </div>
+
+    <dialog id="quickAddModal" class="modal">
+      <form method="dialog" class="modal-card" id="quickAddForm">
+        <div class="modal-header">
+          <div>
+            <p class="eyebrow">Quick Add</p>
+            <h3>Create a new record</h3>
+          </div>
+          <button class="ghost-button" value="cancel" type="submit">Close</button>
+        </div>
+
+        <label class="field">
+          <span>Record type</span>
+          <select id="recordType" name="recordType"></select>
+        </label>
+
+        <div id="dynamicFields" class="field-grid"></div>
+
+        <div class="modal-actions">
+          <button value="cancel" class="ghost-button" type="submit">Cancel</button>
+          <button class="primary-button" type="submit">Save record</button>
+        </div>
+      </form>
+    </dialog>
+
+    <dialog id="assistantCaptureModal" class="modal">
+      <form method="dialog" class="modal-card modal-card-wide" id="assistantCaptureForm">
+        <div class="modal-header">
+          <div>
+            <p class="eyebrow">Assistant Log</p>
+            <h3>Describe what happened in your own words</h3>
+            <p class="modal-copy">Write the way you would message a trusted assistant. Add a file if you have one. The app helps turn that into the right record and keeps the original proof attached.</p>
+          </div>
+          <button class="ghost-button" value="cancel" type="submit">Close</button>
+        </div>
+
+        <div class="field-grid">
+          <label class="field" data-span="full">
+            <span>What happened?</span>
+            <textarea
+              id="assistantSummary"
+              name="summary"
+              placeholder="Examples: Lunch after a client meeting in Toronto. Hotel for the Northern Routes shoot. Starting an India legal system interview series. Paid Alex for second camera support."
+              required
+            ></textarea>
+          </label>
+          <label class="field" data-span="full">
+            <span>Optional file, image, receipt, agreement, or voice note</span>
+            <input id="assistantFile" name="captureFile" type="file" />
+          </label>
+          <label class="field">
+            <span>What are you adding?</span>
+            <select id="assistantCaptureType" name="captureType">
+              <option value="expense">Receipt or expense</option>
+              <option value="update">Project note</option>
+              <option value="project">New project</option>
+              <option value="idea">Idea</option>
+              <option value="knowledge">Saved note or checklist</option>
+              <option value="proof">File or proof</option>
+            </select>
+          </label>
+          <label class="field">
+            <span>Project, if you already know it</span>
+            <select id="assistantProjectId" name="projectId"></select>
+          </label>
+          <label class="field">
+            <span>Short label, if helpful</span>
+            <input id="assistantTitle" name="title" type="text" placeholder="Hotel in Banff, Brand outreach, New series idea..." />
+          </label>
+          <details class="capture-details" data-span="full">
+            <summary>Optional details</summary>
+            <div class="field-grid capture-details-grid">
+              <label class="field">
+                <span>Date</span>
+                <input id="assistantDate" name="captureDate" type="date" />
+              </label>
+              <label class="field" id="assistantAmountField">
+                <span>Amount</span>
+                <input id="assistantAmount" name="amount" type="number" placeholder="48" />
+              </label>
+              <label class="field" id="assistantCategoryField">
+                <span>Category</span>
+                <select id="assistantCategory" name="category">
+                  <option value="Travel">Travel</option>
+                  <option value="Meals">Meals</option>
+                  <option value="Equipment">Equipment</option>
+                  <option value="Production">Production</option>
+                  <option value="Capital Asset">Capital Asset</option>
+                  <option value="Fuel">Fuel</option>
+                </select>
+              </label>
+              <label class="field" id="assistantAllocationField">
+                <span>Business or personal</span>
+                <select id="assistantAllocation" name="allocation">
+                  <option value="Business">Business</option>
+                  <option value="Mixed">Mixed</option>
+                  <option value="Personal">Personal</option>
+                </select>
+              </label>
+            </div>
+          </details>
+        </div>
+
+        <div class="assistant-hint" id="assistantHint"></div>
+
+        <div class="modal-actions">
+          <button value="cancel" class="ghost-button" type="submit">Cancel</button>
+          <button class="ghost-button" id="assistantOpenAdvanced" type="button">Open detailed form</button>
+          <button class="primary-button" type="submit">Save to inbox</button>
+        </div>
+      </form>
+    </dialog>
+
+    <dialog id="questionnaireModal" class="modal">
+      <form method="dialog" class="modal-card modal-card-wide" id="questionnaireForm">
+        <div class="modal-header">
+          <div>
+            <p class="eyebrow" id="questionnaireEyebrow">Guided Questionnaire</p>
+            <h3 id="questionnaireTitle">Questionnaire</h3>
+            <p class="modal-copy" id="questionnaireDescription"></p>
+          </div>
+          <button class="ghost-button" value="cancel" type="submit">Close</button>
+        </div>
+
+        <div class="questionnaire-meta" id="questionnaireMeta"></div>
+        <div id="questionnaireFields" class="questionnaire-fields"></div>
+
+        <div class="modal-actions">
+          <button value="cancel" class="ghost-button" type="submit">Cancel</button>
+          <button class="primary-button" type="submit">Save questionnaire</button>
+        </div>
+      </form>
+    </dialog>
+
+    <dialog id="notificationsModal" class="modal">
+      <form method="dialog" class="modal-card modal-card-wide" id="notificationsForm">
+        <div class="modal-header">
+          <div>
+            <p class="eyebrow">Attention Center</p>
+            <h3>Suggested reminders and active follow-up</h3>
+            <p class="modal-copy">These items are generated from compliance gaps and recent records so you can turn important issues into reminders quickly.</p>
+          </div>
+          <button class="ghost-button" value="cancel" type="submit">Close</button>
+        </div>
+
+        <div id="notificationsSummary" class="questionnaire-meta"></div>
+        <div id="notificationsList" class="record-list"></div>
+
+        <div class="modal-actions">
+          <button value="cancel" class="ghost-button" type="submit">Close</button>
+          <button class="ghost-button" id="openRemindersWorkspace" type="button">Open reminders</button>
+          <button class="primary-button" id="createAllSuggestedReminders" type="button">Create all reminders</button>
+        </div>
+      </form>
+    </dialog>
+
+    <dialog id="documentUploadModal" class="modal">
+      <form method="dialog" class="modal-card modal-card-wide" id="documentUploadForm">
+        <div class="modal-header">
+          <div>
+            <p class="eyebrow">Upload Document</p>
+            <h3>Add evidence to the library</h3>
+            <p class="modal-copy">Select a file, link it to the right record, and store it through the backend.</p>
+          </div>
+          <button class="ghost-button" value="cancel" type="submit">Close</button>
+        </div>
+
+        <div class="field-grid">
+          <label class="field" data-span="full">
+            <span>File</span>
+            <input id="documentFile" name="documentFile" type="file" required />
+          </label>
+          <label class="field">
+            <span>Document type</span>
+            <select id="documentType" name="documentType">
+              <option value="Evidence">Evidence</option>
+              <option value="Receipt">Receipt</option>
+              <option value="Brief">Brief</option>
+              <option value="Agreement">Agreement</option>
+              <option value="Deliverable">Deliverable</option>
+              <option value="Invoice">Invoice</option>
+              <option value="Payment Proof">Payment Proof</option>
+              <option value="Update Note">Update Note</option>
+            </select>
+          </label>
+          <label class="field">
+            <span>Linked entity type</span>
+            <select id="documentLinkedType" name="linkedType">
+              <option value="Project">Project</option>
+              <option value="Trip">Trip</option>
+              <option value="Production">Production</option>
+              <option value="Expense">Expense</option>
+              <option value="Person">Person</option>
+              <option value="Reminder">Reminder</option>
+              <option value="Invoice">Invoice</option>
+              <option value="Payment">Payment</option>
+            </select>
+          </label>
+          <label class="field">
+            <span>Linked record</span>
+            <select id="documentLinkedId" name="linkedId" required></select>
+          </label>
+          <label class="field">
+            <span>Status</span>
+            <select id="documentStatus" name="status">
+              <option value="Linked">Linked</option>
+              <option value="Needs review">Needs review</option>
+              <option value="Pending signature">Pending signature</option>
+              <option value="Archived">Archived</option>
+            </select>
+          </label>
+          <label class="field" data-span="full">
+            <span>Evidence note</span>
+            <textarea id="documentNote" name="note" placeholder="Why this file matters, what it proves, or what still needs follow-up."></textarea>
+          </label>
+        </div>
+
+        <div class="modal-actions">
+          <button value="cancel" class="ghost-button" type="submit">Cancel</button>
+          <button class="primary-button" type="submit">Upload document</button>
+        </div>
+      </form>
+    </dialog>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

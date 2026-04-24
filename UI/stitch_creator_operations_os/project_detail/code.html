@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "error": "#ba1a1a",
+                    "on-primary": "#ffffff",
+                    "surface-container-high": "#ece7e2",
+                    "error-container": "#ffdad6",
+                    "surface": "#fef8f3",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-container": "#1e2b3c",
+                    "primary": "#091627",
+                    "on-secondary-fixed-variant": "#42474f",
+                    "surface-bright": "#fef8f3",
+                    "on-primary-fixed-variant": "#3b485a",
+                    "surface-container-highest": "#e6e2dd",
+                    "on-primary-fixed": "#0f1c2d",
+                    "on-error": "#ffffff",
+                    "on-background": "#1d1b19",
+                    "on-surface": "#1d1b19",
+                    "outline-variant": "#c5c6cd",
+                    "tertiary-fixed": "#fadfb7",
+                    "on-secondary-fixed": "#171c23",
+                    "surface-variant": "#e6e2dd",
+                    "surface-dim": "#ded9d4",
+                    "on-primary-container": "#8592a7",
+                    "on-surface-variant": "#44474c",
+                    "on-tertiary-container": "#a58e6b",
+                    "surface-tint": "#525f72",
+                    "outline": "#75777d",
+                    "on-secondary-container": "#5e636b",
+                    "tertiary": "#201400",
+                    "on-error-container": "#93000a",
+                    "background": "#fef8f3",
+                    "secondary": "#5a5f67",
+                    "on-tertiary-fixed": "#261902",
+                    "inverse-surface": "#32302d",
+                    "secondary-fixed-dim": "#c2c6d0",
+                    "tertiary-container": "#37280d",
+                    "secondary-container": "#dce0ea",
+                    "secondary-fixed": "#dfe2ec",
+                    "surface-container": "#f2ede8",
+                    "on-tertiary-fixed-variant": "#564427",
+                    "primary-fixed-dim": "#bac7de",
+                    "inverse-on-surface": "#f5f0eb",
+                    "on-secondary": "#ffffff",
+                    "primary-fixed": "#d6e3fa",
+                    "tertiary-fixed-dim": "#ddc39c",
+                    "surface-container-low": "#f8f3ee",
+                    "on-tertiary": "#ffffff",
+                    "inverse-primary": "#bac7de"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Epilogue"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body { font-family: 'Manrope', sans-serif; }
+        h1, h2, h3 { font-family: 'Epilogue', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- SideNavBar -->
+<aside class="h-screen w-72 fixed left-0 top-0 overflow-y-auto bg-[#f8f3ee] dark:bg-[#1a1c1e] flex flex-col justify-between py-10 px-8 z-50">
+<div>
+<div class="mb-12">
+<span class="text-2xl font-black font-['Epilogue'] text-[#091627] dark:text-[#ffffff]">Editorial OS</span>
+<p class="text-[10px] uppercase tracking-[0.2em] mt-1 text-on-surface-variant/60 font-bold">Premium Content Studio</p>
+</div>
+<nav class="space-y-2">
+<a class="flex items-center gap-4 py-3 px-4 transition-all duration-300 hover:bg-[#fef8f3]/50 dark:hover:bg-[#ffffff]/5 text-[#5d5e61] dark:text-[#939094] font-medium rounded-xl" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-['Epilogue'] font-semibold tracking-tight">Dashboard</span>
+</a>
+<a class="flex items-center gap-4 py-3 px-4 transition-all duration-300 hover:bg-[#fef8f3]/50 dark:hover:bg-[#ffffff]/5 text-[#091627] dark:text-white font-bold border-r-4 border-[#091627] dark:border-[#d0bcff] bg-surface-container-lowest/50 rounded-xl" href="#">
+<span class="material-symbols-outlined">folder_copy</span>
+<span class="font-['Epilogue'] font-semibold tracking-tight">Projects</span>
+</a>
+<a class="flex items-center gap-4 py-3 px-4 transition-all duration-300 hover:bg-[#fef8f3]/50 dark:hover:bg-[#ffffff]/5 text-[#5d5e61] dark:text-[#939094] font-medium rounded-xl" href="#">
+<span class="material-symbols-outlined">movie</span>
+<span class="font-['Epilogue'] font-semibold tracking-tight">Productions</span>
+</a>
+<a class="flex items-center gap-4 py-3 px-4 transition-all duration-300 hover:bg-[#fef8f3]/50 dark:hover:bg-[#ffffff]/5 text-[#5d5e61] dark:text-[#939094] font-medium rounded-xl" href="#">
+<span class="material-symbols-outlined">receipt_long</span>
+<span class="font-['Epilogue'] font-semibold tracking-tight">Expenses</span>
+</a>
+<a class="flex items-center gap-4 py-3 px-4 transition-all duration-300 hover:bg-[#fef8f3]/50 dark:hover:bg-[#ffffff]/5 text-[#5d5e61] dark:text-[#939094] font-medium rounded-xl" href="#">
+<span class="material-symbols-outlined">leaderboard</span>
+<span class="font-['Epilogue'] font-semibold tracking-tight">Analytics</span>
+</a>
+</nav>
+<button class="mt-12 w-full flex items-center justify-center gap-2 bg-gradient-to-br from-[#091627] to-[#1e2b3c] text-white rounded-full py-4 px-6 font-bold shadow-sm active:scale-95 transition-transform">
+<span class="material-symbols-outlined">add</span>
+<span>New Asset</span>
+</button>
+</div>
+<div class="space-y-4 pt-10 border-t border-outline-variant/10">
+<a class="flex items-center gap-4 py-2 px-4 text-[#5d5e61] dark:text-[#939094] font-medium hover:text-[#091627] transition-colors" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-['Epilogue'] font-semibold tracking-tight">Settings</span>
+</a>
+<a class="flex items-center gap-4 py-2 px-4 text-[#5d5e61] dark:text-[#939094] font-medium hover:text-[#091627] transition-colors" href="#">
+<span class="material-symbols-outlined">help</span>
+<span class="font-['Epilogue'] font-semibold tracking-tight">Support</span>
+</a>
+<div class="flex items-center gap-3 mt-6 px-4">
+<img alt="Workspace Avatar" class="w-10 h-10 rounded-full object-cover" data-alt="professional portrait of a creative director in a minimalist studio setting with soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxVDxFOy_xfajkhWVBMC_F-xKR4enaA-B1lYl5wGBZQO6KPpIGHh1PoXMx_Y3K-9G3f2yc6GDWmUaEEYNwh8cdWNbRIJTfZ3Trpq6NOaxGBvGFCI4neHOB68sn1m3z3IX3FqNwUiuv-zyyDfMVwGh81ll_ABTt9jYMNkBY21yBAcHLQrAWRZbcIfanWWWutu4XoqkeXvPE5yO54kWwYwqbQrynaxd77AnVDpKkEARKrBVBequWOr0v9ye4La_gR0v8aASUBoK2xCTE"/>
+<div class="flex flex-col">
+<span class="text-xs font-bold">Workspace</span>
+<span class="text-[10px] text-on-surface-variant">Editorial OS Premium</span>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="ml-72 min-h-screen">
+<!-- TopNavBar -->
+<header class="fixed top-0 right-0 left-72 z-40 h-20 bg-[#fef8f3]/80 dark:bg-[#1d1b19]/80 backdrop-blur-xl">
+<div class="flex items-center justify-between px-12 h-full w-full max-w-[1600px] mx-auto">
+<div class="flex items-center gap-8">
+<span class="text-xl font-bold font-['Epilogue'] text-[#091627] dark:text-[#ffffff]">Workspace Switcher</span>
+<div class="relative w-80">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-surface-container-high rounded-full border-none focus:ring-2 focus:ring-primary/20 text-sm" placeholder="Search resources..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<nav class="hidden md:flex items-center gap-8 mr-8">
+<a class="text-[#5d5e61] hover:text-[#091627] font-medium text-sm transition-colors" href="#">Documents</a>
+<a class="text-[#5d5e61] hover:text-[#091627] font-medium text-sm transition-colors" href="#">Library</a>
+<a class="text-[#5d5e61] hover:text-[#091627] font-medium text-sm transition-colors" href="#">Team</a>
+</nav>
+<button class="material-symbols-outlined p-2 hover:bg-surface-container-high rounded-full transition-colors">notifications</button>
+<div class="flex items-center gap-2 bg-gradient-to-br from-[#091627] to-[#1e2b3c] text-white rounded-full px-6 py-2 shadow-sm active:scale-95 transition-transform text-sm font-medium">
+<span class="material-symbols-outlined text-sm">add_circle</span>
+<span>Quick Add</span>
+</div>
+<span class="material-symbols-outlined text-3xl text-on-surface/80 cursor-pointer">account_circle</span>
+</div>
+</div>
+</header>
+<!-- Content Canvas -->
+<div class="pt-24 pb-20 px-12 max-w-[1600px] mx-auto space-y-12">
+<!-- Hero Section: Overview -->
+<section class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-end">
+<div class="lg:col-span-2 space-y-6">
+<nav class="flex items-center gap-2 text-xs font-medium text-on-surface-variant uppercase tracking-widest">
+<span>Projects</span>
+<span class="material-symbols-outlined text-[10px]">chevron_right</span>
+<span class="text-primary font-bold">Detail</span>
+</nav>
+<h1 class="text-6xl font-black leading-tight tracking-tighter text-primary">Winter Collection 2024</h1>
+<div class="flex gap-3">
+<span class="px-4 py-1.5 rounded-full bg-primary/5 text-primary text-xs font-bold uppercase tracking-widest border border-primary/10">Seasonal Campaign</span>
+<span class="px-4 py-1.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed text-xs font-bold uppercase tracking-widest">In Production</span>
+</div>
+<p class="text-xl text-on-surface-variant leading-relaxed font-medium max-w-2xl">
+                        A comprehensive visual exploration of the 2024 aesthetic, focusing on textural contrasts and subdued chromatic palettes across northern architectural landscapes.
+                    </p>
+</div>
+<div class="bg-surface-container-low rounded-3xl p-8 space-y-6">
+<div class="flex justify-between items-center">
+<h3 class="text-lg font-bold">Timeline</h3>
+<span class="material-symbols-outlined text-primary/40">calendar_month</span>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-center text-sm">
+<span class="text-on-surface-variant">Launch Date</span>
+<span class="font-bold">Nov 12, 2024</span>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="text-on-surface-variant">Days Remaining</span>
+<span class="font-bold">42</span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-2 overflow-hidden">
+<div class="bg-primary h-full w-[65%]"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bento Grid: Intent & Compliance -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Intent Card -->
+<div class="md:col-span-8 bg-surface-container-low rounded-3xl p-10 flex flex-col justify-between">
+<div class="space-y-8">
+<div>
+<label class="text-[10px] uppercase font-bold tracking-[0.2em] text-on-surface-variant block mb-4">Strategic Objective</label>
+<h2 class="text-3xl font-bold leading-snug">Redefining luxury through architectural minimalism.</h2>
+</div>
+<div class="grid grid-cols-2 gap-12 pt-8 border-t border-outline-variant/10">
+<div class="space-y-3">
+<span class="material-symbols-outlined text-primary-container">target</span>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+                                    Increase brand authority within the high-end apparel segment by 15% through targeted editorial placements in tier-1 design publications.
+                                </p>
+</div>
+<div class="space-y-3">
+<span class="material-symbols-outlined text-primary-container">trending_up</span>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+                                    Drive organic social engagement by leveraging the "Quiet Luxury" aesthetic, aiming for 200k+ impressions within the first 30 days.
+                                </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Compliance Score Card -->
+<div class="md:col-span-4 bg-primary text-white rounded-3xl p-10 flex flex-col justify-between overflow-hidden relative group">
+<div class="relative z-10">
+<label class="text-[10px] uppercase font-bold tracking-[0.2em] text-primary-fixed-dim block mb-6">Asset Compliance</label>
+<div class="flex items-end gap-2">
+<span class="text-7xl font-black font-headline tracking-tighter">85</span>
+<span class="text-2xl font-bold mb-3 opacity-60">/100</span>
+</div>
+</div>
+<div class="mt-8 space-y-4 relative z-10">
+<p class="text-xs font-medium text-primary-fixed-dim border-b border-primary-fixed-dim/20 pb-4">Missing Requirements:</p>
+<ul class="space-y-3">
+<li class="flex items-center gap-3 text-sm font-medium">
+<span class="material-symbols-outlined text-error-container text-lg">error</span>
+                                Legal Release - Talent A
+                            </li>
+<li class="flex items-center gap-3 text-sm font-medium opacity-60">
+<span class="material-symbols-outlined text-lg">pending</span>
+                                Location Permit - Site B
+                            </li>
+</ul>
+</div>
+<div class="absolute -right-12 -bottom-12 w-48 h-48 bg-primary-container/30 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700"></div>
+</div>
+</section>
+<!-- Tabs: Evidence -->
+<section class="space-y-8">
+<div class="flex flex-col md:flex-row justify-between items-end gap-6">
+<div>
+<h2 class="text-3xl font-black mb-2">Evidence &amp; Artifacts</h2>
+<p class="text-on-surface-variant font-medium">Linked assets across the production ecosystem.</p>
+</div>
+<div class="flex gap-2 p-1.5 bg-surface-container-low rounded-full">
+<button class="px-8 py-2.5 rounded-full bg-surface-container-lowest shadow-sm text-primary font-bold text-sm">Linked Trips</button>
+<button class="px-8 py-2.5 rounded-full text-on-surface-variant font-bold text-sm hover:text-primary">Productions</button>
+<button class="px-8 py-2.5 rounded-full text-on-surface-variant font-bold text-sm hover:text-primary">Expenses</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Evidence Item 1 -->
+<div class="bg-surface-container-lowest rounded-3xl p-8 hover:shadow-xl transition-shadow duration-500 cursor-pointer group">
+<div class="aspect-[16/10] bg-surface-container-low rounded-2xl mb-6 overflow-hidden">
+<img alt="Northern architecture" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="dramatic minimalist concrete architecture in a snowy scandinavian landscape at dawn with ethereal blue light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYOQ1wkGPmsOTnv_EM91kBksmF8A-tTxzxwgK9OKYzXJmDP1Jud0ZD_LdvKu7u1ysB9eJa4KSA8OwIsB09zFz1mivFv-MtsESswVNjh0ILtD0kRSNgVyJ0GS-HiikPhVNaffpSAFKZ-CF1iz1VI5iaiBEI8f6yp9YGkYQndtGpUUFd2_r3picpiSL9yMyT4LRM22hGanqNTAalMAn53_Kx4SXvnL3nvR4ZZFygfKOed6YNgHkQEZ4kiRo0YU39cUgConrrRyYJTke9"/>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between items-start">
+<h4 class="font-bold text-lg">Stockholm Residency</h4>
+<span class="material-symbols-outlined text-primary-container">arrow_outward</span>
+</div>
+<p class="text-sm text-on-surface-variant">Sept 12-18 • Scouting &amp; Prep</p>
+</div>
+</div>
+<!-- Evidence Item 2 -->
+<div class="bg-surface-container-lowest rounded-3xl p-8 hover:shadow-xl transition-shadow duration-500 cursor-pointer group">
+<div class="aspect-[16/10] bg-surface-container-low rounded-2xl mb-6 overflow-hidden">
+<img alt="Alps location" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="breathtaking aerial view of snow-capped mountain peaks in the swiss alps during late afternoon with soft clouds" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-IKt6DnfhjHlFVwnVMpYUjPmnVCSAIuboHL3m6eV7ngE8qBecMop2vXXoU37EbW1QJEjlVxfvHypqcZpq8cj6LDPNRyJfbnLQ0IonbaOj2E9WwPaXWbnw264Bx-PKwcKWDNxxnX5fPsehS731QKO3likoE6pvYITGRNvA8gDA259r8UHssKxnKU3YQPVwAskfIu4yWIk7yabPU-PduEwxS4ShgFftxNZHw9Iz3R1mKArx5YNLYKN-6fUFPd3bqi_RUsxwiKPsUAad"/>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between items-start">
+<h4 class="font-bold text-lg">Swiss Alps Production</h4>
+<span class="material-symbols-outlined text-primary-container">arrow_outward</span>
+</div>
+<p class="text-sm text-on-surface-variant">Oct 01-10 • Main Shoot</p>
+</div>
+</div>
+<!-- Evidence Item 3 -->
+<div class="bg-surface-container-low border-2 border-dashed border-outline-variant/30 rounded-3xl flex flex-col items-center justify-center p-8 gap-4 group cursor-pointer">
+<div class="w-16 h-16 rounded-full bg-surface-container-lowest flex items-center justify-center text-primary-container group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+<span class="material-symbols-outlined text-3xl">add</span>
+</div>
+<p class="text-sm font-bold uppercase tracking-widest text-on-surface-variant">Link New Artifact</p>
+</div>
+</div>
+</section>
+<!-- Closure & Summary -->
+<section class="bg-surface-container-high rounded-3xl p-12">
+<div class="max-w-4xl mx-auto space-y-10">
+<div class="text-center space-y-4">
+<h2 class="text-4xl font-black tracking-tight">Project Closure</h2>
+<div class="flex items-center justify-center gap-2">
+<div class="w-2 h-2 rounded-full bg-on-tertiary-container animate-pulse"></div>
+<span class="text-xs font-bold uppercase tracking-widest text-on-tertiary-container">Draft Summary Generated</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-2xl p-10 shadow-sm relative">
+<span class="material-symbols-outlined absolute right-8 top-8 text-outline-variant">format_quote</span>
+<div class="prose prose-sm text-on-surface/80 font-medium leading-loose space-y-6">
+<p>
+                                The "Winter Collection 2024" project has successfully transited from the scouting phase to full active production. Initial deliverables from the Stockholm and Swiss sessions exceed the aesthetic benchmarks established in the Q3 creative brief.
+                            </p>
+<p>
+                                Financial reconciliation is 90% complete, with the current burn rate at 1.2x against projected, primarily due to unseasonable weather patterns requiring extended rental of specialized grip equipment. Compliance markers are currently highlighted for final legal signature on model release forms.
+                            </p>
+</div>
+<div class="mt-10 flex flex-wrap gap-4 pt-8 border-t border-surface-container-low">
+<button class="px-8 py-3 bg-primary text-white rounded-full font-bold text-sm shadow-sm hover:brightness-110 active:scale-95 transition-all">Submit for Review</button>
+<button class="px-8 py-3 bg-surface-container-high text-on-surface rounded-full font-bold text-sm hover:bg-surface-container-highest transition-all">Edit Summary</button>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Sticky Bottom FAB for Context -->
+<div class="fixed bottom-10 right-10 z-50">
+<button class="flex items-center gap-3 bg-gradient-to-br from-primary to-primary-container text-white px-8 py-4 rounded-full shadow-2xl hover:shadow-primary/30 transition-all active:scale-90 group">
+<span class="material-symbols-outlined transition-transform group-hover:rotate-90">add</span>
+<span class="font-bold tracking-tight">Create Artifact</span>
+</button>
+</div>
+</main>
+</body></html>

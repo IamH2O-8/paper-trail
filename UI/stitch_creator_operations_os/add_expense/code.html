@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Editorial OS - Quick Add Expense</title>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600;700;900&amp;family=Manrope:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error": "#ba1a1a",
+                        "on-primary": "#ffffff",
+                        "surface-container-high": "#ece7e2",
+                        "error-container": "#ffdad6",
+                        "surface": "#fef8f3",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-container": "#1e2b3c",
+                        "primary": "#091627",
+                        "on-secondary-fixed-variant": "#42474f",
+                        "surface-bright": "#fef8f3",
+                        "on-primary-fixed-variant": "#3b485a",
+                        "surface-container-highest": "#e6e2dd",
+                        "on-primary-fixed": "#0f1c2d",
+                        "on-error": "#ffffff",
+                        "on-background": "#1d1b19",
+                        "on-surface": "#1d1b19",
+                        "outline-variant": "#c5c6cd",
+                        "tertiary-fixed": "#fadfb7",
+                        "on-secondary-fixed": "#171c23",
+                        "surface-variant": "#e6e2dd",
+                        "surface-dim": "#ded9d4",
+                        "on-primary-container": "#8592a7",
+                        "on-surface-variant": "#44474c",
+                        "on-tertiary-container": "#a58e6b",
+                        "surface-tint": "#525f72",
+                        "outline": "#75777d",
+                        "on-secondary-container": "#5e636b",
+                        "tertiary": "#201400",
+                        "on-error-container": "#93000a",
+                        "background": "#fef8f3",
+                        "secondary": "#5a5f67",
+                        "on-tertiary-fixed": "#261902",
+                        "inverse-surface": "#32302d",
+                        "secondary-fixed-dim": "#c2c6d0",
+                        "tertiary-container": "#37280d",
+                        "secondary-container": "#dce0ea",
+                        "secondary-fixed": "#dfe2ec",
+                        "surface-container": "#f2ede8",
+                        "on-tertiary-fixed-variant": "#564427",
+                        "primary-fixed-dim": "#bac7de",
+                        "inverse-on-surface": "#f5f0eb",
+                        "on-secondary": "#ffffff",
+                        "primary-fixed": "#d6e3fa",
+                        "tertiary-fixed-dim": "#ddc39c",
+                        "surface-container-low": "#f8f3ee",
+                        "on-tertiary": "#ffffff",
+                        "inverse-primary": "#bac7de"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Epilogue"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-primary-gradient {
+            background: linear-gradient(135deg, #091627 0%, #1e2b3c 100%);
+        }
+        .glass-panel {
+            background: rgba(254, 248, 243, 0.8);
+            backdrop-filter: blur(24px);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface">
+<!-- Shell Suppression: This is a Task-Focused sub-page/modal flow. 
+         However, for the context of this preview, we maintain the SideNavBar 
+         with the "Expenses" tab active as per the Editorial OS requirements. -->
+<aside class="h-screen w-72 fixed left-0 top-0 overflow-y-auto bg-[#f8f3ee] flex flex-col justify-between py-10 px-8">
+<div>
+<div class="mb-12">
+<h1 class="text-2xl font-black font-headline text-[#091627] tracking-tight">Editorial OS</h1>
+<p class="text-xs font-label text-on-surface-variant tracking-wider uppercase mt-1">Premium Content Studio</p>
+</div>
+<nav class="space-y-4">
+<!-- Navigation items mapped from JSON -->
+<a class="flex items-center gap-4 py-2 text-[#5d5e61] font-medium hover:bg-[#fef8f3]/50 transition-all duration-300" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-headline font-semibold tracking-tight">Dashboard</span>
+</a>
+<a class="flex items-center gap-4 py-2 text-[#5d5e61] font-medium hover:bg-[#fef8f3]/50 transition-all duration-300" href="#">
+<span class="material-symbols-outlined">folder_copy</span>
+<span class="font-headline font-semibold tracking-tight">Projects</span>
+</a>
+<a class="flex items-center gap-4 py-2 text-[#5d5e61] font-medium hover:bg-[#fef8f3]/50 transition-all duration-300" href="#">
+<span class="material-symbols-outlined">movie</span>
+<span class="font-headline font-semibold tracking-tight">Productions</span>
+</a>
+<a class="flex items-center gap-4 py-2 text-[#091627] font-bold border-r-4 border-[#091627] active:scale-[0.98] transition-all duration-200" href="#">
+<span class="material-symbols-outlined">receipt_long</span>
+<span class="font-headline font-semibold tracking-tight">Expenses</span>
+</a>
+<a class="flex items-center gap-4 py-2 text-[#5d5e61] font-medium hover:bg-[#fef8f3]/50 transition-all duration-300" href="#">
+<span class="material-symbols-outlined">leaderboard</span>
+<span class="font-headline font-semibold tracking-tight">Analytics</span>
+</a>
+</nav>
+</div>
+<div class="space-y-4 pt-10 border-t border-outline-variant/10">
+<a class="flex items-center gap-4 py-2 text-[#5d5e61] font-medium hover:bg-[#fef8f3]/50 transition-all" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-headline font-semibold tracking-tight">Settings</span>
+</a>
+<a class="flex items-center gap-4 py-2 text-[#5d5e61] font-medium hover:bg-[#fef8f3]/50 transition-all" href="#">
+<span class="material-symbols-outlined">help</span>
+<span class="font-headline font-semibold tracking-tight">Support</span>
+</a>
+</div>
+</aside>
+<!-- Main Workspace Container -->
+<main class="ml-72 min-h-screen">
+<!-- Top Navigation -->
+<header class="fixed top-0 right-0 left-72 z-40 h-20 bg-[#fef8f3]/80 backdrop-blur-xl flex items-center justify-between px-12">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-white">
+<span class="material-symbols-outlined">receipt_long</span>
+</div>
+<div>
+<p class="font-headline font-bold text-[#091627]">Quick Add</p>
+<p class="text-xs text-on-surface-variant font-label">Expense Entry Flow</p>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-8 text-sm font-body font-medium mr-4">
+<a class="text-[#5d5e61] hover:text-[#091627] transition-colors" href="#">Documents</a>
+<a class="text-[#5d5e61] hover:text-[#091627] transition-colors" href="#">Library</a>
+<a class="text-[#5d5e61] hover:text-[#091627] transition-colors" href="#">Team</a>
+</div>
+<button class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="w-10 h-10 rounded-full overflow-hidden bg-surface-container-high border-2 border-surface">
+<img alt="User Profile" data-alt="close-up portrait of a professional creative with a minimal studio background in soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBxgX_3wjDN1ddus9dXgqAd2Jk0uyoscyxlwkMmfnuLiau7O13d3VMH4wTH1hvS4VDTv2m21RIaAfuxsIw7wLsi1nxY7Dx6KfyFHNNXgKzhflNcfKDwywt5IqdK_adKl8PM5AGhv8FkY7XKpRE_1JQShgSXpmw6pHwtEgFAvMOwdM38bOl-B_eazUYSvVS6moMEZdlznonhkiULdFhXZvUwV2aaJniK3MlKoln211AZvYdpldrsN-GHOnXC-o9vmLIHyhicUERsLtQ"/>
+</button>
+</div>
+</header>
+<!-- Focused Entry Canvas -->
+<div class="pt-32 pb-20 px-12 max-w-[1200px] mx-auto">
+<div class="grid grid-cols-12 gap-12">
+<!-- Left: Form Section -->
+<div class="col-span-12 lg:col-span-8">
+<section class="bg-surface-container-lowest rounded-2xl p-10">
+<div class="mb-10">
+<h2 class="text-3xl font-headline font-bold tracking-tight text-[#091627]">New Expense</h2>
+<p class="text-on-surface-variant mt-2 font-body">Input your transaction details to maintain project ledger integrity.</p>
+</div>
+<form class="space-y-8">
+<!-- Row 1: Title -->
+<div class="space-y-2">
+<label class="text-[0.75rem] font-label font-semibold uppercase tracking-wider text-on-secondary-fixed-variant ml-1">Expense Title</label>
+<input class="w-full h-14 px-6 bg-surface-container-low border-none rounded-xl focus:ring-1 focus:ring-primary focus:bg-white transition-all text-on-surface placeholder:text-outline/50 font-body" placeholder="e.g. Lens Rental for Venice Shoot" type="text"/>
+</div>
+<!-- Row 2: Category & Date -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-[0.75rem] font-label font-semibold uppercase tracking-wider text-on-secondary-fixed-variant ml-1">Category</label>
+<select class="w-full h-14 px-6 bg-surface-container-low border-none rounded-xl focus:ring-1 focus:ring-primary focus:bg-white transition-all text-on-surface font-body appearance-none">
+<option>Production Gear</option>
+<option>Travel &amp; Lodging</option>
+<option>Professional Services</option>
+<option>Software &amp; Licenses</option>
+<option>Miscellaneous</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="text-[0.75rem] font-label font-semibold uppercase tracking-wider text-on-secondary-fixed-variant ml-1">Date</label>
+<div class="relative">
+<input class="w-full h-14 px-6 bg-surface-container-low border-none rounded-xl focus:ring-1 focus:ring-primary focus:bg-white transition-all text-on-surface font-body" type="date"/>
+</div>
+</div>
+</div>
+<!-- Row 3: Amount & Project Link -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-[0.75rem] font-label font-semibold uppercase tracking-wider text-on-secondary-fixed-variant ml-1">Amount (USD)</label>
+<div class="relative">
+<span class="absolute left-6 top-1/2 -translate-y-1/2 text-on-surface-variant font-bold">$</span>
+<input class="w-full h-14 pl-10 pr-6 bg-surface-container-low border-none rounded-xl focus:ring-1 focus:ring-primary focus:bg-white transition-all text-on-surface font-body font-bold" placeholder="0.00" type="number"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-[0.75rem] font-label font-semibold uppercase tracking-wider text-on-secondary-fixed-variant ml-1">Link to Project/Trip</label>
+<select class="w-full h-14 px-6 bg-surface-container-low border-none rounded-xl focus:ring-1 focus:ring-primary focus:bg-white transition-all text-on-surface font-body appearance-none">
+<option>Project: Venice Noir Documentary</option>
+<option>Project: Autumn Lookbook 2024</option>
+<option>Trip: Cannes Film Festival</option>
+<option>N/A - General Overhead</option>
+</select>
+</div>
+</div>
+<!-- Row 4: Business Purpose -->
+<div class="space-y-2">
+<label class="text-[0.75rem] font-label font-semibold uppercase tracking-wider text-on-secondary-fixed-variant ml-1">Business Purpose</label>
+<textarea class="w-full p-6 bg-surface-container-low border-none rounded-xl focus:ring-1 focus:ring-primary focus:bg-white transition-all text-on-surface placeholder:text-outline/50 font-body resize-none" placeholder="Detail the necessity of this expense for audit compliance..." rows="4"></textarea>
+</div>
+</form>
+</section>
+</div>
+<!-- Right: Utility Section (File Upload + Summary) -->
+<div class="col-span-12 lg:col-span-4 space-y-6">
+<!-- File Upload Zone -->
+<div class="bg-surface-container-low rounded-2xl p-8 border-2 border-dashed border-outline-variant/30 text-center group hover:border-primary/40 transition-colors duration-300">
+<div class="w-16 h-16 bg-surface-container-lowest rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+<span class="material-symbols-outlined text-primary text-3xl">upload_file</span>
+</div>
+<h3 class="font-headline font-bold text-[#091627]">Receipt Upload</h3>
+<p class="text-sm text-on-surface-variant mt-2 mb-6">Drag and drop your digital receipts here or click to browse local files.</p>
+<button class="text-sm font-label font-bold text-primary underline underline-offset-4 decoration-2">Add Files (Max 10MB)</button>
+</div>
+<!-- Receipt Preview / Status -->
+<div class="bg-surface-container-low rounded-2xl p-6">
+<h4 class="text-xs font-label font-bold uppercase tracking-widest text-on-secondary-fixed-variant mb-4">Attached Artifacts</h4>
+<div class="space-y-3">
+<!-- Empty State or List of items -->
+<div class="flex items-center gap-3 p-3 bg-surface-container-lowest rounded-lg">
+<span class="material-symbols-outlined text-secondary">image</span>
+<div class="flex-1 overflow-hidden">
+<p class="text-xs font-bold truncate">camera_rental_receipt_01.pdf</p>
+<p class="text-[10px] text-on-surface-variant">2.4 MB • Processing OCR</p>
+</div>
+<button class="material-symbols-outlined text-sm text-error/60">close</button>
+</div>
+</div>
+</div>
+<!-- Summary Card -->
+<div class="bg-primary text-white rounded-2xl p-8 shadow-2xl relative overflow-hidden">
+<div class="relative z-10">
+<p class="text-xs font-label uppercase tracking-widest text-on-primary-container mb-1">Estimated Total</p>
+<h3 class="text-4xl font-headline font-black">$0.00</h3>
+<div class="mt-6 pt-6 border-t border-white/10 space-y-2">
+<div class="flex justify-between text-sm">
+<span class="text-on-primary-container">Subtotal</span>
+<span>$0.00</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="text-on-primary-container">VAT (0%)</span>
+<span>$0.00</span>
+</div>
+</div>
+</div>
+<!-- Decorative glow -->
+<div class="absolute -right-10 -bottom-10 w-40 h-40 bg-primary-container/30 rounded-full blur-3xl"></div>
+</div>
+</div>
+</div>
+<!-- Footer Sticky Action Bar -->
+<div class="fixed bottom-0 right-0 left-72 h-24 bg-surface-bright/80 backdrop-blur-xl px-12 flex items-center justify-between z-50">
+<button class="px-8 py-3 text-sm font-label font-bold text-on-surface-variant hover:text-on-surface transition-colors active:scale-95">
+                    Cancel
+                </button>
+<div class="flex gap-4">
+<button class="px-8 py-3 text-sm font-label font-bold text-primary border-2 border-primary rounded-full hover:bg-primary/5 transition-all active:scale-95">
+                        Save and add another
+                    </button>
+<button class="px-10 py-3 text-sm font-label font-bold bg-primary-gradient text-white rounded-full shadow-lg shadow-primary/20 hover:brightness-110 transition-all active:scale-95">
+                        Save Expense
+                    </button>
+</div>
+</div>
+</div>
+</main>
+</body></html>

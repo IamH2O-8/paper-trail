@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Projects | Editorial OS</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600;700;800;900&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "error": "#ba1a1a",
+                "on-primary": "#ffffff",
+                "surface-container-high": "#ece7e2",
+                "error-container": "#ffdad6",
+                "surface": "#fef8f3",
+                "surface-container-lowest": "#ffffff",
+                "primary-container": "#1e2b3c",
+                "primary": "#091627",
+                "on-secondary-fixed-variant": "#42474f",
+                "surface-bright": "#fef8f3",
+                "on-primary-fixed-variant": "#3b485a",
+                "surface-container-highest": "#e6e2dd",
+                "on-primary-fixed": "#0f1c2d",
+                "on-error": "#ffffff",
+                "on-background": "#1d1b19",
+                "on-surface": "#1d1b19",
+                "outline-variant": "#c5c6cd",
+                "tertiary-fixed": "#fadfb7",
+                "on-secondary-fixed": "#171c23",
+                "surface-variant": "#e6e2dd",
+                "surface-dim": "#ded9d4",
+                "on-primary-container": "#8592a7",
+                "on-surface-variant": "#44474c",
+                "on-tertiary-container": "#a58e6b",
+                "surface-tint": "#525f72",
+                "outline": "#75777d",
+                "on-secondary-container": "#5e636b",
+                "tertiary": "#201400",
+                "on-error-container": "#93000a",
+                "background": "#fef8f3",
+                "secondary": "#5a5f67",
+                "on-tertiary-fixed": "#261902",
+                "inverse-surface": "#32302d",
+                "secondary-fixed-dim": "#c2c6d0",
+                "tertiary-container": "#37280d",
+                "secondary-container": "#dce0ea",
+                "secondary-fixed": "#dfe2ec",
+                "surface-container": "#f2ede8",
+                "on-tertiary-fixed-variant": "#564427",
+                "primary-fixed-dim": "#bac7de",
+                "inverse-on-surface": "#f5f0eb",
+                "on-secondary": "#ffffff",
+                "primary-fixed": "#d6e3fa",
+                "tertiary-fixed-dim": "#ddc39c",
+                "surface-container-low": "#f8f3ee",
+                "on-tertiary": "#ffffff",
+                "inverse-primary": "#bac7de"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "2xl": "1rem",
+                "3xl": "1.5rem",
+                "full": "9999px"
+            },
+            "fontFamily": {
+                "headline": ["Epilogue"],
+                "body": ["Manrope"],
+                "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Manrope', sans-serif;
+            background-color: #fef8f3;
+            color: #1d1b19;
+        }
+        .editorial-title {
+            font-family: 'Epilogue', sans-serif;
+            letter-spacing: -0.02em;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased">
+<!-- Shared SideNavBar Component -->
+<aside class="h-screen w-72 fixed left-0 top-0 overflow-y-auto bg-[#f8f3ee] dark:bg-[#1a1c1e] flex flex-col justify-between py-10 px-8 z-50">
+<div class="flex flex-col gap-10">
+<div class="flex flex-col gap-1">
+<span class="text-2xl font-black font-['Epilogue'] text-[#091627] dark:text-[#ffffff]">Editorial OS</span>
+<span class="font-['Epilogue'] font-semibold tracking-tight text-[#091627] dark:text-[#e2e2e6] opacity-60 text-xs">Premium Content Studio</span>
+</div>
+<nav class="flex flex-col gap-4">
+<a class="flex items-center gap-3 py-2 px-4 rounded-xl text-[#5d5e61] dark:text-[#939094] font-medium hover:bg-[#fef8f3]/50 dark:hover:bg-[#ffffff]/5 transition-all duration-300" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-['Epilogue'] font-semibold tracking-tight">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 py-2 px-4 rounded-xl text-[#091627] dark:text-white font-bold border-r-4 border-[#091627] dark:border-[#d0bcff] hover:bg-[#fef8f3]/50 dark:hover:bg-[#ffffff]/5 transition-all duration-300" href="#">
+<span class="material-symbols-outlined">folder_copy</span>
+<span class="font-['Epilogue'] font-semibold tracking-tight">Projects</span>
+</a>
+<a class="flex items-center gap-3 py-2 px-4 rounded-xl text-[#5d5e61] dark:text-[#939094] font-medium hover:bg-[#fef8f3]/50 dark:hover:bg-[#ffffff]/5 transition-all duration-300" href="#">
+<span class="material-symbols-outlined">movie</span>
+<span class="font-['Epilogue'] font-semibold tracking-tight">Productions</span>
+</a>
+<a class="flex items-center gap-3 py-2 px-4 rounded-xl text-[#5d5e61] dark:text-[#939094] font-medium hover:bg-[#fef8f3]/50 dark:hover:bg-[#ffffff]/5 transition-all duration-300" href="#">
+<span class="material-symbols-outlined">receipt_long</span>
+<span class="font-['Epilogue'] font-semibold tracking-tight">Expenses</span>
+</a>
+<a class="flex items-center gap-3 py-2 px-4 rounded-xl text-[#5d5e61] dark:text-[#939094] font-medium hover:bg-[#fef8f3]/50 dark:hover:bg-[#ffffff]/5 transition-all duration-300" href="#">
+<span class="material-symbols-outlined">leaderboard</span>
+<span class="font-['Epilogue'] font-semibold tracking-tight">Analytics</span>
+</a>
+</nav>
+<button class="mt-4 bg-gradient-to-br from-[#091627] to-[#1e2b3c] text-white rounded-full px-6 py-3 font-['Epilogue'] font-bold text-sm shadow-lg active:scale-95 transition-transform">
+                New Asset
+            </button>
+</div>
+<div class="flex flex-col gap-4">
+<a class="flex items-center gap-3 py-2 px-4 rounded-xl text-[#5d5e61] dark:text-[#939094] font-medium hover:bg-[#fef8f3]/50 dark:hover:bg-[#ffffff]/5 transition-all duration-300" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-['Epilogue'] font-semibold tracking-tight">Settings</span>
+</a>
+<a class="flex items-center gap-3 py-2 px-4 rounded-xl text-[#5d5e61] dark:text-[#939094] font-medium hover:bg-[#fef8f3]/50 dark:hover:bg-[#ffffff]/5 transition-all duration-300" href="#">
+<span class="material-symbols-outlined">help</span>
+<span class="font-['Epilogue'] font-semibold tracking-tight">Support</span>
+</a>
+<div class="mt-6 flex items-center gap-3 px-4">
+<img alt="Workspace Avatar" class="w-8 h-8 rounded-full bg-surface-container-high" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvuSV6xHXJVs_NbvGnz37ydBEdA8NKouRsL1dodxb2Mhz9yX0SgKgevtkAaFvT3UejdjPKI6VuheihMlvYMVOaa5c_SMNK3M4zX7w300t6TQSGM6cvAJLZkt_xXjPeDLUrLPOOdqF1ubCWIRi5bu5jB6CEnGHGTxGXOzA4vNJGo2pmRyza2hb7MSnh6K5VkquYe-36I5NIg0--YfOq95E0dI5Jse1l8p2JeNBb8Asj_SQmfVdaXiQpMYrJsatjL-hmZwPrmW246KgB"/>
+<div class="flex flex-col overflow-hidden">
+<span class="text-xs font-bold truncate">Studio Admin</span>
+<span class="text-[10px] opacity-60 truncate">Pro Account</span>
+</div>
+</div>
+</div>
+</aside>
+<!-- Shared TopNavBar Component -->
+<header class="fixed top-0 right-0 left-72 z-40 h-20 bg-[#fef8f3]/80 dark:bg-[#1d1b19]/80 backdrop-blur-xl">
+<div class="flex items-center justify-between px-12 h-full w-full max-w-[1600px] mx-auto">
+<div class="flex items-center gap-8 flex-1">
+<div class="relative w-full max-w-md">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-full bg-surface-container-high border-none rounded-full pl-12 pr-6 py-2.5 text-sm focus:ring-2 focus:ring-primary/20 transition-all" placeholder="Search projects, assets..." type="text"/>
+</div>
+<nav class="hidden xl:flex items-center gap-6">
+<a class="text-[#5d5e61] dark:text-[#939094] font-['Manrope'] font-medium text-sm hover:text-[#091627] dark:hover:text-white transition-colors duration-200" href="#">Documents</a>
+<a class="text-[#5d5e61] dark:text-[#939094] font-['Manrope'] font-medium text-sm hover:text-[#091627] dark:hover:text-white transition-colors duration-200" href="#">Library</a>
+<a class="text-[#5d5e61] dark:text-[#939094] font-['Manrope'] font-medium text-sm hover:text-[#091627] dark:hover:text-white transition-colors duration-200" href="#">Team</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-outline hover:text-primary transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="h-8 w-[1px] bg-outline-variant/30"></div>
+<div class="flex items-center gap-3">
+<span class="text-xs font-bold text-primary">Quick Add</span>
+<img alt="User Profile" class="w-8 h-8 rounded-full border-2 border-surface-container-high" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEVQ_Bfy2D4d6AxOpTCMu0jLVbKW-eTdRpDp6f_2Jf1VCDb5BXMNmt62qZyoDtQMNhk4ebQ0lsJgaSCn1j_Ans4IFH-1kEUbkqT4s3nzXuhQdFNnigTqC2d0fEDe7A2byYdP3j9PFCQp6WZyQh7tElvFIOA42ue8mkWa6QyvF9pQ3ImaahE2RvXjNtkzj_hlVSaN9cXSgYyATl8SNsVwOrLzmVgWjrrH1a7EOAhunJ369aWLlBBc-L_cEVfVIOrPrYxalg3k0XyuZp"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Canvas -->
+<main class="pl-72 pt-20 min-h-screen">
+<div class="max-w-[1600px] mx-auto px-12 py-12">
+<!-- Page Header Section -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+<div class="space-y-2">
+<h1 class="text-5xl font-black editorial-title text-primary leading-tight">Project Portfolio</h1>
+<p class="text-lg text-on-surface-variant font-medium">Curating 24 active creative initiatives.</p>
+</div>
+<button class="flex items-center gap-2 bg-gradient-to-br from-[#091627] to-[#1e2b3c] text-on-primary px-8 py-4 rounded-full font-headline font-bold shadow-xl shadow-primary/10 active:scale-95 transition-transform">
+<span class="material-symbols-outlined">add_circle</span>
+                    New Project
+                </button>
+</div>
+<!-- Filter Bar Section -->
+<div class="bg-surface-container-low p-6 rounded-3xl mb-12 flex flex-wrap items-center gap-4">
+<div class="flex items-center gap-3 px-4 py-2 bg-surface-container-lowest rounded-2xl">
+<span class="text-xs font-bold uppercase tracking-widest text-outline">Status:</span>
+<select class="bg-transparent border-none text-sm font-semibold focus:ring-0 cursor-pointer">
+<option>All Projects</option>
+<option>Active Only</option>
+<option>Archived</option>
+</select>
+</div>
+<div class="flex items-center gap-3 px-4 py-2 bg-surface-container-lowest rounded-2xl">
+<span class="text-xs font-bold uppercase tracking-widest text-outline">Client:</span>
+<select class="bg-transparent border-none text-sm font-semibold focus:ring-0 cursor-pointer">
+<option>All Clients</option>
+<option>Nordic Wear</option>
+<option>Lumina Media</option>
+<option>Apex Studio</option>
+</select>
+</div>
+<div class="flex items-center gap-3 px-4 py-2 bg-surface-container-lowest rounded-2xl">
+<span class="text-xs font-bold uppercase tracking-widest text-outline">Compliance:</span>
+<select class="bg-transparent border-none text-sm font-semibold focus:ring-0 cursor-pointer">
+<option>Any Score</option>
+<option>90% +</option>
+<option>Action Required</option>
+</select>
+</div>
+<button class="ml-auto flex items-center gap-2 text-primary font-bold text-sm px-4">
+<span class="material-symbols-outlined text-sm">tune</span>
+                    Advanced Filters
+                </button>
+</div>
+<!-- Project Grid (High-end Bento-inspired Layout) -->
+<div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+<!-- Project Card 1: Winter Collection 2024 -->
+<div class="group bg-surface-container-lowest rounded-3xl p-8 hover:shadow-2xl transition-all duration-500 border border-transparent hover:border-outline-variant/10">
+<div class="flex justify-between items-start mb-6">
+<div class="space-y-1">
+<h3 class="text-2xl font-bold editorial-title group-hover:text-primary transition-colors">Winter Collection 2024</h3>
+<p class="text-sm font-medium text-on-surface-variant">Nordic Wear × Studio Prime</p>
+</div>
+<span class="px-4 py-1.5 rounded-full bg-tertiary-container/10 text-on-tertiary-container text-[10px] font-black uppercase tracking-widest">Active</span>
+</div>
+<div class="grid grid-cols-2 gap-4 mb-8">
+<div class="bg-surface-container-low rounded-2xl p-4">
+<span class="text-[10px] font-bold text-outline uppercase tracking-wider block mb-1">Timeline</span>
+<span class="text-sm font-bold">Oct — Dec 2024</span>
+</div>
+<div class="bg-surface-container-low rounded-2xl p-4">
+<span class="text-[10px] font-bold text-outline uppercase tracking-wider block mb-1">Budget</span>
+<span class="text-sm font-bold text-primary">$124,500</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-6 border-t border-outline-variant/10">
+<div class="flex gap-4">
+<div class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-lg">flight_takeoff</span>
+<span class="text-xs font-bold">2</span>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-lg">movie</span>
+<span class="text-xs font-bold">3</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-[10px] font-bold text-outline uppercase tracking-wider">Compliance</span>
+<div class="flex items-center gap-1 bg-on-tertiary-container/10 px-2 py-1 rounded-lg">
+<div class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container"></div>
+<span class="text-xs font-black text-on-tertiary-container">98%</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Project Card 2: Urban Expedition Series -->
+<div class="group bg-surface-container-lowest rounded-3xl p-8 hover:shadow-2xl transition-all duration-500 border border-transparent hover:border-outline-variant/10">
+<div class="flex justify-between items-start mb-6">
+<div class="space-y-1">
+<h3 class="text-2xl font-bold editorial-title group-hover:text-primary transition-colors">Urban Expedition Series</h3>
+<p class="text-sm font-medium text-on-surface-variant">Lumina Media Productions</p>
+</div>
+<span class="px-4 py-1.5 rounded-full bg-secondary-container/30 text-on-secondary-container text-[10px] font-black uppercase tracking-widest">Active</span>
+</div>
+<div class="grid grid-cols-2 gap-4 mb-8">
+<div class="bg-surface-container-low rounded-2xl p-4">
+<span class="text-[10px] font-bold text-outline uppercase tracking-wider block mb-1">Timeline</span>
+<span class="text-sm font-bold">Jan — Mar 2025</span>
+</div>
+<div class="bg-surface-container-low rounded-2xl p-4">
+<span class="text-[10px] font-bold text-outline uppercase tracking-wider block mb-1">Budget</span>
+<span class="text-sm font-bold text-primary">$86,000</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-6 border-t border-outline-variant/10">
+<div class="flex gap-4">
+<div class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-lg">flight_takeoff</span>
+<span class="text-xs font-bold">5</span>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-lg">movie</span>
+<span class="text-xs font-bold">8</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-[10px] font-bold text-outline uppercase tracking-wider">Compliance</span>
+<div class="flex items-center gap-1 bg-error-container/40 px-2 py-1 rounded-lg">
+<div class="w-1.5 h-1.5 rounded-full bg-error"></div>
+<span class="text-xs font-black text-error">72%</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Project Card 3: Brand Rebirth '24 -->
+<div class="group bg-surface-container-lowest rounded-3xl p-8 hover:shadow-2xl transition-all duration-500 border border-transparent hover:border-outline-variant/10">
+<div class="flex justify-between items-start mb-6">
+<div class="space-y-1">
+<h3 class="text-2xl font-bold editorial-title group-hover:text-primary transition-colors">Brand Rebirth '24</h3>
+<p class="text-sm font-medium text-on-surface-variant">Apex Studio Global</p>
+</div>
+<span class="px-4 py-1.5 rounded-full bg-surface-container-highest text-on-surface-variant text-[10px] font-black uppercase tracking-widest">Closed</span>
+</div>
+<div class="grid grid-cols-2 gap-4 mb-8">
+<div class="bg-surface-container-low rounded-2xl p-4">
+<span class="text-[10px] font-bold text-outline uppercase tracking-wider block mb-1">Timeline</span>
+<span class="text-sm font-bold">Jun — Aug 2024</span>
+</div>
+<div class="bg-surface-container-low rounded-2xl p-4">
+<span class="text-[10px] font-bold text-outline uppercase tracking-wider block mb-1">Budget</span>
+<span class="text-sm font-bold text-primary">$210,000</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-6 border-t border-outline-variant/10">
+<div class="flex gap-4">
+<div class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-lg">flight_takeoff</span>
+<span class="text-xs font-bold">12</span>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-lg">movie</span>
+<span class="text-xs font-bold">4</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-[10px] font-bold text-outline uppercase tracking-wider">Compliance</span>
+<div class="flex items-center gap-1 bg-on-tertiary-container/10 px-2 py-1 rounded-lg">
+<div class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container"></div>
+<span class="text-xs font-black text-on-tertiary-container">100%</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Wide Asset Card -->
+<div class="lg:col-span-2 xl:col-span-2 bg-primary rounded-3xl p-8 relative overflow-hidden flex flex-col justify-between min-h-[320px]">
+<div class="relative z-10 space-y-2">
+<h3 class="text-4xl font-bold editorial-title text-on-primary">Desert Mirage Film</h3>
+<p class="text-primary-fixed-dim font-medium max-w-md">Our largest ongoing production. Over 45 crew members across 3 international locations.</p>
+</div>
+<div class="relative z-10 flex flex-wrap items-center gap-6 mt-8">
+<div class="flex flex-col">
+<span class="text-[10px] font-black text-on-primary/40 uppercase tracking-[0.2em]">Next Milestone</span>
+<span class="text-white font-bold">Color Grading — Dec 12</span>
+</div>
+<div class="w-[1px] h-8 bg-on-primary/10"></div>
+<div class="flex flex-col">
+<span class="text-[10px] font-black text-on-primary/40 uppercase tracking-[0.2em]">Current Budget</span>
+<span class="text-white font-bold">$420,000</span>
+</div>
+<button class="bg-white text-primary px-6 py-3 rounded-full font-bold text-sm ml-auto active:scale-95 transition-transform">
+                            View Production
+                        </button>
+</div>
+<!-- Decorative Background Image -->
+<div class="absolute inset-0 opacity-40 mix-blend-overlay grayscale">
+<img alt="Background" class="w-full h-full object-cover" data-alt="dramatic desert landscape at twilight with long shadows and deep orange and purple sky textures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8CjoDAwayavRdCmlvrkSUEa5p5O9QluDANPnttTITqkgs1Z0a2F6-7O3tTNxwvbmhEolkl4V4lHPjuYHv_ngs1le_53aB1YQHXB1hpcms6hOSfeQUnYEkuaI0NtYG01m1VDRkR40OYV1jSuVQVz4oIG3P9EkUBW0G7crQ4qXpqfp0G2BNZ1ONdiUq24eobMQNd59zl0BoDeUlsE8lrtwyJdO2zUZJI0NdkfmNx5d8muWZKL6Yys-1BvsQ-AnKtGcVm1dIEGipdYt4"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary via-primary/40 to-transparent"></div>
+</div>
+<!-- Compliance Health Card -->
+<div class="bg-tertiary-fixed rounded-3xl p-8 flex flex-col justify-between">
+<div class="space-y-4">
+<div class="p-3 bg-tertiary-container w-fit rounded-2xl">
+<span class="material-symbols-outlined text-on-tertiary">verified_user</span>
+</div>
+<h3 class="text-2xl font-bold editorial-title text-on-tertiary-fixed">Portfolio Health</h3>
+<p class="text-on-tertiary-fixed-variant text-sm font-medium leading-relaxed">Your current compliance average across all active projects is maintaining a premium standard.</p>
+</div>
+<div class="mt-8 flex items-end gap-2">
+<span class="text-6xl font-black editorial-title text-on-tertiary-fixed">92</span>
+<span class="text-2xl font-bold text-on-tertiary-fixed-variant mb-2">%</span>
+</div>
+</div>
+</div>
+<!-- Footer Pagination/Status (Minimalist) -->
+<div class="mt-12 pt-8 flex items-center justify-between border-t border-outline-variant/10">
+<span class="text-xs font-bold text-outline">Showing 1-12 of 24 projects</span>
+<div class="flex items-center gap-2">
+<button class="p-2 rounded-xl bg-surface-container-low text-primary hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<div class="flex gap-1">
+<button class="w-10 h-10 rounded-xl bg-primary text-on-primary font-bold text-xs">1</button>
+<button class="w-10 h-10 rounded-xl bg-surface-container-low text-primary font-bold text-xs hover:bg-surface-container-high">2</button>
+</div>
+<button class="p-2 rounded-xl bg-surface-container-low text-primary hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+</body></html>

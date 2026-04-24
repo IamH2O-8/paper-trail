@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Trips List | Editorial OS</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600;700;800;900&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "error": "#ba1a1a",
+                    "on-primary": "#ffffff",
+                    "surface-container-high": "#ece7e2",
+                    "error-container": "#ffdad6",
+                    "surface": "#fef8f3",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-container": "#1e2b3c",
+                    "primary": "#091627",
+                    "on-secondary-fixed-variant": "#42474f",
+                    "surface-bright": "#fef8f3",
+                    "on-primary-fixed-variant": "#3b485a",
+                    "surface-container-highest": "#e6e2dd",
+                    "on-primary-fixed": "#0f1c2d",
+                    "on-error": "#ffffff",
+                    "on-background": "#1d1b19",
+                    "on-surface": "#1d1b19",
+                    "outline-variant": "#c5c6cd",
+                    "tertiary-fixed": "#fadfb7",
+                    "on-secondary-fixed": "#171c23",
+                    "surface-variant": "#e6e2dd",
+                    "surface-dim": "#ded9d4",
+                    "on-primary-container": "#8592a7",
+                    "on-surface-variant": "#44474c",
+                    "on-tertiary-container": "#a58e6b",
+                    "surface-tint": "#525f72",
+                    "outline": "#75777d",
+                    "on-secondary-container": "#5e636b",
+                    "tertiary": "#201400",
+                    "on-error-container": "#93000a",
+                    "background": "#fef8f3",
+                    "secondary": "#5a5f67",
+                    "on-tertiary-fixed": "#261902",
+                    "inverse-surface": "#32302d",
+                    "secondary-fixed-dim": "#c2c6d0",
+                    "tertiary-container": "#37280d",
+                    "secondary-container": "#dce0ea",
+                    "secondary-fixed": "#dfe2ec",
+                    "surface-container": "#f2ede8",
+                    "on-tertiary-fixed-variant": "#564427",
+                    "primary-fixed-dim": "#bac7de",
+                    "inverse-on-surface": "#f5f0eb",
+                    "on-secondary": "#ffffff",
+                    "primary-fixed": "#d6e3fa",
+                    "tertiary-fixed-dim": "#ddc39c",
+                    "surface-container-low": "#f8f3ee",
+                    "on-tertiary": "#ffffff",
+                    "inverse-primary": "#bac7de"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "2xl": "1.5rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Epilogue"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body { font-family: 'Manrope', sans-serif; }
+        h1, h2, h3, .font-editorial { font-family: 'Epilogue', sans-serif; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased">
+<!-- SideNavBar -->
+<aside class="h-screen w-72 fixed left-0 top-0 overflow-y-auto bg-[#f8f3ee] dark:bg-[#1a1c1e] flex flex-col justify-between py-10 px-8 z-50">
+<div class="space-y-10">
+<div class="flex flex-col gap-1">
+<span class="text-2xl font-black font-['Epilogue'] text-[#091627] dark:text-[#ffffff]">Editorial OS</span>
+<span class="text-xs font-['Manrope'] font-medium text-on-surface-variant tracking-wider uppercase">Premium Content Studio</span>
+</div>
+<button class="w-full bg-gradient-to-br from-[#091627] to-[#1e2b3c] text-white rounded-full py-3.5 px-6 font-semibold shadow-sm active:scale-95 transition-transform duration-200 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-xl">add</span>
+                New Asset
+            </button>
+<nav class="space-y-4 font-['Epilogue'] font-semibold tracking-tight">
+<!-- Dashboard -->
+<a class="flex items-center gap-4 py-2 text-[#5d5e61] dark:text-[#939094] hover:bg-[#fef8f3]/50 dark:hover:bg-[#ffffff]/5 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+                    Dashboard
+                </a>
+<!-- Projects -->
+<a class="flex items-center gap-4 py-2 text-[#5d5e61] dark:text-[#939094] hover:bg-[#fef8f3]/50 dark:hover:bg-[#ffffff]/5 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="folder_copy">folder_copy</span>
+                    Projects
+                </a>
+<!-- Productions (ACTIVE for Trips) -->
+<a class="flex items-center gap-4 py-2 text-[#091627] dark:text-white font-bold border-r-4 border-[#091627] dark:border-[#d0bcff]" href="#">
+<span class="material-symbols-outlined" data-icon="movie">movie</span>
+                    Productions
+                </a>
+<!-- Expenses -->
+<a class="flex items-center gap-4 py-2 text-[#5d5e61] dark:text-[#939094] hover:bg-[#fef8f3]/50 dark:hover:bg-[#ffffff]/5 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="receipt_long">receipt_long</span>
+                    Expenses
+                </a>
+<!-- Analytics -->
+<a class="flex items-center gap-4 py-2 text-[#5d5e61] dark:text-[#939094] hover:bg-[#fef8f3]/50 dark:hover:bg-[#ffffff]/5 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="leaderboard">leaderboard</span>
+                    Analytics
+                </a>
+</nav>
+</div>
+<div class="space-y-4 font-['Epilogue'] font-semibold tracking-tight pt-10 border-t border-outline-variant/10">
+<a class="flex items-center gap-4 py-2 text-[#5d5e61] dark:text-[#939094] hover:bg-[#fef8f3]/50 dark:hover:bg-[#ffffff]/5 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+                Settings
+            </a>
+<a class="flex items-center gap-4 py-2 text-[#5d5e61] dark:text-[#939094] hover:bg-[#fef8f3]/50 dark:hover:bg-[#ffffff]/5 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+                Support
+            </a>
+</div>
+</aside>
+<!-- TopNavBar -->
+<header class="fixed top-0 right-0 left-72 z-40 h-20 bg-[#fef8f3]/80 dark:bg-[#1d1b19]/80 backdrop-blur-xl">
+<div class="flex items-center justify-between px-12 h-full w-full max-w-[1600px] mx-auto">
+<div class="flex items-center gap-8">
+<span class="text-xl font-bold font-['Epilogue'] text-[#091627] dark:text-[#ffffff]">Workspace Switcher</span>
+<nav class="hidden md:flex items-center gap-6 font-['Manrope'] font-medium text-sm">
+<a class="text-[#5d5e61] dark:text-[#939094] hover:text-[#091627] dark:hover:text-white transition-colors" href="#">Documents</a>
+<a class="text-[#5d5e61] dark:text-[#939094] hover:text-[#091627] dark:hover:text-white transition-colors" href="#">Library</a>
+<a class="text-[#5d5e61] dark:text-[#939094] hover:text-[#091627] dark:hover:text-white transition-colors" href="#">Team</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<div class="relative hidden lg:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-lg" data-icon="search">search</span>
+<input class="bg-surface-container-high border-none rounded-full pl-10 pr-4 py-2 text-sm focus:ring-1 focus:ring-primary w-64 transition-all" placeholder="Search productions..." type="text"/>
+</div>
+<button class="bg-[#091627] text-white px-6 py-2 rounded-full text-sm font-medium shadow-sm active:scale-95 transition-transform">Quick Add</button>
+<div class="flex items-center gap-4 text-on-surface-variant">
+<span class="material-symbols-outlined cursor-pointer hover:text-primary transition-colors" data-icon="notifications">notifications</span>
+<div class="w-10 h-10 rounded-full bg-surface-container-highest overflow-hidden cursor-pointer">
+<img class="w-full h-full object-cover" data-alt="close up professional headshot of a creative director in a bright minimalist office environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZXb-vzDCogryJ92mircOsCjJF6SRQXreWDbg2eTxXvrzDB9TrvmrrYTNw4l2a2nYzzZ-8M0aqheKx0J-dKk4C6usRBChNbXxdjA5U23_cvEaheSItZmBHPnSFYUey6ayBBefVSMhWQKs-HWnqZLBE6gFI4-i2UHdP5LXpC1OEk7cyDewq3W2DSdhwBRAZ3rt4wNqJC7lDmki5XpREUL6ZanBmAlzXtmQ9M4ApinPOqwDIm8my860FWDhGqNAxjI0wy-_wbMWvZhMq"/>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="pl-72 pt-20 min-h-screen">
+<div class="max-w-[1600px] mx-auto px-12 py-12">
+<!-- Header Section with Asymmetry -->
+<div class="flex justify-between items-end mb-16">
+<div class="space-y-4 max-w-2xl">
+<h1 class="text-6xl font-extrabold tracking-tighter text-primary">Trips &amp; Expeditions</h1>
+<p class="text-lg text-on-surface-variant font-medium leading-relaxed">Manage your global production travel, logistics, and closure statuses within a unified workspace.</p>
+</div>
+<div class="flex flex-col items-end gap-4">
+<button class="bg-gradient-to-br from-primary to-primary-container text-white px-8 py-4 rounded-full font-bold shadow-lg hover:shadow-xl active:scale-95 transition-all flex items-center gap-3">
+<span class="material-symbols-outlined" data-icon="flight_takeoff">flight_takeoff</span>
+                        New Trip
+                    </button>
+<div class="flex gap-2">
+<span class="px-3 py-1 bg-surface-container-high rounded-full text-[10px] font-bold tracking-widest uppercase">12 Active</span>
+<span class="px-3 py-1 bg-surface-container-high rounded-full text-[10px] font-bold tracking-widest uppercase">4 Pending</span>
+</div>
+</div>
+</div>
+<!-- Bento Grid Trips Layout -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Trip Card 1 -->
+<div class="group relative bg-surface-container-low rounded-2xl p-8 hover:bg-surface-container-lowest transition-all duration-500 flex flex-col justify-between min-h-[420px]">
+<div class="space-y-6">
+<div class="flex justify-between items-start">
+<span class="text-[10px] font-bold tracking-[0.2em] text-on-surface-variant uppercase">Sept 2024</span>
+<!-- Status Chip: In Progress -->
+<div class="flex items-center gap-2 px-3 py-1 bg-tertiary-fixed-dim/20 text-on-tertiary-fixed-variant rounded-full text-xs font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+                                In Progress
+                            </div>
+</div>
+<div class="space-y-2">
+<h3 class="text-3xl font-bold tracking-tight text-primary leading-tight">Paris Shoot - Sept</h3>
+<div class="flex items-center gap-2 text-on-surface-variant text-sm font-medium">
+<span class="material-symbols-outlined text-base" data-icon="map">map</span>
+                                Paris, France &amp; Versailles
+                            </div>
+</div>
+</div>
+<div class="relative h-32 rounded-xl overflow-hidden my-6">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="cinematic wide angle shot of the Eiffel Tower at sunrise with soft warm light and golden fog" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4Y8UWNSZkN-e7ZuxPtMdbyHn6qUuThcCt0xdVNBjiGCvI2vEk_T8RwKF8CnVjEUjml3AS7rZxePUb_tqUUeaNOroWUL6QKD9xWBAr_Fjg9FkEOxmAKTb2Aqbc5e4YZJ4zeGzPt1DiZJZQqIOwsKrP_OKvd6Kc41CDioEkDskbXmEhcctG9ayTRzY4Qy5vNTUlzUSrCjuNuIQiAsZw8KCzo5taa1UN50cwoP3bxLCuM9ISaAPyriqbtWvUv0zKrgWekYUGD-t9uMz0"/>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-center text-sm border-t border-outline-variant/10 pt-4">
+<span class="text-outline">Dates</span>
+<span class="font-bold">12 Sep - 18 Sep</span>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="text-outline">Project</span>
+<span class="font-bold px-3 py-0.5 bg-surface-container-high rounded text-xs">Vogue FW24</span>
+</div>
+</div>
+</div>
+<!-- Trip Card 2 -->
+<div class="group relative bg-surface-container-low rounded-2xl p-8 hover:bg-surface-container-lowest transition-all duration-500 flex flex-col justify-between min-h-[420px]">
+<div class="space-y-6">
+<div class="flex justify-between items-start">
+<span class="text-[10px] font-bold tracking-[0.2em] text-on-surface-variant uppercase">Oct 2024</span>
+<!-- Status Chip: Awaiting Closure -->
+<div class="flex items-center gap-2 px-3 py-1 bg-error-container/30 text-error rounded-full text-xs font-bold">
+<span class="material-symbols-outlined text-sm" data-icon="error">error</span>
+                                Awaiting Closure
+                            </div>
+</div>
+<div class="space-y-2">
+<h3 class="text-3xl font-bold tracking-tight text-primary leading-tight">Iceland Aerials</h3>
+<div class="flex items-center gap-2 text-on-surface-variant text-sm font-medium">
+<span class="material-symbols-outlined text-base" data-icon="navigation">navigation</span>
+                                Reykjavik - Vik - Jökulsárlón
+                            </div>
+</div>
+</div>
+<div class="relative h-32 rounded-xl overflow-hidden my-6">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="dramatic aerial view of black sand beaches in Iceland with crashing blue waves and mist" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdwDMDpCtokw_RsWVzGwn_Fo8Uyws21nLPMaQ5hR0AjIqqai_3TUu4m5PslfPu8GihtjchbP8Y-Pg7KJyuF8O9emumOCxT2EW_hEGEzTV4NfqAKNtvDABq976IVVG0E-pi_J8TG_Lqe6Jy4sZqAWGPG73NtmQ2EAGzA34BC-YvZOIhJDDhHQHDOt80bQMvWXZethPvdqUWPvrgDPQa2RkbZXoBxN0XD-6JTadi3k5c1xjAWTKce3ZSpTIAfhMF22529E-iaTYlpfmr"/>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-center text-sm border-t border-outline-variant/10 pt-4">
+<span class="text-outline">Dates</span>
+<span class="font-bold">04 Oct - 10 Oct</span>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="text-outline">Project</span>
+<span class="font-bold px-3 py-0.5 bg-surface-container-high rounded text-xs">Nature Docu 2025</span>
+</div>
+</div>
+</div>
+<!-- Trip Card 3 -->
+<div class="group relative bg-surface-container-low rounded-2xl p-8 hover:bg-surface-container-lowest transition-all duration-500 flex flex-col justify-between min-h-[420px]">
+<div class="space-y-6">
+<div class="flex justify-between items-start">
+<span class="text-[10px] font-bold tracking-[0.2em] text-on-surface-variant uppercase">Aug 2024</span>
+<!-- Status Chip: Closed -->
+<div class="flex items-center gap-2 px-3 py-1 bg-surface-container-high text-on-surface-variant rounded-full text-xs font-bold">
+<span class="material-symbols-outlined text-sm" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                Closed
+                            </div>
+</div>
+<div class="space-y-2">
+<h3 class="text-3xl font-bold tracking-tight text-primary leading-tight">Tokyo Street Style</h3>
+<div class="flex items-center gap-2 text-on-surface-variant text-sm font-medium">
+<span class="material-symbols-outlined text-base" data-icon="location_on">location_on</span>
+                                Shibuya &amp; Shinjuku
+                            </div>
+</div>
+</div>
+<div class="relative h-32 rounded-xl overflow-hidden my-6 grayscale hover:grayscale-0 transition-all duration-500">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="vibrant neon lit streets of Tokyo at night with blurred motion of crowds and architectural depth" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnjDIbHOZXm4aYkIAS2iaYRLTUoLQ1vntCNQ4og7GreUQhkYHvIou2kQGOJFgjLihz8NNFeAcvcBZVU-Vcwnn16-HkjZtrdjM-fLWBPshuBI9u8oqpotiDN948ZQSPbL8sbZXSXJZSmAS7hR995XOjEZpp6bygDAr8eOjqTetWCh85amW4OKu9bqDm5Lpe5K4irWl8lho-r2hEse_gdYrROkASA6TG7sJj8h1i_81PCB87c55cpfK4RJ-Xfhr5a42PKN0UeAjQ59zf"/>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-center text-sm border-t border-outline-variant/10 pt-4">
+<span class="text-outline">Dates</span>
+<span class="font-bold">15 Aug - 22 Aug</span>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="text-outline">Project</span>
+<span class="font-bold px-3 py-0.5 bg-surface-container-high rounded text-xs">Editorial Global</span>
+</div>
+</div>
+</div>
+<!-- Trip Card 4 (Minimalist variant) -->
+<div class="group relative bg-surface-container-low rounded-2xl p-8 hover:bg-surface-container-lowest transition-all duration-500 flex flex-col justify-between min-h-[420px]">
+<div class="space-y-6">
+<div class="flex justify-between items-start">
+<span class="text-[10px] font-bold tracking-[0.2em] text-on-surface-variant uppercase">Nov 2024</span>
+<div class="flex items-center gap-2 px-3 py-1 bg-tertiary-fixed-dim/20 text-on-tertiary-fixed-variant rounded-full text-xs font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                                Planning
+                            </div>
+</div>
+<div class="space-y-2">
+<h3 class="text-3xl font-bold tracking-tight text-primary leading-tight">NYC Loft Series</h3>
+<div class="flex items-center gap-2 text-on-surface-variant text-sm font-medium">
+<span class="material-symbols-outlined text-base" data-icon="apartment">apartment</span>
+                                Manhattan &amp; Brooklyn
+                            </div>
+</div>
+</div>
+<div class="flex items-center justify-center bg-surface h-32 rounded-xl my-6 border-2 border-dashed border-outline-variant/20">
+<span class="text-xs font-bold text-outline-variant uppercase tracking-widest">No Imagery Assigned</span>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-center text-sm border-t border-outline-variant/10 pt-4">
+<span class="text-outline">Dates</span>
+<span class="font-bold">TBD Nov</span>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="text-outline">Project</span>
+<span class="font-bold px-3 py-0.5 bg-surface-container-high rounded text-xs">Internal Branding</span>
+</div>
+</div>
+</div>
+<!-- Trip Card 5 (Awaiting closure variant) -->
+<div class="group relative bg-surface-container-low rounded-2xl p-8 hover:bg-surface-container-lowest transition-all duration-500 flex flex-col justify-between min-h-[420px]">
+<div class="space-y-6">
+<div class="flex justify-between items-start">
+<span class="text-[10px] font-bold tracking-[0.2em] text-on-surface-variant uppercase">July 2024</span>
+<div class="flex items-center gap-2 px-3 py-1 bg-error-container/30 text-error rounded-full text-xs font-bold">
+<span class="material-symbols-outlined text-sm" data-icon="receipt_long">receipt_long</span>
+                                Awaiting Closure
+                            </div>
+</div>
+<div class="space-y-2">
+<h3 class="text-3xl font-bold tracking-tight text-primary leading-tight">Milan Design Week</h3>
+<div class="flex items-center gap-2 text-on-surface-variant text-sm font-medium">
+<span class="material-symbols-outlined text-base" data-icon="festival">festival</span>
+                                Milan, Italy
+                            </div>
+</div>
+</div>
+<div class="relative h-32 rounded-xl overflow-hidden my-6">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="architectural detail of Duomo di Milano at twilight with intricate marble patterns and soft purple sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDS783W8aFUjGXlMoYdFTiVzFeh7unNZsY8Mu_P7GVw1nvIZmWVeVVbDRkNs8AUHjzdEYaRcPJ3S5MaQLZ2uqeJfEodAudjIXE4JPr_3YmTRRZvDUvVaLErZzpyCA1RGAvqWUdQV1fydssdWoesphO6D1HgZA2SFx__c1sPrF9W33dJPQVji8QVBLkBS1CUamtB2yQ8ALkz9CbAZ0KkiL1NbNp9SEeER24DJxZbsePZYDCWuEE56QYbxfQBkUUl_0Nk8Z0MejG0Jpq"/>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-center text-sm border-t border-outline-variant/10 pt-4">
+<span class="text-outline">Dates</span>
+<span class="font-bold">14 Apr - 20 Apr</span>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="text-outline">Project</span>
+<span class="font-bold px-3 py-0.5 bg-surface-container-high rounded text-xs">ArchiDigest Features</span>
+</div>
+</div>
+</div>
+<!-- New Trip Placeholder / Interactive Empty State -->
+<button class="group relative bg-surface border-2 border-dashed border-outline-variant/30 rounded-2xl p-8 hover:bg-surface-container-low hover:border-primary/20 transition-all duration-500 flex flex-col items-center justify-center min-h-[420px] gap-6 text-center">
+<div class="w-20 h-20 rounded-full bg-surface-container-high flex items-center justify-center group-hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-3xl text-primary group-hover:text-white transition-colors" data-icon="add_location_alt">add_location_alt</span>
+</div>
+<div class="space-y-2">
+<h3 class="text-2xl font-bold text-primary">Start New Journey</h3>
+<p class="text-sm text-on-surface-variant max-w-[180px] mx-auto leading-relaxed">Map routes, budget assets, and assign crew to your next shoot.</p>
+</div>
+<div class="mt-4 text-[10px] font-bold tracking-widest text-outline-variant uppercase">Create Draft Trip</div>
+</button>
+</div>
+</div>
+</main>
+<!-- Contextual FAB (Hidden on Trips List as per rules if primary action is prominent) -->
+</body></html>

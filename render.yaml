@@ -1,0 +1,31 @@
+services:
+  - type: web
+    name: paper-trail
+    runtime: node
+    plan: starter
+    buildCommand: "true"
+    startCommand: node server.js
+    healthCheckPath: /api/health
+    envVars:
+      - key: APP_REPOSITORY
+        value: supabase
+      - key: APP_BASE_URL
+        sync: false
+      - key: APP_SESSION_SECRET
+        generateValue: true
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_SERVICE_ROLE_KEY
+        sync: false
+      - key: SUPABASE_STORAGE_BUCKET
+        value: content-documents
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: OPENAI_BASE_URL
+        value: https://api.openai.com/v1
+      - key: OPENAI_VISION_MODEL
+        value: gpt-4o-mini
+      - key: OPENAI_CLASSIFICATION_MODEL
+        value: gpt-4o-mini
+      - key: OPENAI_TRANSCRIPTION_MODEL
+        value: gpt-4o-mini-transcribe

@@ -1,0 +1,637 @@
+{
+  "workspace": {
+    "id": "ws-1",
+    "name": "Northbound Studio",
+    "focus": "Travel-led creator business",
+    "defaultCurrency": "CAD"
+  },
+  "projects": [
+    {
+      "id": "project-1ih87k",
+      "workspaceId": "ws-8a4a707k",
+      "projectType": "The start",
+      "status": "Planning",
+      "plannedStart": "",
+      "plannedEnd": "2026-07-31",
+      "budgetEstimate": 0,
+      "revenueOutcome": "Since the company is starting out in the journey of content creation, the aim is to get relatable and unique content that makes the users subscribe and follow along for more quality content.",
+      "timeline": "TBD to 2026-07-31",
+      "linkedTripIds": [],
+      "linkedProductionIds": [],
+      "linkedExpenseIds": [],
+      "linkedPersonIds": [],
+      "closureStatus": "Open",
+      "narrative": "Opening interview is captured. Evidence and closure summary will develop as linked records accumulate.",
+      "title": "Inside India",
+      "commercialObjective": "The objective is to start the content creation journey by sitting down with some people who I think have achieved things in their life and have been able to reach a particular spot. These people are businessmen, lawyers, professors, etc. This project will allow for setting a solid based for the channel and build an audience as the values that are extracted during this project allows for future comparative analysis and difference between india and Canada series in future.",
+      "archivedAt": "",
+      "deletedAt": "",
+      "createdAt": "2026-04-24T18:31:04.178Z",
+      "updatedAt": "2026-04-24T18:31:04.178Z"
+    },
+    {
+      "id": "project-ak6mux",
+      "workspaceId": "ws-1",
+      "projectType": "videos and interviews",
+      "status": "Planning",
+      "plannedStart": "2026-04-18",
+      "plannedEnd": "",
+      "budgetEstimate": 0,
+      "revenueOutcome": "I am expecting to interview around 8-10 practitioners of different ages, which should realistically produce 8-10 long form videos which will be then used to make other short form clips from those interviews. \nRegarding travel content, I am expecting to explore at least 2-3 Indian cities, one rural village to draw comparisons between the Indian countryside and the Canadian countryside. The travel content is expected to produce 3-4 clips for expanding the viewer reach and act as the base clips to compare against when doing the comparative videos of Canada.",
+      "timeline": "2026-04-18 to TBD",
+      "linkedTripIds": [],
+      "linkedProductionIds": [],
+      "linkedExpenseIds": [],
+      "linkedPersonIds": [],
+      "closureStatus": "Open",
+      "narrative": "Opening interview is captured. Evidence and closure summary will develop as linked records accumulate.",
+      "title": "India Content Trip",
+      "commercialObjective": "Objective is to make videos with several practitioners of law to collect insights into the india legal system. These interviews will be directed towards understanding the challenges that the interviewee faced in their legal journey, advices to young advocates, how they interact with AI, etc. \nThe other objective it make life-style and travel content to be able to draw a contrast between travelling in India and in Canada.",
+      "createdAt": "2026-04-18T22:34:16.913Z",
+      "updatedAt": "2026-04-18T22:34:16.913Z"
+    },
+    {
+      "id": "project-1",
+      "workspaceId": "ws-1",
+      "title": "Northern Routes Series",
+      "projectType": "Series",
+      "status": "Active",
+      "plannedStart": "2026-04-10",
+      "plannedEnd": "2026-05-25",
+      "budgetEstimate": 9600,
+      "commercialObjective": "Build a sponsor-ready travel series and convert audience interest into affiliate and brand revenue.",
+      "revenueOutcome": "Target one tourism partner and one camera accessory sponsor.",
+      "timeline": "April to late May rollout.",
+      "linkedTripIds": [
+        "trip-1"
+      ],
+      "linkedProductionIds": [
+        "production-1"
+      ],
+      "linkedExpenseIds": [
+        "expense-1",
+        "expense-2"
+      ],
+      "linkedPersonIds": [
+        "person-1",
+        "person-2"
+      ],
+      "closureStatus": "Soft Close",
+      "narrative": "The project is active, but closure should remain blocked until the international trip dossier and production role confirmations are complete.",
+      "createdAt": "2026-04-10T09:00:00Z",
+      "updatedAt": "2026-04-19T23:36:31.767Z",
+      "archivedAt": "",
+      "deletedAt": "2026-04-19T23:36:31.765Z"
+    },
+    {
+      "id": "project-2",
+      "workspaceId": "ws-1",
+      "title": "Studio Workflow Refresh",
+      "projectType": "Internal Ops",
+      "status": "Planning",
+      "plannedStart": "2026-04-20",
+      "plannedEnd": "2026-05-02",
+      "budgetEstimate": 1800,
+      "commercialObjective": "Improve editing throughput and standardize post-production systems for future client delivery.",
+      "revenueOutcome": "Reduce turnaround time by 20 percent.",
+      "timeline": "Two-week implementation sprint.",
+      "linkedTripIds": [],
+      "linkedProductionIds": [
+        "production-2"
+      ],
+      "linkedExpenseIds": [],
+      "linkedPersonIds": [
+        "person-3"
+      ],
+      "closureStatus": "Open",
+      "narrative": "This internal project has a clear commercial intent but still needs linked expense and milestone evidence.",
+      "createdAt": "2026-04-16T09:00:00Z",
+      "updatedAt": "2026-04-19T23:36:33.746Z",
+      "archivedAt": "",
+      "deletedAt": "2026-04-19T23:36:33.745Z"
+    }
+  ],
+  "trips": [
+    {
+      "id": "trip-1",
+      "workspaceId": "ws-1",
+      "title": "Banff Opening Shoot",
+      "tripType": "International",
+      "purpose": "Capture destination footage for the Northern Routes series and develop sponsor-facing visuals.",
+      "originSummary": "Toronto",
+      "destinationSummary": "Banff and Canmore",
+      "startDate": "2026-04-12",
+      "endDate": "2026-04-18",
+      "linkedProjectId": "project-1",
+      "preTripComplete": true,
+      "duringTripComplete": true,
+      "postTripComplete": false,
+      "spouseOrContractor": true,
+      "briefSaved": true,
+      "estimatedBudget": 4300,
+      "actualSpend": 3890,
+      "closureStatus": "Soft Close",
+      "outcomeNotes": "Daily logs are present, but the post-trip narrative and contractor proof are still incomplete.",
+      "createdAt": "2026-04-11T15:00:00Z",
+      "updatedAt": "2026-04-18T12:00:00Z"
+    },
+    {
+      "id": "trip-2",
+      "workspaceId": "ws-1",
+      "title": "Montreal Brand Scout",
+      "tripType": "Work",
+      "purpose": "Meet two hospitality prospects and capture scouting footage for a pitch deck.",
+      "originSummary": "Toronto",
+      "destinationSummary": "Montreal",
+      "startDate": "2026-04-25",
+      "endDate": "2026-04-26",
+      "linkedProjectId": "project-1",
+      "preTripComplete": false,
+      "duringTripComplete": false,
+      "postTripComplete": false,
+      "spouseOrContractor": false,
+      "briefSaved": false,
+      "estimatedBudget": 980,
+      "actualSpend": 0,
+      "closureStatus": "Open",
+      "outcomeNotes": "Planned trip with no opening questionnaire completed yet.",
+      "createdAt": "2026-04-18T10:00:00Z",
+      "updatedAt": "2026-04-18T10:00:00Z"
+    }
+  ],
+  "productions": [
+    {
+      "id": "production-1",
+      "workspaceId": "ws-1",
+      "title": "Episode 1 Hero Cut",
+      "contentType": "Long-form video",
+      "platformIntent": "YouTube + short-form cutdowns",
+      "shootDate": "2026-04-14",
+      "location": "Banff Gondola and downtown Banff",
+      "linkedProjectId": "project-1",
+      "businessPurpose": "Launch the series with a sponsor-quality anchor piece that supports audience growth and monetization.",
+      "publishedUrl": "",
+      "publishTargetDate": "2026-04-24",
+      "roleDocumentationComplete": false,
+      "linkedExpenseIds": [
+        "expense-1"
+      ],
+      "linkedPersonIds": [
+        "person-1",
+        "person-2"
+      ],
+      "closureStatus": "Soft Close",
+      "outcomeNotes": "Primary footage is captured, but role documentation and publish status still need confirmation.",
+      "createdAt": "2026-04-14T08:00:00Z",
+      "updatedAt": "2026-04-18T12:00:00Z"
+    },
+    {
+      "id": "production-2",
+      "workspaceId": "ws-1",
+      "title": "Editing Bay Setup Walkthrough",
+      "contentType": "Process reel",
+      "platformIntent": "Instagram Reels",
+      "shootDate": "2026-04-21",
+      "location": "Studio",
+      "linkedProjectId": "project-2",
+      "businessPurpose": "Document the upgraded studio workflow and produce a behind-the-scenes brand asset.",
+      "publishedUrl": "https://example.com/studio-refresh",
+      "publishTargetDate": "2026-04-22",
+      "roleDocumentationComplete": true,
+      "linkedExpenseIds": [],
+      "linkedPersonIds": [
+        "person-3"
+      ],
+      "closureStatus": "Final Close",
+      "outcomeNotes": "Published and operationally complete.",
+      "createdAt": "2026-04-17T11:00:00Z",
+      "updatedAt": "2026-04-18T12:00:00Z"
+    }
+  ],
+  "expenses": [
+    {
+      "id": "expense-1",
+      "workspaceId": "ws-1",
+      "title": "Drone rental",
+      "category": "Production",
+      "amount": 420,
+      "expenseDate": "2026-04-13",
+      "businessPurpose": "Capture hero aerial footage for the Northern Routes opening episode.",
+      "contentConnection": "Episode 1 Hero Cut",
+      "receiptAttached": true,
+      "assetLinked": false,
+      "linkedProjectId": "project-1",
+      "linkedTripId": "trip-1",
+      "linkedProductionId": "production-1",
+      "createdAt": "2026-04-13T09:30:00Z",
+      "updatedAt": "2026-04-13T09:30:00Z"
+    },
+    {
+      "id": "expense-2",
+      "workspaceId": "ws-1",
+      "title": "Hotel stay",
+      "category": "Travel",
+      "amount": 1180,
+      "expenseDate": "2026-04-14",
+      "businessPurpose": "",
+      "contentConnection": "Banff trip",
+      "receiptAttached": false,
+      "assetLinked": false,
+      "linkedProjectId": "project-1",
+      "linkedTripId": "trip-1",
+      "linkedProductionId": "",
+      "createdAt": "2026-04-18T12:00:00Z",
+      "updatedAt": "2026-04-18T12:00:00Z"
+    },
+    {
+      "id": "expense-3",
+      "workspaceId": "ws-1",
+      "title": "Color grading monitor",
+      "category": "Capital Asset",
+      "amount": 1599,
+      "expenseDate": "2026-04-17",
+      "businessPurpose": "Increase post-production accuracy for deliverables and series work.",
+      "contentConnection": "Studio Workflow Refresh",
+      "receiptAttached": true,
+      "assetLinked": false,
+      "linkedProjectId": "project-2",
+      "linkedTripId": "",
+      "linkedProductionId": "production-2",
+      "createdAt": "2026-04-17T16:10:00Z",
+      "updatedAt": "2026-04-17T16:10:00Z"
+    }
+  ],
+  "people": [
+    {
+      "id": "person-1",
+      "workspaceId": "ws-1",
+      "fullName": "Maya Lin",
+      "personType": "Editor",
+      "roleSummary": "Edited selects and delivery package for the series launch.",
+      "agreementOnFile": true,
+      "marketRateJustified": true,
+      "workLogsLinked": true,
+      "linkedProjectIds": [
+        "project-1"
+      ],
+      "createdAt": "2026-04-11T09:00:00Z",
+      "updatedAt": "2026-04-18T12:00:00Z"
+    },
+    {
+      "id": "person-2",
+      "workspaceId": "ws-1",
+      "fullName": "Alex Park",
+      "personType": "Contractor",
+      "roleSummary": "Second camera operator for Banff field days.",
+      "agreementOnFile": false,
+      "marketRateJustified": false,
+      "workLogsLinked": false,
+      "linkedProjectIds": [
+        "project-1"
+      ],
+      "createdAt": "2026-04-11T09:15:00Z",
+      "updatedAt": "2026-04-18T12:00:00Z"
+    },
+    {
+      "id": "person-3",
+      "workspaceId": "ws-1",
+      "fullName": "Nina Lopez",
+      "personType": "Assistant",
+      "roleSummary": "Studio reorganization and equipment documentation.",
+      "agreementOnFile": true,
+      "marketRateJustified": true,
+      "workLogsLinked": true,
+      "linkedProjectIds": [
+        "project-2"
+      ],
+      "createdAt": "2026-04-16T09:00:00Z",
+      "updatedAt": "2026-04-18T12:00:00Z"
+    }
+  ],
+  "reminders": [
+    {
+      "id": "reminder-1",
+      "workspaceId": "ws-1",
+      "title": "Upload Banff hotel receipt",
+      "linkedType": "Expense",
+      "linkedId": "expense-2",
+      "dueDate": "2026-04-19",
+      "severity": "High",
+      "note": "Receipt threshold exceeded and business purpose is still blank.",
+      "createdAt": "2026-04-18T09:00:00Z",
+      "updatedAt": "2026-04-20T00:56:44.355Z",
+      "archivedAt": "",
+      "deletedAt": "2026-04-20T00:56:44.348Z"
+    },
+    {
+      "id": "reminder-2",
+      "workspaceId": "ws-1",
+      "title": "Finish trip closure questionnaire",
+      "linkedType": "Trip",
+      "linkedId": "trip-1",
+      "dueDate": "2026-04-20",
+      "severity": "High",
+      "note": "Trip passed end date and is not ready for final close.",
+      "createdAt": "2026-04-18T09:05:00Z",
+      "updatedAt": "2026-04-18T09:05:00Z"
+    },
+    {
+      "id": "reminder-3",
+      "workspaceId": "ws-1",
+      "title": "Document contractor role and rate basis",
+      "linkedType": "Person",
+      "linkedId": "person-2",
+      "dueDate": "2026-04-21",
+      "severity": "Medium",
+      "note": "Agreement, work log, and market-rate evidence are missing.",
+      "createdAt": "2026-04-18T09:10:00Z",
+      "updatedAt": "2026-04-18T09:10:00Z"
+    }
+  ],
+  "documents": [
+    {
+      "id": "document-1",
+      "workspaceId": "ws-1",
+      "fileName": "banff-trip-brief.svg",
+      "documentType": "Brief",
+      "linkedType": "Trip",
+      "linkedId": "trip-1",
+      "mimeType": "image/svg+xml",
+      "storagePath": "workspace/ws-1/trips/trip-1/banff-trip-brief.svg",
+      "status": "Linked",
+      "note": "Opening brief covering sponsor visuals, route plan, and field capture goals.",
+      "createdAt": "2026-04-11T16:00:00Z",
+      "updatedAt": "2026-04-19T23:36:06.816Z",
+      "archivedAt": "2026-04-19T23:36:06.814Z",
+      "deletedAt": ""
+    },
+    {
+      "id": "document-2",
+      "workspaceId": "ws-1",
+      "fileName": "hotel-receipt-banff.svg",
+      "documentType": "Receipt",
+      "linkedType": "Expense",
+      "linkedId": "expense-2",
+      "mimeType": "image/svg+xml",
+      "storagePath": "workspace/ws-1/expenses/expense-2/hotel-receipt-banff.svg",
+      "status": "Needs review",
+      "note": "Receipt placeholder created so the team can track the missing upload against the expense record.",
+      "createdAt": "2026-04-18T09:02:00Z",
+      "updatedAt": "2026-04-19T23:36:14.049Z",
+      "archivedAt": "2026-04-19T23:36:14.048Z",
+      "deletedAt": ""
+    },
+    {
+      "id": "document-3",
+      "workspaceId": "ws-1",
+      "fileName": "alex-park-contractor-agreement.svg",
+      "documentType": "Agreement",
+      "linkedType": "Person",
+      "linkedId": "person-2",
+      "mimeType": "image/svg+xml",
+      "storagePath": "workspace/ws-1/people/person-2/alex-park-contractor-agreement.svg",
+      "status": "Pending signature",
+      "note": "Contractor agreement draft created but still waiting for signed return copy.",
+      "createdAt": "2026-04-18T09:12:00Z",
+      "updatedAt": "2026-04-19T23:36:16.646Z",
+      "archivedAt": "2026-04-19T23:36:16.645Z",
+      "deletedAt": ""
+    },
+    {
+      "id": "document-4",
+      "workspaceId": "ws-1",
+      "fileName": "nr-2026-014-invoice.svg",
+      "documentType": "Invoice",
+      "linkedType": "Invoice",
+      "linkedId": "invoice-1",
+      "mimeType": "image/svg+xml",
+      "storagePath": "workspace/ws-1/invoices/invoice-1/nr-2026-014-invoice.svg",
+      "status": "Linked",
+      "note": "Client-facing invoice for the first Northern Routes sponsor milestone.",
+      "createdAt": "2026-04-18T08:40:00Z",
+      "updatedAt": "2026-04-19T23:36:18.048Z",
+      "archivedAt": "2026-04-19T23:36:18.046Z",
+      "deletedAt": ""
+    },
+    {
+      "id": "document-5",
+      "workspaceId": "ws-1",
+      "fileName": "alex-park-payment-proof.svg",
+      "documentType": "Payment Proof",
+      "linkedType": "Payment",
+      "linkedId": "payment-1",
+      "mimeType": "image/svg+xml",
+      "storagePath": "workspace/ws-1/payments/payment-1/alex-park-payment-proof.svg",
+      "status": "Linked",
+      "note": "Bank transfer confirmation for contractor payment.",
+      "createdAt": "2026-04-18T11:25:00Z",
+      "updatedAt": "2026-04-19T23:36:19.113Z",
+      "archivedAt": "",
+      "deletedAt": "2026-04-19T23:36:19.112Z"
+    }
+  ],
+  "invoices": [
+    {
+      "id": "invoice-1",
+      "workspaceId": "ws-1",
+      "projectId": "project-1",
+      "personId": "",
+      "invoiceNumber": "NR-2026-014",
+      "direction": "Outbound",
+      "status": "Sent",
+      "issueDate": "2026-04-18",
+      "dueDate": "2026-05-02",
+      "totalAmount": 4200,
+      "note": "First sponsor milestone invoice for Northern Routes.",
+      "createdAt": "2026-04-18T08:35:00Z",
+      "updatedAt": "2026-04-18T08:35:00Z"
+    },
+    {
+      "id": "invoice-2",
+      "workspaceId": "ws-1",
+      "projectId": "project-1",
+      "personId": "person-2",
+      "invoiceNumber": "AP-2026-003",
+      "direction": "Inbound",
+      "status": "Paid",
+      "issueDate": "2026-04-17",
+      "dueDate": "2026-04-21",
+      "totalAmount": 780,
+      "note": "Contractor invoice for second camera field support.",
+      "createdAt": "2026-04-17T16:45:00Z",
+      "updatedAt": "2026-04-18T11:20:00Z"
+    }
+  ],
+  "payments": [
+    {
+      "id": "payment-1",
+      "workspaceId": "ws-1",
+      "invoiceId": "invoice-2",
+      "amount": 780,
+      "paidAt": "2026-04-18",
+      "method": "Bank transfer",
+      "proofDocumentId": "document-5",
+      "note": "Paid in full after field support wrap.",
+      "createdAt": "2026-04-18T11:22:00Z",
+      "updatedAt": "2026-04-18T11:22:00Z"
+    }
+  ],
+  "questionnaires": [],
+  "captures": [
+    {
+      "id": "capture-tpy2gp",
+      "workspaceId": "ws-1",
+      "sourceType": "text",
+      "userIntent": "knowledge",
+      "title": "I will need the following tools during my business travel acr...",
+      "summary": "I will need the following tools during my business travel across india : 1. Cameras 2. Tripod 3. Lights 4 Microphones",
+      "rawText": "I will need the following tools during my business travel across india : 1. Cameras 2. Tripod 3. Lights 4 Microphones",
+      "extractedText": "I will need the following tools during my business travel across india : 1. Cameras 2. Tripod 3. Lights 4 Microphones",
+      "suggestedResourceType": "knowledge",
+      "suggestedProjectId": "project-ak6mux",
+      "suggestedDocumentType": "Evidence",
+      "suggestedCategory": "Travel",
+      "suggestedAmount": 1,
+      "suggestedExpenseDate": "2026-04-19",
+      "confidence": 0.74,
+      "reasoning": "Classified with heuristic_fallback rules using intent, keywords, and active project context.",
+      "status": "needs_review",
+      "processingStatus": "completed",
+      "fileName": "knowledge-1776641893200.txt",
+      "mimeType": "application/octet-stream",
+      "storagePath": "ws-1/captures/capture-tpy2gp/2026-04-19T23-38-13-200Z-knowledge-1776641893200.txt",
+      "appliedResourceType": "",
+      "appliedResourceId": "",
+      "auditTrail": [
+        {
+          "action": "captured",
+          "note": "Capture saved to inbox.",
+          "timestamp": "2026-04-19T23:38:13.202Z"
+        }
+      ],
+      "createdAt": "2026-04-19T23:38:13.200Z",
+      "updatedAt": "2026-04-19T23:38:13.200Z"
+    },
+    {
+      "id": "capture-72e29a",
+      "workspaceId": "ws-1",
+      "sourceType": "text",
+      "userIntent": "idea",
+      "title": "people that I can interview are : 1. Jaswant mama 2. Rajnish ...",
+      "summary": "people that I can interview are : 1. Jaswant mama 2. Rajnish mama 3. Tarun bhaiya",
+      "rawText": "people that I can interview are : 1. Jaswant mama 2. Rajnish mama 3. Tarun bhaiya",
+      "extractedText": "people that I can interview are : 1. Jaswant mama 2. Rajnish mama 3. Tarun bhaiya",
+      "suggestedResourceType": "ideas",
+      "suggestedProjectId": "project-ak6mux",
+      "suggestedDocumentType": "Evidence",
+      "suggestedCategory": "Travel",
+      "suggestedAmount": 1,
+      "suggestedExpenseDate": "2026-04-19",
+      "confidence": 0.74,
+      "reasoning": "Classified with heuristic_fallback rules using intent, keywords, and active project context.",
+      "status": "applied",
+      "processingStatus": "completed",
+      "fileName": "idea-1776641717988.txt",
+      "mimeType": "application/octet-stream",
+      "storagePath": "ws-1/captures/capture-72e29a/2026-04-19T23-35-17-991Z-idea-1776641717988.txt",
+      "appliedResourceType": "ideas",
+      "appliedResourceId": "idea-lt74v3",
+      "auditTrail": [
+        {
+          "action": "captured",
+          "note": "Capture saved to inbox.",
+          "timestamp": "2026-04-19T23:35:17.994Z"
+        },
+        {
+          "action": "applied",
+          "note": "Capture was applied as ideas:idea-8z8iq6.",
+          "timestamp": "2026-04-19T23:35:42.142Z"
+        },
+        {
+          "action": "applied",
+          "note": "Capture was applied as ideas:idea-lt74v3.",
+          "timestamp": "2026-04-19T23:35:44.034Z"
+        }
+      ],
+      "createdAt": "2026-04-19T23:35:17.988Z",
+      "updatedAt": "2026-04-19T23:35:44.034Z"
+    }
+  ],
+  "ideas": [
+    {
+      "id": "idea-lt74v3",
+      "workspaceId": "ws-1",
+      "status": "Captured",
+      "hook": "people that I can interview are : 1. Jaswant mama 2. Rajnish ...",
+      "platformFit": "",
+      "commercialAngle": "people that I can interview are : 1. Jaswant mama 2. Rajnish mama 3. Tarun bhaiya",
+      "sourceCaptureId": "capture-72e29a",
+      "promotedProjectId": "",
+      "tags": [],
+      "title": "people that I can interview are : 1. Jaswant mama 2. Rajnish ...",
+      "summary": "people that I can interview are : 1. Jaswant mama 2. Rajnish mama 3. Tarun bhaiya",
+      "archivedAt": "",
+      "deletedAt": "2026-04-19T23:38:38.254Z",
+      "createdAt": "2026-04-19T23:35:44.032Z",
+      "updatedAt": "2026-04-19T23:38:38.255Z"
+    },
+    {
+      "id": "idea-8z8iq6",
+      "workspaceId": "ws-1",
+      "status": "Captured",
+      "hook": "people that I can interview are : 1. Jaswant mama 2. Rajnish ...",
+      "platformFit": "",
+      "commercialAngle": "people that I can interview are : 1. Jaswant mama 2. Rajnish mama 3. Tarun bhaiya",
+      "sourceCaptureId": "capture-72e29a",
+      "promotedProjectId": "",
+      "tags": [],
+      "title": "people that I can interview are : 1. Jaswant mama 2. Rajnish ...",
+      "summary": "people that I can interview are : 1. Jaswant mama 2. Rajnish mama 3. Tarun bhaiya",
+      "archivedAt": "",
+      "deletedAt": "",
+      "createdAt": "2026-04-19T23:35:42.140Z",
+      "updatedAt": "2026-04-19T23:35:42.140Z"
+    }
+  ],
+  "knowledge": [],
+  "workspaces": [
+    {
+      "id": "ws-8a4a707k",
+      "name": "NG",
+      "slug": "ng",
+      "focus": "Independent creator workspace",
+      "defaultCurrency": "CAD",
+      "createdAt": "2026-04-21T13:42:00.587Z",
+      "updatedAt": "2026-04-21T13:42:00.587Z"
+    },
+    {
+      "id": "ws-1",
+      "name": "Northbound Studio",
+      "focus": "Travel-led creator business",
+      "defaultCurrency": "CAD"
+    }
+  ],
+  "users": [
+    {
+      "id": "user-gbzoy5jo",
+      "workspaceId": "ws-8a4a707k",
+      "email": "gahlawatneer@gmail.com",
+      "fullName": "Neer",
+      "role": "owner",
+      "passwordHash": "9c35f05d7953da9688fbdcefac25f3d3:8c1725824cb37b97c96ec42bbea4433e5d93c9bd9f2b59288279d008260b309cc89de833a90ae6a4dd842c93b90c264b3c2f9d0e9cff8c7ac60a70502dc96216",
+      "createdAt": "2026-04-21T13:42:00.587Z",
+      "updatedAt": "2026-04-21T13:42:00.587Z"
+    },
+    {
+      "id": "user-demo",
+      "workspaceId": "ws-1",
+      "email": "demo@papertrail.app",
+      "fullName": "Alex River",
+      "role": "owner",
+      "passwordHash": "demo-salt-1234:347a5ed50fadff51d3f96ed92aa16500674c3c97b190f339dcdc45c657bcdb1d63b65d7e9e01de2755f949d0bcf18a09773b46dc790f304e1b624625b8485cf2",
+      "createdAt": "2026-04-10T09:00:00Z",
+      "updatedAt": "2026-04-18T12:00:00Z"
+    }
+  ],
+  "auditEvents": []
+}

@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600;700;800;900&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-primary": "#bac7de",
+                        "secondary-container": "#dce0ea",
+                        "primary": "#091627",
+                        "surface": "#fef8f3",
+                        "tertiary": "#201400",
+                        "primary-container": "#1e2b3c",
+                        "inverse-on-surface": "#f5f0eb",
+                        "secondary-fixed": "#dfe2ec",
+                        "on-secondary-fixed-variant": "#42474f",
+                        "secondary-fixed-dim": "#c2c6d0",
+                        "on-surface": "#1d1b19",
+                        "outline-variant": "#c5c6cd",
+                        "on-primary": "#ffffff",
+                        "surface-container-low": "#f8f3ee",
+                        "primary-fixed": "#d6e3fa",
+                        "inverse-surface": "#32302d",
+                        "surface-bright": "#fef8f3",
+                        "surface-tint": "#525f72",
+                        "surface-dim": "#ded9d4",
+                        "on-tertiary": "#ffffff",
+                        "on-surface-variant": "#44474c",
+                        "error": "#ba1a1a",
+                        "tertiary-container": "#37280d",
+                        "on-secondary-container": "#5e636b",
+                        "on-primary-fixed": "#0f1c2d",
+                        "on-tertiary-fixed-variant": "#564427",
+                        "on-tertiary-container": "#a58e6b",
+                        "outline": "#75777d",
+                        "on-secondary-fixed": "#171c23",
+                        "on-background": "#1d1b19",
+                        "error-container": "#ffdad6",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-highest": "#e6e2dd",
+                        "surface-container-high": "#ece7e2",
+                        "surface-container": "#f2ede8",
+                        "tertiary-fixed-dim": "#ddc39c",
+                        "primary-fixed-dim": "#bac7de",
+                        "on-error": "#ffffff",
+                        "surface-variant": "#e6e2dd",
+                        "on-secondary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-primary-container": "#8592a7",
+                        "on-tertiary-fixed": "#261902",
+                        "tertiary-fixed": "#fadfb7",
+                        "secondary": "#5a5f67",
+                        "on-primary-fixed-variant": "#3b485a",
+                        "background": "#fef8f3"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "3xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Epilogue"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Manrope', sans-serif;
+            background-color: #fef8f3;
+            color: #1d1b19;
+        }
+        h1, h2, h3 {
+            font-family: 'Epilogue', sans-serif;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- TopNavBar -->
+<nav class="sticky top-0 z-50 flex items-center justify-between px-8 py-4 w-full bg-[#fef8f3]/80 backdrop-blur-3xl transition-all duration-300 ease-in-out">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-bold font-['Epilogue'] text-[#091627] tracking-tight">Curator OS</span>
+<div class="hidden md:flex items-center space-x-6">
+<a class="text-slate-500 hover:text-[#1e2b3c] transition-colors font-['Epilogue'] tracking-tight" href="#">Library</a>
+<a class="text-slate-500 hover:text-[#1e2b3c] transition-colors font-['Epilogue'] tracking-tight" href="#">Wiki</a>
+<a class="text-slate-500 hover:text-[#1e2b3c] transition-colors font-['Epilogue'] tracking-tight" href="#">Ideas</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex items-center bg-surface-container-high px-4 py-2 rounded-full">
+<span class="material-symbols-outlined text-on-surface-variant text-lg" data-icon="search">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm font-body px-2 w-48" placeholder="Search workspace..." type="text"/>
+</div>
+<button class="p-2 text-on-surface-variant hover:bg-surface-container transition-colors rounded-full">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="p-2 text-[#091627] font-semibold border-b-2 border-[#091627] rounded-none">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+<div class="w-10 h-10 rounded-full overflow-hidden bg-surface-container-highest">
+<img alt="User profile" class="w-full h-full object-cover" data-alt="professional headshot of a creative director in a neutral studio setting with soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2FcKZ5zP5DYz5p4_tAwACDej9aPWav2aFANqoG0dMvCWuO6hinRfcxEpyZIvnVaJD-atE8zJ5cXihxktUq0y7QqyN5-W3g2lOcpGLvnNYQvpKHTQ8TIWEtmUU059w2XnF-yXWSyjnlORg3hv7DU67rggltyDRXjHxvOJCeMFUkwnfKN7r33nKd5dkhiq4vawadWVY38e-EyvwoCaQjmDwYdN1h7PktRpeet2EQW0iL-kvahkxG_vF-zVPYghD4mvwjQGv3n_bbaiE"/>
+</div>
+</div>
+</nav>
+<div class="flex">
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-0 h-full hidden lg:flex flex-col p-8 space-y-8 bg-[#f8f3ee] w-72 z-40">
+<div class="pt-16 pb-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined text-white" data-icon="view_quilt" style="font-variation-settings: 'FILL' 1;">view_quilt</span>
+</div>
+<div>
+<div class="text-lg font-['Epilogue'] font-black text-[#091627]">Content OS</div>
+<div class="text-[10px] font-['Manrope'] font-medium uppercase tracking-widest text-slate-400">Premium Edition</div>
+</div>
+</div>
+</div>
+<nav class="flex-grow space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-400 font-['Manrope'] text-sm font-medium uppercase tracking-widest hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="book_4">book_4</span>
+                    Library
+                </a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-400 font-['Manrope'] text-sm font-medium uppercase tracking-widest hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+                    Wiki
+                </a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-400 font-['Manrope'] text-sm font-medium uppercase tracking-widest hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="lightbulb">lightbulb</span>
+                    Ideas
+                </a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-400 font-['Manrope'] text-sm font-medium uppercase tracking-widest hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="alarm">alarm</span>
+                    Reminders
+                </a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-400 font-['Manrope'] text-sm font-medium uppercase tracking-widest hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="receipt_long">receipt_long</span>
+                    Billing
+                </a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-400 font-['Manrope'] text-sm font-medium uppercase tracking-widest hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="distance">distance</span>
+                    Mileage
+                </a>
+</nav>
+<button class="bg-gradient-to-br from-primary to-primary-container text-white rounded-full py-4 px-6 font-headline font-bold text-sm shadow-xl active:scale-95 duration-150 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="add">add</span>
+                New Artifact
+            </button>
+</aside>
+<!-- Main Content Workspace -->
+<main class="lg:ml-72 flex-grow p-8 md:p-12 min-h-screen">
+<header class="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<h1 class="text-5xl font-extrabold text-primary tracking-tighter mb-2">Workspace Settings</h1>
+<p class="text-on-surface-variant max-w-xl text-lg font-body leading-relaxed">
+                        Configure your organizational core, set compliance thresholds, and define how your artifacts are presented to the world.
+                    </p>
+</div>
+<div class="flex gap-4">
+<button class="px-6 py-3 rounded-full border border-outline-variant text-on-surface font-semibold hover:bg-surface-container transition-all">Discard</button>
+<button class="px-8 py-3 rounded-full bg-gradient-to-br from-primary to-primary-container text-white font-bold shadow-lg hover:shadow-xl transition-all active:scale-95">Save Changes</button>
+</div>
+</header>
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-8">
+<!-- Left Column: Navigation/Status -->
+<div class="xl:col-span-3 space-y-6">
+<div class="bg-surface-container-low rounded-3xl p-6">
+<h3 class="text-xs font-bold uppercase tracking-widest text-on-tertiary-fixed-variant mb-6">Navigation</h3>
+<div class="space-y-4">
+<a class="flex items-center gap-3 text-primary font-bold text-sm" href="#profile">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                                Workspace Profile
+                            </a>
+<a class="flex items-center gap-3 text-on-surface-variant font-medium text-sm hover:text-primary transition-colors" href="#compliance">
+<span class="w-1.5 h-1.5 rounded-full bg-transparent"></span>
+                                Compliance &amp; Rules
+                            </a>
+<a class="flex items-center gap-3 text-on-surface-variant font-medium text-sm hover:text-primary transition-colors" href="#branding">
+<span class="w-1.5 h-1.5 rounded-full bg-transparent"></span>
+                                Export Branding
+                            </a>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-3xl p-6">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-xs font-bold uppercase tracking-widest text-on-tertiary-fixed-variant">System Health</h3>
+<span class="flex h-2 w-2 rounded-full bg-on-tertiary-container animate-pulse"></span>
+</div>
+<div class="space-y-3">
+<div class="flex justify-between items-center text-xs">
+<span class="text-on-surface-variant">Storage</span>
+<span class="font-bold">64%</span>
+</div>
+<div class="h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[64%]"></div>
+</div>
+<p class="text-[10px] text-on-surface-variant leading-tight mt-2">
+                                Your workspace is currently utilizing 12.8GB of 20GB.
+                            </p>
+</div>
+</div>
+</div>
+<!-- Center Column: Form Sections -->
+<div class="xl:col-span-9 space-y-12 pb-24">
+<!-- Section: Workspace Profile -->
+<section class="bg-surface-container-lowest rounded-3xl p-8 md:p-10" id="profile">
+<div class="flex items-start justify-between mb-10">
+<div>
+<h2 class="text-2xl font-bold text-primary mb-2">Workspace Profile</h2>
+<p class="text-sm text-on-surface-variant">The fundamental identity of your digital environment.</p>
+</div>
+<span class="material-symbols-outlined text-primary-container opacity-20 text-4xl" data-icon="corporate_fare">corporate_fare</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-wider text-on-surface-variant ml-1">Workspace Name</label>
+<input class="w-full bg-surface-container-high border-none rounded-xl px-4 py-3 text-on-surface focus:ring-2 focus:ring-primary-fixed-dim transition-all font-medium" type="text" value="Curator OS Premium"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-wider text-on-surface-variant ml-1">Industry Vertical</label>
+<select class="w-full bg-surface-container-high border-none rounded-xl px-4 py-3 text-on-surface focus:ring-2 focus:ring-primary-fixed-dim transition-all font-medium">
+<option>Creative Production</option>
+<option>Digital Marketing</option>
+<option>Legal Documentation</option>
+<option>Technical Research</option>
+</select>
+</div>
+<div class="md:col-span-2 space-y-2">
+<label class="text-xs font-bold uppercase tracking-wider text-on-surface-variant ml-1">Workspace Description</label>
+<textarea class="w-full bg-surface-container-high border-none rounded-xl px-4 py-3 text-on-surface focus:ring-2 focus:ring-primary-fixed-dim transition-all font-medium" rows="3">Central command for high-fidelity content creation and knowledge management across the enterprise.</textarea>
+</div>
+<div class="md:col-span-2 flex items-center gap-6 mt-4 p-6 bg-surface-container-low rounded-2xl">
+<div class="w-20 h-20 bg-surface-container-highest rounded-2xl flex items-center justify-center relative group cursor-pointer overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="minimalist abstract logo mark with clean lines and high contrast on a neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAf4mNJYH8woV5mcoa8CaE3Njar5yHy_1lVyZpL1G1q-uLjapbvSVyos8sspQrgoHzLGonZtDfmUNFoxf0fq6rkmWfAxCFjQgDEsgo_KwjMX6DVhmZiFzxbmTXo6MTY931rNhIv0B3qEXcFyv475pzGF7XIOphAKDoDXUEckjV__V1iq7Sa29M97bEu-3I7YpXPddo5oN1lNinSUp9IT7iB3MuYfvZvbUQgzXs-KQ5TLodV7N8-XCNGTAcq1RB5DIeHsIyKUC3aH4ix"/>
+<div class="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
+<span class="material-symbols-outlined text-white text-xl" data-icon="edit">edit</span>
+</div>
+</div>
+<div class="flex-grow">
+<h4 class="text-sm font-bold mb-1">Organization Avatar</h4>
+<p class="text-xs text-on-surface-variant mb-3">Recommended size 400x400px. PNG or SVG.</p>
+<div class="flex gap-3">
+<button class="text-xs font-bold text-primary px-4 py-2 bg-surface-container-highest rounded-full hover:bg-surface-dim transition-colors">Upload New</button>
+<button class="text-xs font-bold text-error px-4 py-2 bg-error-container/30 rounded-full hover:bg-error-container/50 transition-colors">Remove</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Compliance Settings -->
+<section class="bg-surface-container-lowest rounded-3xl p-8 md:p-10" id="compliance">
+<div class="flex items-start justify-between mb-10">
+<div>
+<h2 class="text-2xl font-bold text-primary mb-2">Compliance &amp; Rules</h2>
+<p class="text-sm text-on-surface-variant">Define automation thresholds and governance for your data.</p>
+</div>
+<span class="material-symbols-outlined text-primary-container opacity-20 text-4xl" data-icon="verified_user">verified_user</span>
+</div>
+<div class="space-y-8">
+<div class="bg-surface-container-low p-6 rounded-2xl">
+<div class="flex items-center justify-between mb-6">
+<div>
+<h4 class="text-sm font-bold text-primary">Data Retention Thresholds</h4>
+<p class="text-xs text-on-surface-variant">Automatically archive artifacts based on inactivity.</p>
+</div>
+<span class="px-3 py-1 bg-on-tertiary-container/10 text-on-tertiary-container text-[10px] font-bold rounded-full uppercase">Active</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-3">
+<div class="flex justify-between text-xs font-bold">
+<span>Soft Archive</span>
+<span class="text-primary">90 Days</span>
+</div>
+<input class="w-full h-1.5 bg-surface-container rounded-full appearance-none cursor-pointer accent-primary" max="365" min="30" type="range" value="90"/>
+</div>
+<div class="space-y-3">
+<div class="flex justify-between text-xs font-bold">
+<span>Permanent Deletion</span>
+<span class="text-primary">2 Years</span>
+</div>
+<input class="w-full h-1.5 bg-surface-container rounded-full appearance-none cursor-pointer accent-primary" max="5" min="1" type="range" value="2"/>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="p-6 bg-surface-container-low rounded-2xl flex flex-col justify-between h-40">
+<div class="flex items-start justify-between">
+<div class="w-10 h-10 rounded-xl bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="history">history</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div>
+<h4 class="text-sm font-bold">Audit Logging</h4>
+<p class="text-xs text-on-surface-variant">Keep detailed record of all user interactions.</p>
+</div>
+</div>
+<div class="p-6 bg-surface-container-low rounded-2xl flex flex-col justify-between h-40">
+<div class="flex items-start justify-between">
+<div class="w-10 h-10 rounded-xl bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="notification_important">notification_important</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div>
+<h4 class="text-sm font-bold">Smart Reminder Rules</h4>
+<p class="text-xs text-on-surface-variant">Notify admins when artifacts miss thresholds.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Export Branding -->
+<section class="bg-surface-container-lowest rounded-3xl p-8 md:p-10" id="branding">
+<div class="flex items-start justify-between mb-10">
+<div>
+<h2 class="text-2xl font-bold text-primary mb-2">Export Branding</h2>
+<p class="text-sm text-on-surface-variant">Customize how your generated PDFs and links appear to clients.</p>
+</div>
+<span class="material-symbols-outlined text-primary-container opacity-20 text-4xl" data-icon="palette">palette</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+<div class="space-y-6">
+<div class="space-y-3">
+<label class="text-xs font-bold uppercase tracking-wider text-on-surface-variant">Primary Brand Color</label>
+<div class="flex gap-3">
+<div class="w-12 h-12 rounded-xl bg-[#091627] shadow-inner cursor-pointer border-2 border-primary-fixed"></div>
+<div class="w-12 h-12 rounded-xl bg-secondary-fixed shadow-inner cursor-pointer hover:scale-105 transition-transform"></div>
+<div class="w-12 h-12 rounded-xl bg-tertiary shadow-inner cursor-pointer hover:scale-105 transition-transform"></div>
+<div class="w-12 h-12 rounded-xl bg-error shadow-inner cursor-pointer hover:scale-105 transition-transform"></div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-highest border border-outline flex items-center justify-center cursor-pointer">
+<span class="material-symbols-outlined text-xs" data-icon="add">add</span>
+</div>
+</div>
+</div>
+<div class="space-y-3">
+<label class="text-xs font-bold uppercase tracking-wider text-on-surface-variant">Typography Suite</label>
+<div class="space-y-2">
+<div class="p-3 bg-surface-container-low rounded-xl flex items-center justify-between border-2 border-primary">
+<span class="font-headline font-bold text-sm">Epilogue &amp; Manrope</span>
+<span class="material-symbols-outlined text-primary text-sm" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div class="p-3 bg-surface-container-low rounded-xl flex items-center justify-between opacity-60">
+<span class="font-sans font-bold text-sm">Inter &amp; Roboto Mono</span>
+<span class="material-symbols-outlined text-transparent text-sm" data-icon="circle">circle</span>
+</div>
+</div>
+</div>
+</div>
+<div class="relative">
+<div class="absolute -inset-4 bg-gradient-to-br from-secondary-container/30 to-tertiary-fixed/30 blur-2xl rounded-full opacity-50"></div>
+<div class="relative bg-[#ffffff] border border-outline-variant/20 rounded-2xl overflow-hidden shadow-2xl p-6 aspect-[3/4] flex flex-col">
+<div class="flex justify-between items-center mb-10">
+<div class="w-8 h-8 bg-primary rounded-lg"></div>
+<div class="text-[10px] font-bold uppercase text-on-surface-variant tracking-tighter">Document Export</div>
+</div>
+<div class="h-4 bg-surface-container w-3/4 rounded-full mb-3"></div>
+<div class="h-4 bg-surface-container w-1/2 rounded-full mb-10"></div>
+<div class="flex-grow space-y-4">
+<div class="h-32 rounded-xl bg-surface-container-low relative overflow-hidden">
+<img class="w-full h-full object-cover opacity-20 grayscale" data-alt="modern minimalist office space with large windows and clean white desks with designer chairs" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDfOuUptjvL7GjVAwOtPz7Ql78_BRIhIVKkUEL8BJ7sMKUYjQKt51B0i6ZX1MfpSQoIEgkmYz3zL0yLSYl27m4G6mi5i1lxXb8fOjoYlV1aNZWxlfaZ7Rm5Ky0NqmHwnQ2tEbTE8pKO_aEc5KF6PVbcW3jmYGYb9oZXZmhWox3oqEhd8RiuTZm8dUlUuaiW16mi7rbBlWd0A_CiaF60rEbOPGlQ7nNMbqo_OAY_eIahLqD1NpxmUf87Syg0D2eFqwKoBiRlNIOOq_Y"/>
+</div>
+<div class="h-3 bg-surface-container w-full rounded-full"></div>
+<div class="h-3 bg-surface-container w-full rounded-full"></div>
+<div class="h-3 bg-surface-container w-2/3 rounded-full"></div>
+</div>
+<div class="mt-auto pt-6 border-t border-outline-variant/10 flex justify-between">
+<div class="w-16 h-2 bg-primary/20 rounded-full"></div>
+<div class="w-8 h-2 bg-primary/20 rounded-full"></div>
+</div>
+</div>
+<div class="absolute bottom-4 right-4 bg-primary text-white p-3 rounded-xl shadow-xl">
+<span class="material-symbols-outlined text-sm" data-icon="visibility">visibility</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</main>
+</div>
+<!-- Contextual FAB (Hidden as per requirement for settings) -->
+<!-- Suppression Logic: FAB suppressed on Settings screen -->
+</body></html>

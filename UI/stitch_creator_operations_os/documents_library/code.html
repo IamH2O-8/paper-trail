@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Library | Curator OS</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700;800;900&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-primary": "#bac7de",
+                        "secondary-container": "#dce0ea",
+                        "primary": "#091627",
+                        "surface": "#fef8f3",
+                        "tertiary": "#201400",
+                        "primary-container": "#1e2b3c",
+                        "inverse-on-surface": "#f5f0eb",
+                        "secondary-fixed": "#dfe2ec",
+                        "on-secondary-fixed-variant": "#42474f",
+                        "secondary-fixed-dim": "#c2c6d0",
+                        "on-surface": "#1d1b19",
+                        "outline-variant": "#c5c6cd",
+                        "on-primary": "#ffffff",
+                        "surface-container-low": "#f8f3ee",
+                        "primary-fixed": "#d6e3fa",
+                        "inverse-surface": "#32302d",
+                        "surface-bright": "#fef8f3",
+                        "surface-tint": "#525f72",
+                        "surface-dim": "#ded9d4",
+                        "on-tertiary": "#ffffff",
+                        "on-surface-variant": "#44474c",
+                        "error": "#ba1a1a",
+                        "tertiary-container": "#37280d",
+                        "on-secondary-container": "#5e636b",
+                        "on-primary-fixed": "#0f1c2d",
+                        "on-tertiary-fixed-variant": "#564427",
+                        "on-tertiary-container": "#a58e6b",
+                        "outline": "#75777d",
+                        "on-secondary-fixed": "#171c23",
+                        "on-background": "#1d1b19",
+                        "error-container": "#ffdad6",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-highest": "#e6e2dd",
+                        "surface-container-high": "#ece7e2",
+                        "surface-container": "#f2ede8",
+                        "tertiary-fixed-dim": "#ddc39c",
+                        "primary-fixed-dim": "#bac7de",
+                        "on-error": "#ffffff",
+                        "surface-variant": "#e6e2dd",
+                        "on-secondary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-primary-container": "#8592a7",
+                        "on-tertiary-fixed": "#261902",
+                        "tertiary-fixed": "#fadfb7",
+                        "secondary": "#5a5f67",
+                        "on-primary-fixed-variant": "#3b485a",
+                        "background": "#fef8f3"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Epilogue"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Manrope', sans-serif;
+            background-color: #fef8f3;
+        }
+        .header-anchor {
+            font-family: 'Epilogue', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- SideNavBar (Shared Component) -->
+<aside class="fixed left-0 top-0 h-full flex flex-col p-8 space-y-8 bg-[#f8f3ee] dark:bg-slate-900 w-72 z-40">
+<div class="flex items-center space-x-3 mb-4">
+<div class="w-10 h-10 bg-primary-container rounded-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">account_tree</span>
+</div>
+<div>
+<h2 class="text-lg font-['Epilogue'] font-black text-[#091627] dark:text-slate-100">Content OS</h2>
+<p class="font-['Manrope'] text-[10px] font-medium uppercase tracking-widest text-slate-400">Premium Edition</p>
+</div>
+</div>
+<nav class="flex-1 space-y-2">
+<!-- Active Navigation State: Library -->
+<a class="flex items-center space-x-4 p-3 rounded-xl transition-all text-[#091627] dark:text-white font-bold bg-surface-container-lowest" href="#">
+<span class="material-symbols-outlined" data-icon="book_4">book_4</span>
+<span class="font-['Manrope'] text-sm font-medium uppercase tracking-widest">Library</span>
+</a>
+<a class="flex items-center space-x-4 p-3 rounded-xl transition-transform duration-200 hover:translate-x-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+<span class="font-['Manrope'] text-sm font-medium uppercase tracking-widest">Wiki</span>
+</a>
+<a class="flex items-center space-x-4 p-3 rounded-xl transition-transform duration-200 hover:translate-x-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined" data-icon="lightbulb">lightbulb</span>
+<span class="font-['Manrope'] text-sm font-medium uppercase tracking-widest">Ideas</span>
+</a>
+<a class="flex items-center space-x-4 p-3 rounded-xl transition-transform duration-200 hover:translate-x-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined" data-icon="alarm">alarm</span>
+<span class="font-['Manrope'] text-sm font-medium uppercase tracking-widest">Reminders</span>
+</a>
+<a class="flex items-center space-x-4 p-3 rounded-xl transition-transform duration-200 hover:translate-x-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined" data-icon="receipt_long">receipt_long</span>
+<span class="font-['Manrope'] text-sm font-medium uppercase tracking-widest">Billing</span>
+</a>
+<a class="flex items-center space-x-4 p-3 rounded-xl transition-transform duration-200 hover:translate-x-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined" data-icon="distance">distance</span>
+<span class="font-['Manrope'] text-sm font-medium uppercase tracking-widest">Mileage</span>
+</a>
+</nav>
+<button class="mt-auto w-full py-4 bg-gradient-to-br from-primary to-primary-container text-white rounded-full font-bold flex items-center justify-center space-x-2 shadow-xl hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined">add_circle</span>
+<span>New Artifact</span>
+</button>
+</aside>
+<!-- Main Content Area -->
+<main class="ml-72 min-h-screen">
+<!-- TopNavBar (Shared Component) -->
+<header class="sticky top-0 z-50 flex items-center justify-between px-12 py-6 w-full bg-[#fef8f3]/80 backdrop-blur-3xl">
+<div class="flex items-center space-x-8">
+<h1 class="text-2xl font-bold font-['Epilogue'] text-[#091627] tracking-tight">Curator OS</h1>
+<div class="relative w-96">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant/50">search</span>
+<input class="w-full bg-surface-container-high border-none rounded-xl py-3 pl-12 pr-4 text-sm focus:ring-2 focus:ring-primary-fixed-dim transition-all" placeholder="Search archive..." type="text"/>
+</div>
+</div>
+<div class="flex items-center space-x-6">
+<div class="flex items-center space-x-4">
+<button class="text-slate-500 hover:text-[#1e2b3c] transition-colors">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="text-slate-500 hover:text-[#1e2b3c] transition-colors">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+</div>
+<div class="h-10 w-10 rounded-full overflow-hidden border-2 border-surface-container-highest">
+<img alt="User profile" class="h-full w-full object-cover" data-alt="Close-up portrait of a professional man with a friendly expression in clean minimalist studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDf3BJKAUt0aja_0hiP0Zn7rv-HJ7jsJSRUwcYULp8CYa0g8doA1IZvT2e-guAqZWhfFc2JA4N21cAvSV9oXv4Cop1jAQzzcgizzIuOo8yhUGyYtsej1pwp1IeQM7ta5joee4iGW_KcoE7XusbUS7OEFAXrxHoGPEw951wwBXE1S8dg3XuFswxD60B6NgqyKkzA3Ed2Oa2NTqN2-uURwz7CGz6g0QOFLUIAyawHzIUtw75rMDyT1V00tt3vB3UTI-_P6WPbpM2B2qZW"/>
+</div>
+</div>
+</header>
+<!-- Library Workspace -->
+<section class="px-12 py-10">
+<!-- Header Section with Asymmetry -->
+<div class="flex justify-between items-end mb-12">
+<div class="space-y-2">
+<p class="font-['Manrope'] text-xs font-bold uppercase tracking-widest text-on-tertiary-container bg-tertiary-fixed px-3 py-1 rounded-full inline-block">Digital Assets</p>
+<h2 class="text-[3.5rem] font-black font-['Epilogue'] tracking-tighter leading-none text-primary">Library</h2>
+</div>
+<div class="flex items-center space-x-4">
+<div class="flex space-x-2 bg-surface-container-low p-1.5 rounded-xl">
+<button class="p-2 bg-white rounded-lg shadow-sm text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">grid_view</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">list_alt</span>
+</button>
+</div>
+<button class="px-8 py-4 bg-gradient-to-br from-primary to-primary-container text-white rounded-full font-bold flex items-center space-x-3 shadow-lg hover:shadow-primary/20 transition-all">
+<span class="material-symbols-outlined">upload_file</span>
+<span>Upload File</span>
+</button>
+</div>
+</div>
+<!-- Filters Bar (Tonal Layering, no borders) -->
+<div class="flex flex-wrap items-center gap-4 mb-10 p-6 bg-surface-container-low rounded-2xl">
+<div class="flex items-center space-x-2">
+<span class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Filter By:</span>
+</div>
+<button class="px-5 py-2.5 bg-surface-container-lowest text-on-surface text-sm font-semibold rounded-full flex items-center space-x-2 hover:bg-white transition-all shadow-sm">
+<span>File Type</span>
+<span class="material-symbols-outlined text-sm">expand_more</span>
+</button>
+<button class="px-5 py-2.5 bg-surface-container-lowest text-on-surface text-sm font-semibold rounded-full flex items-center space-x-2 hover:bg-white transition-all shadow-sm">
+<span>Date Modified</span>
+<span class="material-symbols-outlined text-sm">calendar_today</span>
+</button>
+<button class="px-5 py-2.5 bg-surface-container-lowest text-on-surface text-sm font-semibold rounded-full flex items-center space-x-2 hover:bg-white transition-all shadow-sm">
+<span>Linked Record</span>
+<span class="material-symbols-outlined text-sm">link</span>
+</button>
+<div class="ml-auto flex items-center space-x-3">
+<span class="text-sm text-on-surface-variant font-medium">1,248 items</span>
+</div>
+</div>
+<!-- Library Grid (Bento style inspiration) -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+<!-- File Card 1 -->
+<div class="group bg-surface-container-lowest rounded-[1.5rem] p-6 transition-all hover:-translate-y-1">
+<div class="aspect-[4/3] bg-surface-container-low rounded-xl mb-6 flex items-center justify-center relative overflow-hidden">
+<span class="material-symbols-outlined text-primary/10 text-7xl select-none">description</span>
+<div class="absolute inset-0 bg-gradient-to-tr from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="absolute top-4 left-4 bg-white/90 backdrop-blur-md p-2 rounded-lg text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">contract</span>
+</div>
+</div>
+<div class="space-y-3">
+<div class="flex justify-between items-start">
+<h3 class="font-bold text-lg text-primary truncate leading-tight">Project_Contract_v4.pdf</h3>
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</div>
+<div class="flex flex-col space-y-1.5">
+<div class="flex items-center space-x-2 text-xs font-medium text-on-surface-variant/70">
+<span class="material-symbols-outlined text-sm">calendar_today</span>
+<span>Uploaded: Oct 24, 2023</span>
+</div>
+<div class="flex items-center space-x-2 text-xs font-semibold text-secondary">
+<span class="material-symbols-outlined text-sm">link</span>
+<span class="uppercase tracking-wider">Linked: Acme Corp Project</span>
+</div>
+</div>
+</div>
+</div>
+<!-- File Card 2 -->
+<div class="group bg-surface-container-lowest rounded-[1.5rem] p-6 transition-all hover:-translate-y-1">
+<div class="aspect-[4/3] bg-surface-container-low rounded-xl mb-6 flex items-center justify-center relative overflow-hidden">
+<img alt="Invoice thumbnail" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Macro photography of a modern business invoice on textured paper with soft focus pens in the background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaNneLzs_zUy_aEDFcfc86AtVpCiMve_sK6u8r9mX5wDyZTROZQZvFy-DmxkILlwVj-mR1CPEF-LBuuH2BD3CqJJaT6GQ0iyJy9HrdkotSsYKwxXFKQrDRo37DksjBxrxRkgrxzimHXb1xjhrkjfLXcVA5bI82g7Rmznm0Rr8UeQd6_vomk0DlQSA7Hxs3-os_wa1CNwlDb1NdmoC2u64TxPiGge1Oh081xd0byXI6vLEdCxlyDpno2eegHWAgTkZIGcJ356xK9-_v"/>
+<div class="absolute inset-0 bg-black/10"></div>
+<div class="absolute top-4 left-4 bg-white/90 backdrop-blur-md p-2 rounded-lg text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">receipt</span>
+</div>
+</div>
+<div class="space-y-3">
+<div class="flex justify-between items-start">
+<h3 class="font-bold text-lg text-primary truncate leading-tight">Office_Furniture_Receipt.jpg</h3>
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</div>
+<div class="flex flex-col space-y-1.5">
+<div class="flex items-center space-x-2 text-xs font-medium text-on-surface-variant/70">
+<span class="material-symbols-outlined text-sm">calendar_today</span>
+<span>Uploaded: Oct 22, 2023</span>
+</div>
+<div class="flex items-center space-x-2 text-xs font-semibold text-secondary">
+<span class="material-symbols-outlined text-sm">link</span>
+<span class="uppercase tracking-wider">Linked: Q4 Expenses</span>
+</div>
+</div>
+</div>
+</div>
+<!-- File Card 3 -->
+<div class="group bg-surface-container-lowest rounded-[1.5rem] p-6 transition-all hover:-translate-y-1">
+<div class="aspect-[4/3] bg-surface-container-low rounded-xl mb-6 flex items-center justify-center relative overflow-hidden">
+<span class="material-symbols-outlined text-primary/10 text-7xl select-none">verified_user</span>
+<div class="absolute inset-0 bg-gradient-to-tr from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="absolute top-4 left-4 bg-white/90 backdrop-blur-md p-2 rounded-lg text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">policy</span>
+</div>
+</div>
+<div class="space-y-3">
+<div class="flex justify-between items-start">
+<h3 class="font-bold text-lg text-primary truncate leading-tight">Building_Permit_2024.pdf</h3>
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</div>
+<div class="flex flex-col space-y-1.5">
+<div class="flex items-center space-x-2 text-xs font-medium text-on-surface-variant/70">
+<span class="material-symbols-outlined text-sm">calendar_today</span>
+<span>Uploaded: Oct 15, 2023</span>
+</div>
+<div class="flex items-center space-x-2 text-xs font-semibold text-secondary">
+<span class="material-symbols-outlined text-sm">link</span>
+<span class="uppercase tracking-wider">Linked: 5th Ave Reno</span>
+</div>
+</div>
+</div>
+</div>
+<!-- File Card 4 -->
+<div class="group bg-surface-container-lowest rounded-[1.5rem] p-6 transition-all hover:-translate-y-1">
+<div class="aspect-[4/3] bg-surface-container-low rounded-xl mb-6 flex items-center justify-center relative overflow-hidden">
+<img alt="Technical drawing" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Technical blueprint drawing of architectural plans on a white background with clean lines and gray details" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqssR_OlShtyJwgUHe4TJ153-ovM_oWFVERoesvuh5lCeVi8VjWFu0bLjnKNxCCamJIAucjjkyqL6pKquvoRIR1IUWfbihrHQZvn0y2mSv8ibpHp0T-2izpYktaJbMiQQlWIb0AW2PFpHYbJNu65jmcXBq_qXHYbuSac0b8tvBjE4caY0dbDi7O5VD3Sx-yDJIjlUZ-aVxIPdkJUm8VS-s3JoDE_1o4rcrmCVR4Khc7M29Rl91Xk2iypbdqNYgpHKC4wDo-hyoSAcG"/>
+<div class="absolute inset-0 bg-black/5"></div>
+<div class="absolute top-4 left-4 bg-white/90 backdrop-blur-md p-2 rounded-lg text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">engineering</span>
+</div>
+</div>
+<div class="space-y-3">
+<div class="flex justify-between items-start">
+<h3 class="font-bold text-lg text-primary truncate leading-tight">Master_Schematic_Final.svg</h3>
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</div>
+<div class="flex flex-col space-y-1.5">
+<div class="flex items-center space-x-2 text-xs font-medium text-on-surface-variant/70">
+<span class="material-symbols-outlined text-sm">calendar_today</span>
+<span>Uploaded: Oct 10, 2023</span>
+</div>
+<div class="flex items-center space-x-2 text-xs font-semibold text-secondary">
+<span class="material-symbols-outlined text-sm">link</span>
+<span class="uppercase tracking-wider">Linked: Technical Wiki</span>
+</div>
+</div>
+</div>
+</div>
+<!-- File Card 5 -->
+<div class="group bg-surface-container-lowest rounded-[1.5rem] p-6 transition-all hover:-translate-y-1">
+<div class="aspect-[4/3] bg-surface-container-low rounded-xl mb-6 flex items-center justify-center relative overflow-hidden">
+<span class="material-symbols-outlined text-primary/10 text-7xl select-none">table_chart</span>
+<div class="absolute inset-0 bg-gradient-to-tr from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="absolute top-4 left-4 bg-white/90 backdrop-blur-md p-2 rounded-lg text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">analytics</span>
+</div>
+</div>
+<div class="space-y-3">
+<div class="flex justify-between items-start">
+<h3 class="font-bold text-lg text-primary truncate leading-tight">Mileage_Report_Sept.xlsx</h3>
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</div>
+<div class="flex flex-col space-y-1.5">
+<div class="flex items-center space-x-2 text-xs font-medium text-on-surface-variant/70">
+<span class="material-symbols-outlined text-sm">calendar_today</span>
+<span>Uploaded: Oct 02, 2023</span>
+</div>
+<div class="flex items-center space-x-2 text-xs font-semibold text-secondary">
+<span class="material-symbols-outlined text-sm">link</span>
+<span class="uppercase tracking-wider">Linked: Mileage Tracker</span>
+</div>
+</div>
+</div>
+</div>
+<!-- File Card 6 -->
+<div class="group bg-surface-container-lowest rounded-[1.5rem] p-6 transition-all hover:-translate-y-1">
+<div class="aspect-[4/3] bg-surface-container-low rounded-xl mb-6 flex items-center justify-center relative overflow-hidden">
+<span class="material-symbols-outlined text-primary/10 text-7xl select-none">videocam</span>
+<div class="absolute inset-0 bg-gradient-to-tr from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="absolute top-4 left-4 bg-white/90 backdrop-blur-md p-2 rounded-lg text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">movie</span>
+</div>
+</div>
+<div class="space-y-3">
+<div class="flex justify-between items-start">
+<h3 class="font-bold text-lg text-primary truncate leading-tight">Brand_Video_Draft.mp4</h3>
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</div>
+<div class="flex flex-col space-y-1.5">
+<div class="flex items-center space-x-2 text-xs font-medium text-on-surface-variant/70">
+<span class="material-symbols-outlined text-sm">calendar_today</span>
+<span>Uploaded: Sept 28, 2023</span>
+</div>
+<div class="flex items-center space-x-2 text-xs font-semibold text-secondary">
+<span class="material-symbols-outlined text-sm">link</span>
+<span class="uppercase tracking-wider">Linked: Marketing Assets</span>
+</div>
+</div>
+</div>
+</div>
+<!-- File Card 7 -->
+<div class="group bg-surface-container-lowest rounded-[1.5rem] p-6 transition-all hover:-translate-y-1">
+<div class="aspect-[4/3] bg-surface-container-low rounded-xl mb-6 flex items-center justify-center relative overflow-hidden">
+<img alt="Legal paper" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Close up of a magnifying glass over legal text on warm cream paper with soft morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBc2JgCWUZ72ihSk33QWUZnE-ePVrrqBD066i-MIZEEzK8k9On4FDgEUURraFQyWURkp7J3u4ixwfPPMEKKIu4IZD02pfktKMc5ZKlyNOsuwxtIhet8m6yyno6pXot7BEq2M5mjRlPwFXtRvHjFDjhKMK7pJYoViIqtZ_E0yJztYmrw2_HJtQPB4steBWndsrEwmYvRT0BkdSIZvYApJCjAQO5JGDyKd63K9OXwnpQfqP9aSvAYvWU6pWjErtrwmQnExK74Eqri4p3a"/>
+<div class="absolute inset-0 bg-black/5"></div>
+<div class="absolute top-4 left-4 bg-white/90 backdrop-blur-md p-2 rounded-lg text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">gavel</span>
+</div>
+</div>
+<div class="space-y-3">
+<div class="flex justify-between items-start">
+<h3 class="font-bold text-lg text-primary truncate leading-tight">NDA_Template_2024.docx</h3>
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</div>
+<div class="flex flex-col space-y-1.5">
+<div class="flex items-center space-x-2 text-xs font-medium text-on-surface-variant/70">
+<span class="material-symbols-outlined text-sm">calendar_today</span>
+<span>Uploaded: Sept 20, 2023</span>
+</div>
+<div class="flex items-center space-x-2 text-xs font-semibold text-secondary">
+<span class="material-symbols-outlined text-sm">link</span>
+<span class="uppercase tracking-wider">Linked: Legal Templates</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Empty State / Add New Card -->
+<button class="group border-2 border-dashed border-outline-variant/30 rounded-[1.5rem] p-6 flex flex-col items-center justify-center space-y-4 hover:bg-surface-container-low/50 hover:border-primary-fixed transition-all">
+<div class="w-16 h-16 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant group-hover:scale-110 group-hover:bg-primary-fixed transition-all duration-300">
+<span class="material-symbols-outlined text-3xl">add</span>
+</div>
+<div class="text-center">
+<p class="font-bold text-primary">Drop files here</p>
+<p class="text-xs text-on-surface-variant font-medium">or click to browse local storage</p>
+</div>
+</button>
+</div>
+</section>
+</main>
+</body></html>

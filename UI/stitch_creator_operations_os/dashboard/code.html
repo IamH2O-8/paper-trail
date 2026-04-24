@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Editorial OS - Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600;700;800;900&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "error": "#ba1a1a",
+                    "on-primary": "#ffffff",
+                    "surface-container-high": "#ece7e2",
+                    "error-container": "#ffdad6",
+                    "surface": "#fef8f3",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-container": "#1e2b3c",
+                    "primary": "#091627",
+                    "on-secondary-fixed-variant": "#42474f",
+                    "surface-bright": "#fef8f3",
+                    "on-primary-fixed-variant": "#3b485a",
+                    "surface-container-highest": "#e6e2dd",
+                    "on-primary-fixed": "#0f1c2d",
+                    "on-error": "#ffffff",
+                    "on-background": "#1d1b19",
+                    "on-surface": "#1d1b19",
+                    "outline-variant": "#c5c6cd",
+                    "tertiary-fixed": "#fadfb7",
+                    "on-secondary-fixed": "#171c23",
+                    "surface-variant": "#e6e2dd",
+                    "surface-dim": "#ded9d4",
+                    "on-primary-container": "#8592a7",
+                    "on-surface-variant": "#44474c",
+                    "on-tertiary-container": "#a58e6b",
+                    "surface-tint": "#525f72",
+                    "outline": "#75777d",
+                    "on-secondary-container": "#5e636b",
+                    "tertiary": "#201400",
+                    "on-error-container": "#93000a",
+                    "background": "#fef8f3",
+                    "secondary": "#5a5f67",
+                    "on-tertiary-fixed": "#261902",
+                    "inverse-surface": "#32302d",
+                    "secondary-fixed-dim": "#c2c6d0",
+                    "tertiary-container": "#37280d",
+                    "secondary-container": "#dce0ea",
+                    "secondary-fixed": "#dfe2ec",
+                    "surface-container": "#f2ede8",
+                    "on-tertiary-fixed-variant": "#564427",
+                    "primary-fixed-dim": "#bac7de",
+                    "inverse-on-surface": "#f5f0eb",
+                    "on-secondary": "#ffffff",
+                    "primary-fixed": "#d6e3fa",
+                    "tertiary-fixed-dim": "#ddc39c",
+                    "surface-container-low": "#f8f3ee",
+                    "on-tertiary": "#ffffff",
+                    "inverse-primary": "#bac7de"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "1.5rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Epilogue"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Manrope', sans-serif; background-color: #fef8f3; color: #1d1b19; }
+        h1, h2, h3 { font-family: 'Epilogue', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased">
+<!-- SideNavBar Shell -->
+<aside class="h-screen w-72 fixed left-0 top-0 overflow-y-auto bg-surface-container-low flex flex-col justify-between py-10 px-8 z-50">
+<div class="flex flex-col gap-10">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-white" data-icon="movie">movie</span>
+</div>
+<div class="flex flex-col">
+<span class="text-2xl font-black font-headline tracking-tight text-primary leading-none">Editorial OS</span>
+<span class="text-[10px] font-label uppercase tracking-widest text-on-surface-variant/60 font-bold">Premium Content Studio</span>
+</div>
+</div>
+<button class="w-full bg-gradient-to-br from-primary to-primary-container text-on-primary rounded-full px-6 py-4 flex items-center justify-center gap-2 font-bold transition-transform active:scale-95 shadow-lg">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+<span class="font-label">New Asset</span>
+</button>
+<nav class="flex flex-col gap-2">
+<!-- Dashboard Active -->
+<a class="flex items-center gap-4 px-4 py-3 rounded-xl text-primary font-bold border-r-4 border-primary bg-surface-container-high transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard" data-weight="fill" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span class="font-headline tracking-tight">Dashboard</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 rounded-xl text-on-surface-variant font-medium hover:bg-surface-container-high/50 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="folder_copy">folder_copy</span>
+<span class="font-headline tracking-tight">Projects</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 rounded-xl text-on-surface-variant font-medium hover:bg-surface-container-high/50 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="movie">movie</span>
+<span class="font-headline tracking-tight">Productions</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 rounded-xl text-on-surface-variant font-medium hover:bg-surface-container-high/50 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="receipt_long">receipt_long</span>
+<span class="font-headline tracking-tight">Expenses</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 rounded-xl text-on-surface-variant font-medium hover:bg-surface-container-high/50 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="leaderboard">leaderboard</span>
+<span class="font-headline tracking-tight">Analytics</span>
+</a>
+</nav>
+</div>
+<div class="flex flex-col gap-4">
+<a class="flex items-center gap-4 px-4 py-2 text-on-surface-variant font-medium hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-xl" data-icon="settings">settings</span>
+<span class="text-sm font-label">Settings</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-2 text-on-surface-variant font-medium hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-xl" data-icon="help">help</span>
+<span class="text-sm font-label">Support</span>
+</a>
+<div class="mt-4 pt-6 border-t border-outline-variant/10 flex items-center gap-3">
+<img alt="Workspace Avatar" class="w-10 h-10 rounded-full object-crop" data-alt="close-up portrait of a professional creative director with glasses in a warmly lit studio environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmy9F7drViT5f_K89v3ev6UsIBFvOE9yRmB7UhvT6b5f-f1PM-EuNeqhITEf_BMLqURSjhKjj07lOgloq_3yjUiMvmx_rgRPNn032_3rVER7oOADdiI915L0FrHKKrKPJSDIu1ELmoEjEmqA7vyUq8-X6YntIopeP5RaB-LU38MG7f2Z-YJNS-OCBo8a30q4reS4wb9K0KCRsNBFq2ep14yMJZjcgEP3V4sOKZdaJe-fVt9N9RfO26XFM6RUdPcNrY3GX_61QtDZa-"/>
+<div>
+<p class="text-sm font-bold text-on-surface">Alex River</p>
+<p class="text-[10px] text-on-surface-variant font-medium uppercase tracking-tight">Lead Producer</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Canvas Area -->
+<main class="ml-72 min-h-screen bg-surface">
+<!-- TopNavBar Shell -->
+<header class="fixed top-0 right-0 left-72 z-40 h-20 bg-surface/80 backdrop-blur-xl flex items-center justify-between px-12 max-w-[1600px] mx-auto">
+<div class="flex items-center gap-8">
+<h2 class="text-xl font-bold font-headline text-primary">Workspace Switcher</h2>
+<div class="flex items-center gap-6">
+<a class="text-on-surface-variant font-label text-sm hover:text-primary transition-colors" href="#">Documents</a>
+<a class="text-on-surface-variant font-label text-sm hover:text-primary transition-colors" href="#">Library</a>
+<a class="text-on-surface-variant font-label text-sm hover:text-primary transition-colors" href="#">Team</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline" data-icon="search">search</span>
+<input class="bg-surface-container-high border-none rounded-full pl-10 pr-4 py-2 text-sm focus:ring-2 focus:ring-primary-fixed-dim w-64 transition-all" placeholder="Search resources..." type="text"/>
+</div>
+<button class="p-2 rounded-full hover:bg-surface-container-low transition-colors relative">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-error rounded-full"></span>
+</button>
+<div class="w-10 h-10 rounded-full bg-primary-fixed text-primary flex items-center justify-center font-bold shadow-sm">
+                    AR
+                </div>
+</div>
+</header>
+<!-- Content Area -->
+<div class="pt-28 pb-12 px-12 max-w-[1600px] mx-auto">
+<!-- Summary Row -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+<div class="bg-surface-container-low p-8 rounded-xl flex flex-col gap-2 relative overflow-hidden group">
+<span class="text-on-surface-variant font-label text-xs uppercase tracking-widest font-bold">Open Records</span>
+<div class="flex items-end justify-between">
+<span class="text-4xl font-headline font-black text-primary">12</span>
+<div class="bg-primary/5 p-2 rounded-lg">
+<span class="material-symbols-outlined text-primary" data-icon="description">description</span>
+</div>
+</div>
+<div class="absolute -bottom-4 -right-4 w-24 h-24 bg-primary/5 rounded-full blur-2xl group-hover:bg-primary/10 transition-colors"></div>
+</div>
+<div class="bg-surface-container-low p-8 rounded-xl flex flex-col gap-2 relative overflow-hidden group">
+<span class="text-on-surface-variant font-label text-xs uppercase tracking-widest font-bold">Compliance Avg</span>
+<div class="flex items-end justify-between">
+<span class="text-4xl font-headline font-black text-primary">82%</span>
+<div class="bg-tertiary-fixed/30 p-2 rounded-lg">
+<span class="material-symbols-outlined text-on-tertiary-fixed-variant" data-icon="verified_user">verified_user</span>
+</div>
+</div>
+<div class="absolute -bottom-4 -right-4 w-24 h-24 bg-tertiary-fixed/10 rounded-full blur-2xl group-hover:bg-tertiary-fixed/20 transition-colors"></div>
+</div>
+<div class="bg-surface-container-low p-8 rounded-xl flex flex-col gap-2 relative overflow-hidden group">
+<span class="text-on-surface-variant font-label text-xs uppercase tracking-widest font-bold">High Priority Issues</span>
+<div class="flex items-end justify-between">
+<span class="text-4xl font-headline font-black text-error">03</span>
+<div class="bg-error-container/30 p-2 rounded-lg">
+<span class="material-symbols-outlined text-error" data-icon="warning" data-weight="fill" style="font-variation-settings: 'FILL' 1;">warning</span>
+</div>
+</div>
+<div class="absolute -bottom-4 -right-4 w-24 h-24 bg-error-container/10 rounded-full blur-2xl group-hover:bg-error-container/20 transition-colors"></div>
+</div>
+<div class="bg-surface-container-low p-8 rounded-xl flex flex-col gap-2 relative overflow-hidden group">
+<span class="text-on-surface-variant font-label text-xs uppercase tracking-widest font-bold">Outstanding Invoices</span>
+<div class="flex items-end justify-between">
+<span class="text-4xl font-headline font-black text-primary">$4.2k</span>
+<div class="bg-primary/5 p-2 rounded-lg">
+<span class="material-symbols-outlined text-primary" data-icon="payments">payments</span>
+</div>
+</div>
+<div class="absolute -bottom-4 -right-4 w-24 h-24 bg-primary/5 rounded-full blur-2xl group-hover:bg-primary/10 transition-colors"></div>
+</div>
+</section>
+<!-- Main Bento Grid -->
+<div class="grid grid-cols-12 gap-8">
+<!-- Priority Issues (Bento Item 1) -->
+<section class="col-span-12 lg:col-span-7 bg-surface-container-low rounded-xl p-10 flex flex-col gap-8">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<h3 class="text-2xl font-headline font-bold text-primary">Priority Issues</h3>
+<p class="text-on-surface-variant font-body">Required actions to maintain compliance.</p>
+</div>
+<span class="px-4 py-1.5 bg-error-container text-on-error-container rounded-full text-xs font-bold font-label uppercase tracking-wider">3 Alerts</span>
+</div>
+<div class="flex flex-col gap-4">
+<div class="bg-surface-container-lowest p-6 rounded-xl flex items-center justify-between hover:scale-[1.01] transition-transform duration-300">
+<div class="flex items-center gap-5">
+<div class="w-12 h-12 rounded-full bg-error-container/20 flex items-center justify-center text-error">
+<span class="material-symbols-outlined" data-icon="receipt">receipt</span>
+</div>
+<div>
+<h4 class="font-headline font-bold text-primary">Missing Receipt - Tokyo Trip</h4>
+<p class="text-sm text-on-surface-variant">Expense ID: #EX-9023 • Filed 2 days ago</p>
+</div>
+</div>
+<button class="px-6 py-2 border-2 border-outline-variant text-on-surface-variant font-bold rounded-full text-sm hover:bg-primary hover:text-on-primary hover:border-primary transition-all">Resolve</button>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl flex items-center justify-between hover:scale-[1.01] transition-transform duration-300">
+<div class="flex items-center gap-5">
+<div class="w-12 h-12 rounded-full bg-error-container/20 flex items-center justify-center text-error">
+<span class="material-symbols-outlined" data-icon="history_edu">history_edu</span>
+</div>
+<div>
+<h4 class="font-headline font-bold text-primary">Unsigned Agreement - Editor X</h4>
+<p class="text-sm text-on-surface-variant">Legal: Contractor MSA • Overdue 4 hours</p>
+</div>
+</div>
+<button class="px-6 py-2 border-2 border-outline-variant text-on-surface-variant font-bold rounded-full text-sm hover:bg-primary hover:text-on-primary hover:border-primary transition-all">Sign Now</button>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl flex items-center justify-between hover:scale-[1.01] transition-transform duration-300">
+<div class="flex items-center gap-5">
+<div class="w-12 h-12 rounded-full bg-error-container/20 flex items-center justify-center text-error">
+<span class="material-symbols-outlined" data-icon="broken_image">broken_image</span>
+</div>
+<div>
+<h4 class="font-headline font-bold text-primary">Corrupted Export - Campaign A</h4>
+<p class="text-sm text-on-surface-variant">Production: Render Queue • Failed Re-run</p>
+</div>
+</div>
+<button class="px-6 py-2 border-2 border-outline-variant text-on-surface-variant font-bold rounded-full text-sm hover:bg-primary hover:text-on-primary hover:border-primary transition-all">Re-Render</button>
+</div>
+</div>
+</section>
+<!-- Upcoming Shoots (Bento Item 2) -->
+<section class="col-span-12 lg:col-span-5 bg-surface-container-low rounded-xl p-10 flex flex-col gap-8">
+<div class="flex flex-col">
+<h3 class="text-2xl font-headline font-bold text-primary">Upcoming Shoots</h3>
+<p class="text-on-surface-variant font-body">Production schedule and key deadlines.</p>
+</div>
+<div class="flex flex-col gap-6">
+<div class="relative pl-8 border-l-2 border-primary-container/20 py-2">
+<div class="absolute left-0 top-2 -translate-x-1/2 w-4 h-4 bg-primary rounded-full border-4 border-surface-container-low"></div>
+<span class="text-xs font-label font-bold text-on-tertiary-container uppercase tracking-tighter">Oct 24, 2023</span>
+<h4 class="font-headline font-bold text-primary mt-1">Winter Collection Reel</h4>
+<p class="text-sm text-on-surface-variant mt-1">Location: Studio B • 09:00 AM</p>
+<div class="flex -space-x-2 mt-3">
+<img class="w-7 h-7 rounded-full border-2 border-surface-container-lowest" data-alt="portrait of a fashion model in a studio setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_PumECNA_C5_zX46dTd13VHZ_k5SvuXTKpGBMSxbbCuW4AIGfFqlwhAvVAyI1voh3X3LPFgTHyWx8MzxlBEDzcS7wkDjNkF3dFGIg_kG82DB7OMBRxYNJCUMYWI30g-3THS29yAdXfBvqyLWDVwAHb7yueLOq_kyO3YYltxZZ_fsFygEtpGAQpkGyEhmj18YIC59c6sBVWIDCI9151XM10BgXzfyALF03ZcwZXeFjpZmAyyjqIfvgLItp93jv5n09wGz21Mnj9xAk"/>
+<img class="w-7 h-7 rounded-full border-2 border-surface-container-lowest" data-alt="portrait of a professional photographer with camera" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdghrsc48gy0P23ZKvjBE7ERL4jqQm9EMjhg9XYZH2yoyl34T3z0fEC546xOL77kHalMdc6KtNOWXbeIzbjq7Jb6OV3RvG0OQRwmb8UJHP2BxnEJ9zPPqsg6T1LDRiQivzOcY_3Z2N0eN-dayAgV4IIl5eMqzVofA3OBfhJr6ISO0DAc2H4ma7_ZmumRkh2L1qUMlrkkAg_SI7loAJJ6DnCzmGkggLPHc17en3C4erZ5J38WL1TQF8v34JzKg_mPcAN1dnLRUQVFI7"/>
+<div class="w-7 h-7 rounded-full bg-surface-container-highest border-2 border-surface-container-lowest flex items-center justify-center text-[10px] font-bold">+3</div>
+</div>
+</div>
+<div class="relative pl-8 border-l-2 border-primary-container/20 py-2">
+<div class="absolute left-0 top-2 -translate-x-1/2 w-4 h-4 bg-surface-container-highest rounded-full border-4 border-surface-container-low"></div>
+<span class="text-xs font-label font-bold text-on-surface-variant/60 uppercase tracking-tighter">Oct 26, 2023</span>
+<h4 class="font-headline font-bold text-primary mt-1">Creator Interview Series</h4>
+<p class="text-sm text-on-surface-variant mt-1">Location: London HQ • 02:00 PM</p>
+</div>
+<div class="relative pl-8 border-l-2 border-primary-container/20 py-2">
+<div class="absolute left-0 top-2 -translate-x-1/2 w-4 h-4 bg-surface-container-highest rounded-full border-4 border-surface-container-low"></div>
+<span class="text-xs font-label font-bold text-on-surface-variant/60 uppercase tracking-tighter">Nov 02, 2023</span>
+<h4 class="font-headline font-bold text-primary mt-1">Brand Launch Documentary</h4>
+<p class="text-sm text-on-surface-variant mt-1">Location: Remote • Multi-day Shoot</p>
+</div>
+</div>
+<button class="w-full py-4 rounded-xl border-2 border-dashed border-outline-variant text-on-surface-variant font-bold hover:bg-surface-container-highest/50 transition-colors">
+                        View Full Calendar
+                    </button>
+</section>
+<!-- Recent Activity Timeline (Bento Item 3) -->
+<section class="col-span-12 bg-surface-container-low rounded-xl p-10 flex flex-col gap-8">
+<div class="flex items-center justify-between">
+<h3 class="text-2xl font-headline font-bold text-primary">Recent Activity</h3>
+<a class="text-sm font-bold text-primary hover:underline underline-offset-4" href="#">View All</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="flex gap-4">
+<div class="shrink-0 w-10 h-10 rounded-full bg-secondary-container/50 flex items-center justify-center">
+<span class="material-symbols-outlined text-on-secondary-container text-lg" data-icon="cloud_upload">cloud_upload</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="text-xs font-bold text-on-surface-variant uppercase tracking-tighter">Today, 10:45</span>
+<p class="text-sm font-bold text-primary"><span class="text-on-surface-variant font-medium">Marco</span> uploaded 12 new assets to Project Alpha</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="shrink-0 w-10 h-10 rounded-full bg-secondary-container/50 flex items-center justify-center">
+<span class="material-symbols-outlined text-on-secondary-container text-lg" data-icon="edit">edit</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="text-xs font-bold text-on-surface-variant uppercase tracking-tighter">Today, 08:20</span>
+<p class="text-sm font-bold text-primary"><span class="text-on-surface-variant font-medium">Sarah</span> edited the Master Agreement</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="shrink-0 w-10 h-10 rounded-full bg-tertiary-fixed/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-on-tertiary-fixed-variant text-lg" data-icon="check_circle">check_circle</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="text-xs font-bold text-on-surface-variant uppercase tracking-tighter">Yesterday</span>
+<p class="text-sm font-bold text-primary"><span class="text-on-surface-variant font-medium">System</span> verified 4 compliance documents</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="shrink-0 w-10 h-10 rounded-full bg-error-container/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-error text-lg" data-icon="chat">chat</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="text-xs font-bold text-on-surface-variant uppercase tracking-tighter">Yesterday</span>
+<p class="text-sm font-bold text-primary"><span class="text-on-surface-variant font-medium">Legal</span> flagged a discrepancy in Editor X contract</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Assets (Extra Bento Section) -->
+<section class="col-span-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="relative h-64 rounded-xl overflow-hidden group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="vibrant urban sunset reflecting on glass skyscrapers in a modern business district" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjYVuaW7aVBgvZtyJyT78S183KbmQKvrGiJF3BFwFzQhNZE1CPcUfZESeK-HnQVKakp-W9LbRzZ2LvrrcmoNTyLuamILmZdL5mg8Iq7aUBGnl1ozXYduuhIrXJTjDWxSqpAWs-IzOGFbbD_6Nq2bDvZ-LpMfqBNPT97_RLDCCDRNDaqgISqh7RJI5P55mKkcY2a1tn3VL8HMLcGF3_Telcf_I0ko8yZvq_jmbNNEvoYYqhsFXad8ITaWGtWfcH4HpZQva6ecOnTGI2"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex flex-col justify-end p-6">
+<span class="text-[10px] font-bold text-white/70 uppercase tracking-widest">In Production</span>
+<h4 class="text-white font-headline font-bold text-lg">Urban Aesthetics Vol. 2</h4>
+</div>
+</div>
+<div class="relative h-64 rounded-xl overflow-hidden group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="minimalist architectural detail of white concrete curves against a bright blue sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7hpyAL-vSH3rKTKt7A5jzJmUdAL5NDyuhDtSqnvLCNH8Wrdw8baGQSLSDf2DYz3elsqb14-Iwb1h16yrv4mWqlJe6OLhePr_gcXlRyETA65_-Iw5IDrgpIQ1xEBRHTb2kg8y4Lu9edZlpwhu7Zjmk25pyKXlRakn6gjKvdaHy-KioKdAKwTuVNYJQfK1STp4utzsNcfUuDRY2eZZPp7cp-yiWeN3GXU7sZloqBSIx7PbhhWD7L6oRrjPRpUQdqrZ40v6w6Xyo8iFr"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex flex-col justify-end p-6">
+<span class="text-[10px] font-bold text-white/70 uppercase tracking-widest">Library</span>
+<h4 class="text-white font-headline font-bold text-lg">Minimal Architecture Stock</h4>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-xl p-8 flex flex-col justify-center items-center text-center gap-4">
+<div class="w-16 h-16 rounded-full bg-primary/5 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<h4 class="font-headline font-bold text-primary">Need inspiration?</h4>
+<p class="text-sm text-on-surface-variant">Check out our latest curated moodboards for the next season.</p>
+<button class="text-sm font-bold text-primary border-b-2 border-primary pb-0.5">Explore Library</button>
+</div>
+</section>
+</div>
+</div>
+</main>
+</body></html>

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Reminders | Curator OS</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700;800;900&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-primary": "#bac7de",
+                    "secondary-container": "#dce0ea",
+                    "primary": "#091627",
+                    "surface": "#fef8f3",
+                    "tertiary": "#201400",
+                    "primary-container": "#1e2b3c",
+                    "inverse-on-surface": "#f5f0eb",
+                    "secondary-fixed": "#dfe2ec",
+                    "on-secondary-fixed-variant": "#42474f",
+                    "secondary-fixed-dim": "#c2c6d0",
+                    "on-surface": "#1d1b19",
+                    "outline-variant": "#c5c6cd",
+                    "on-primary": "#ffffff",
+                    "surface-container-low": "#f8f3ee",
+                    "primary-fixed": "#d6e3fa",
+                    "inverse-surface": "#32302d",
+                    "surface-bright": "#fef8f3",
+                    "surface-tint": "#525f72",
+                    "surface-dim": "#ded9d4",
+                    "on-tertiary": "#ffffff",
+                    "on-surface-variant": "#44474c",
+                    "error": "#ba1a1a",
+                    "tertiary-container": "#37280d",
+                    "on-secondary-container": "#5e636b",
+                    "on-primary-fixed": "#0f1c2d",
+                    "on-tertiary-fixed-variant": "#564427",
+                    "on-tertiary-container": "#a58e6b",
+                    "outline": "#75777d",
+                    "on-secondary-fixed": "#171c23",
+                    "on-background": "#1d1b19",
+                    "error-container": "#ffdad6",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-highest": "#e6e2dd",
+                    "surface-container-high": "#ece7e2",
+                    "surface-container": "#f2ede8",
+                    "tertiary-fixed-dim": "#ddc39c",
+                    "primary-fixed-dim": "#bac7de",
+                    "on-error": "#ffffff",
+                    "surface-variant": "#e6e2dd",
+                    "on-secondary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "on-primary-container": "#8592a7",
+                    "on-tertiary-fixed": "#261902",
+                    "tertiary-fixed": "#fadfb7",
+                    "secondary": "#5a5f67",
+                    "on-primary-fixed-variant": "#3b485a",
+                    "background": "#fef8f3"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Epilogue"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Manrope', sans-serif; background-color: #fef8f3; }
+        h1, h2, h3, .font-headline { font-family: 'Epilogue', sans-serif; }
+    </style>
+</head>
+<body class="text-on-surface">
+<!-- Top Navigation -->
+<header class="sticky top-0 z-50 flex items-center justify-between px-8 py-4 w-full bg-[#fef8f3]/80 backdrop-blur-3xl">
+<div class="flex items-center gap-12">
+<span class="text-2xl font-bold font-['Epilogue'] text-[#091627] tracking-tight">Curator OS</span>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-slate-500 hover:text-[#1e2b3c] transition-colors font-['Epilogue'] tracking-tight" href="#">Library</a>
+<a class="text-slate-500 hover:text-[#1e2b3c] transition-colors font-['Epilogue'] tracking-tight" href="#">Wiki</a>
+<a class="text-[#091627] font-semibold border-b-2 border-[#091627] font-['Epilogue'] tracking-tight" href="#">Reminders</a>
+<a class="text-slate-500 hover:text-[#1e2b3c] transition-colors font-['Epilogue'] tracking-tight" href="#">Billing</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-on-surface-variant hover:bg-surface-container-high rounded-full transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:bg-surface-container-high rounded-full transition-colors">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center overflow-hidden">
+<img alt="User profile" data-alt="close-up portrait of a professional woman with a minimalist aesthetic and soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPlCtoBlfTo7V-HRgrPoSkqCcMTfghP4tOADZGI5af9i4h8WO9LfL0Petd5NxrsWjeD7Z4Ech9_WJYZKHk2Rvhrm085-nxXIioAI7f9fvNPIkzHBiRJhzouU-YUD1XEGARRJlHzVG-8j6EOs4WCmo0ECLQOzjBc0a_5_m--i9mIb_s31TJluXDJZGxUfNo9U8v85sS3w9TzIFn6vxP2V6yyWKkVZYGpYJAaycZE5R4HYqT-2u-UqLdMhCnjfwHPWKiQi-mUGSaOIr7"/>
+</div>
+</div>
+</header>
+<div class="flex min-h-screen">
+<!-- Side Navigation (Web) -->
+<aside class="fixed left-0 top-0 h-full hidden lg:flex flex-col p-8 space-y-8 bg-[#f8f3ee] w-72 z-40 pt-24">
+<div class="space-y-1">
+<div class="text-lg font-['Epilogue'] font-black text-[#091627]">Content OS</div>
+<div class="text-[10px] font-['Manrope'] font-medium uppercase tracking-[0.2em] text-slate-500">Premium Edition</div>
+</div>
+<button class="bg-primary hover:bg-primary-container text-white py-4 px-6 rounded-full font-bold flex items-center justify-center gap-2 transition-all duration-300">
+<span class="material-symbols-outlined">add_circle</span>
+                New Artifact
+            </button>
+<nav class="flex flex-col space-y-4 pt-4">
+<a class="flex items-center gap-3 text-slate-400 font-['Manrope'] text-sm font-medium uppercase tracking-widest hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined">book_4</span> Library
+                </a>
+<a class="flex items-center gap-3 text-slate-400 font-['Manrope'] text-sm font-medium uppercase tracking-widest hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined">menu_book</span> Wiki
+                </a>
+<a class="flex items-center gap-3 text-slate-400 font-['Manrope'] text-sm font-medium uppercase tracking-widest hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined">lightbulb</span> Ideas
+                </a>
+<a class="flex items-center gap-3 text-[#091627] font-bold font-['Manrope'] text-sm font-medium uppercase tracking-widest hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined">alarm</span> Reminders
+                </a>
+<a class="flex items-center gap-3 text-slate-400 font-['Manrope'] text-sm font-medium uppercase tracking-widest hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined">receipt_long</span> Billing
+                </a>
+<a class="flex items-center gap-3 text-slate-400 font-['Manrope'] text-sm font-medium uppercase tracking-widest hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined">distance</span> Mileage
+                </a>
+</nav>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 lg:ml-72 p-8 lg:p-12">
+<!-- Page Header -->
+<div class="max-w-6xl mx-auto mb-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<h1 class="text-6xl font-bold tracking-tighter mb-4">Reminders</h1>
+<p class="text-on-surface-variant max-w-xl text-lg leading-relaxed">
+                            Surface missing follow-ups and required actions across your ecosystem. 
+                            Curated tasks requiring immediate attention.
+                        </p>
+</div>
+<div class="flex gap-3">
+<div class="bg-surface-container-low px-6 py-4 rounded-xl flex items-center gap-6">
+<div class="text-center">
+<span class="block text-2xl font-bold text-error">3</span>
+<span class="text-[10px] uppercase tracking-wider font-bold text-on-surface-variant">Overdue</span>
+</div>
+<div class="w-px h-8 bg-outline-variant/30"></div>
+<div class="text-center">
+<span class="block text-2xl font-bold text-primary">12</span>
+<span class="text-[10px] uppercase tracking-wider font-bold text-on-surface-variant">Open</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Filter Bar -->
+<section class="max-w-6xl mx-auto mb-8">
+<div class="bg-surface-container-low rounded-2xl p-6 flex flex-wrap gap-6 items-center">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">filter_list</span>
+<span class="text-sm font-bold uppercase tracking-widest text-on-surface">Filters</span>
+</div>
+<!-- Severity -->
+<div class="flex gap-2">
+<button class="px-4 py-2 bg-surface-container-lowest rounded-full text-xs font-bold border border-outline-variant/20 hover:bg-white transition-all">SEVERITY: ALL</button>
+<button class="px-4 py-2 hover:bg-surface-container-lowest rounded-full text-xs font-bold text-on-surface-variant transition-all">HIGH</button>
+<button class="px-4 py-2 hover:bg-surface-container-lowest rounded-full text-xs font-bold text-on-surface-variant transition-all">MEDIUM</button>
+</div>
+<div class="h-6 w-px bg-outline-variant/30 hidden md:block"></div>
+<!-- Status -->
+<div class="flex gap-2">
+<button class="px-4 py-2 bg-surface-container-lowest rounded-full text-xs font-bold border border-outline-variant/20">STATUS: OPEN</button>
+<button class="px-4 py-2 hover:bg-surface-container-lowest rounded-full text-xs font-bold text-on-surface-variant transition-all">OVERDUE</button>
+<button class="px-4 py-2 hover:bg-surface-container-lowest rounded-full text-xs font-bold text-on-surface-variant transition-all">COMPLETED</button>
+</div>
+<div class="h-6 w-px bg-outline-variant/30 hidden md:block"></div>
+<!-- Entity Type -->
+<div class="flex gap-2">
+<button class="flex items-center gap-2 px-4 py-2 hover:bg-surface-container-lowest rounded-full text-xs font-bold text-on-surface-variant transition-all">
+                            TYPE <span class="material-symbols-outlined text-[16px]">expand_more</span>
+</button>
+</div>
+<div class="ml-auto">
+<div class="bg-surface-container-high flex items-center px-4 py-2 rounded-full">
+<span class="material-symbols-outlined text-on-surface-variant text-sm mr-2">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm placeholder:text-on-surface-variant/50 w-32 md:w-48" placeholder="Search tasks..." type="text"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Reminders List -->
+<section class="max-w-6xl mx-auto space-y-4">
+<!-- Reminder Item 1: Overdue/High -->
+<div class="bg-surface-container-lowest rounded-xl p-6 group hover:bg-white transition-all duration-300">
+<div class="grid grid-cols-1 md:grid-cols-[1fr_200px_150px_150px] items-center gap-6">
+<div class="flex items-start gap-4">
+<div class="mt-1">
+<span class="material-symbols-outlined text-error" style="font-variation-settings: 'FILL' 1;">error</span>
+</div>
+<div>
+<h3 class="text-xl font-bold tracking-tight mb-1">Finalize Brand Strategy Proposal</h3>
+<p class="text-sm text-on-surface-variant flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">inventory_2</span> Project: Zenith Media Rebrand
+                                </p>
+</div>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] uppercase tracking-widest font-bold text-on-surface-variant mb-1">Due Date</span>
+<span class="text-sm font-bold text-error">Oct 24 (Overdue)</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] uppercase tracking-widest font-bold text-on-surface-variant mb-1">Status</span>
+<span class="inline-flex items-center px-3 py-1 bg-error-container/20 text-on-error-container text-[11px] font-black rounded-full uppercase tracking-tighter">Overdue</span>
+</div>
+<div class="flex justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-2 rounded-full hover:bg-surface-container-low text-primary transition-colors"><span class="material-symbols-outlined">check_circle</span></button>
+<button class="p-2 rounded-full hover:bg-surface-container-low text-on-surface-variant transition-colors"><span class="material-symbols-outlined">edit</span></button>
+<button class="p-2 rounded-full hover:bg-surface-container-low text-on-surface-variant transition-colors"><span class="material-symbols-outlined">more_vert</span></button>
+</div>
+</div>
+</div>
+<!-- Reminder Item 2: Open/Medium -->
+<div class="bg-surface-container-low rounded-xl p-6 group hover:bg-surface-container-lowest transition-all duration-300">
+<div class="grid grid-cols-1 md:grid-cols-[1fr_200px_150px_150px] items-center gap-6">
+<div class="flex items-start gap-4">
+<div class="mt-1">
+<span class="material-symbols-outlined text-secondary">info</span>
+</div>
+<div>
+<h3 class="text-xl font-bold tracking-tight mb-1">Book Flight to Lisbon Creative Week</h3>
+<p class="text-sm text-on-surface-variant flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">flight_takeoff</span> Trip: Lisbon 2024
+                                </p>
+</div>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] uppercase tracking-widest font-bold text-on-surface-variant mb-1">Due Date</span>
+<span class="text-sm font-bold text-on-surface">Oct 30 (In 3 days)</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] uppercase tracking-widest font-bold text-on-surface-variant mb-1">Status</span>
+<span class="inline-flex items-center px-3 py-1 bg-secondary-container/30 text-on-secondary-container text-[11px] font-black rounded-full uppercase tracking-tighter">Open</span>
+</div>
+<div class="flex justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-2 rounded-full hover:bg-surface-container-low text-primary transition-colors"><span class="material-symbols-outlined">check_circle</span></button>
+<button class="p-2 rounded-full hover:bg-surface-container-low text-on-surface-variant transition-colors"><span class="material-symbols-outlined">edit</span></button>
+<button class="p-2 rounded-full hover:bg-surface-container-low text-on-surface-variant transition-colors"><span class="material-symbols-outlined">more_vert</span></button>
+</div>
+</div>
+</div>
+<!-- Reminder Item 3: Open/Low -->
+<div class="bg-surface-container-low rounded-xl p-6 group hover:bg-surface-container-lowest transition-all duration-300">
+<div class="grid grid-cols-1 md:grid-cols-[1fr_200px_150px_150px] items-center gap-6">
+<div class="flex items-start gap-4">
+<div class="mt-1">
+<span class="material-symbols-outlined text-outline">circle</span>
+</div>
+<div>
+<h3 class="text-xl font-bold tracking-tight mb-1">Review Monthly Infrastructure Bill</h3>
+<p class="text-sm text-on-surface-variant flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">receipt_long</span> Finance: Q4 Expenses
+                                </p>
+</div>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] uppercase tracking-widest font-bold text-on-surface-variant mb-1">Due Date</span>
+<span class="text-sm font-bold text-on-surface">Nov 05</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] uppercase tracking-widest font-bold text-on-surface-variant mb-1">Status</span>
+<span class="inline-flex items-center px-3 py-1 bg-secondary-container/30 text-on-secondary-container text-[11px] font-black rounded-full uppercase tracking-tighter">Open</span>
+</div>
+<div class="flex justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-2 rounded-full hover:bg-surface-container-low text-primary transition-colors"><span class="material-symbols-outlined">check_circle</span></button>
+<button class="p-2 rounded-full hover:bg-surface-container-low text-on-surface-variant transition-colors"><span class="material-symbols-outlined">edit</span></button>
+<button class="p-2 rounded-full hover:bg-surface-container-low text-on-surface-variant transition-colors"><span class="material-symbols-outlined">more_vert</span></button>
+</div>
+</div>
+</div>
+<!-- Reminder Item 4: Completed -->
+<div class="bg-surface-container-low/50 rounded-xl p-6 opacity-60">
+<div class="grid grid-cols-1 md:grid-cols-[1fr_200px_150px_150px] items-center gap-6">
+<div class="flex items-start gap-4">
+<div class="mt-1">
+<span class="material-symbols-outlined text-on-tertiary-container" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div>
+<h3 class="text-xl font-bold tracking-tight mb-1 line-through">Send Weekly Client Update</h3>
+<p class="text-sm text-on-surface-variant flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">groups</span> Project: Studio Operations
+                                </p>
+</div>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] uppercase tracking-widest font-bold text-on-surface-variant mb-1">Due Date</span>
+<span class="text-sm font-medium text-on-surface-variant">Oct 23</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] uppercase tracking-widest font-bold text-on-surface-variant mb-1">Status</span>
+<span class="inline-flex items-center px-3 py-1 bg-on-tertiary-container/10 text-on-tertiary-container text-[11px] font-black rounded-full uppercase tracking-tighter">Completed</span>
+</div>
+<div class="flex justify-end gap-2">
+<button class="p-2 rounded-full text-on-surface-variant/40"><span class="material-symbols-outlined">history</span></button>
+</div>
+</div>
+</div>
+</section>
+<!-- Bottom Floating UI Hint (Mobile) -->
+<div class="md:hidden fixed bottom-6 right-6">
+<button class="w-14 h-14 bg-primary text-on-primary rounded-full shadow-2xl flex items-center justify-center">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+</main>
+</div>
+<!-- Mobile Navigation Shell -->
+<nav class="md:hidden fixed bottom-0 left-0 right-0 bg-[#fef8f3]/80 backdrop-blur-2xl px-6 py-4 flex justify-between items-center z-50">
+<a class="flex flex-col items-center gap-1 text-slate-500" href="#">
+<span class="material-symbols-outlined">book_4</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Library</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-500" href="#">
+<span class="material-symbols-outlined">menu_book</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Wiki</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-[#091627]" href="#">
+<span class="material-symbols-outlined">alarm</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Reminders</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-500" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Profile</span>
+</a>
+</nav>
+</body></html>

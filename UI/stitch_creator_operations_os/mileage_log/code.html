@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Curator OS - Mileage Log</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700;800;900&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-primary": "#bac7de",
+                    "secondary-container": "#dce0ea",
+                    "primary": "#091627",
+                    "surface": "#fef8f3",
+                    "tertiary": "#201400",
+                    "primary-container": "#1e2b3c",
+                    "inverse-on-surface": "#f5f0eb",
+                    "secondary-fixed": "#dfe2ec",
+                    "on-secondary-fixed-variant": "#42474f",
+                    "secondary-fixed-dim": "#c2c6d0",
+                    "on-surface": "#1d1b19",
+                    "outline-variant": "#c5c6cd",
+                    "on-primary": "#ffffff",
+                    "surface-container-low": "#f8f3ee",
+                    "primary-fixed": "#d6e3fa",
+                    "inverse-surface": "#32302d",
+                    "surface-bright": "#fef8f3",
+                    "surface-tint": "#525f72",
+                    "surface-dim": "#ded9d4",
+                    "on-tertiary": "#ffffff",
+                    "on-surface-variant": "#44474c",
+                    "error": "#ba1a1a",
+                    "tertiary-container": "#37280d",
+                    "on-secondary-container": "#5e636b",
+                    "on-primary-fixed": "#0f1c2d",
+                    "on-tertiary-fixed-variant": "#564427",
+                    "on-tertiary-container": "#a58e6b",
+                    "outline": "#75777d",
+                    "on-secondary-fixed": "#171c23",
+                    "on-background": "#1d1b19",
+                    "error-container": "#ffdad6",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-highest": "#e6e2dd",
+                    "surface-container-high": "#ece7e2",
+                    "surface-container": "#f2ede8",
+                    "tertiary-fixed-dim": "#ddc39c",
+                    "primary-fixed-dim": "#bac7de",
+                    "on-error": "#ffffff",
+                    "surface-variant": "#e6e2dd",
+                    "on-secondary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "on-primary-container": "#8592a7",
+                    "on-tertiary-fixed": "#261902",
+                    "tertiary-fixed": "#fadfb7",
+                    "secondary": "#5a5f67",
+                    "on-primary-fixed-variant": "#3b485a",
+                    "background": "#fef8f3"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {},
+            "fontFamily": {
+                    "headline": ["Epilogue"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { background-color: #fef8f3; font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="text-on-surface">
+<aside class="fixed left-0 top-0 h-full flex flex-col p-8 space-y-8 bg-[#f8f3ee] dark:bg-slate-900 h-screen w-72 flex-col z-50">
+<div class="flex items-center space-x-3 mb-6">
+<div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-white" style="font-variation-settings: 'FILL' 1;">token</span>
+</div>
+<div>
+<h2 class="text-lg font-['Epilogue'] font-black text-[#091627] dark:text-slate-100">Content OS</h2>
+<p class="font-['Manrope'] text-[10px] font-medium uppercase tracking-widest text-slate-400">Premium Edition</p>
+</div>
+</div>
+<nav class="flex-1 space-y-2">
+<a class="flex items-center space-x-3 px-4 py-3 rounded-xl text-slate-400 dark:text-slate-500 font-['Manrope'] text-sm font-medium uppercase tracking-widest hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="book_4">book_4</span>
+<span>Library</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 rounded-xl text-slate-400 dark:text-slate-500 font-['Manrope'] text-sm font-medium uppercase tracking-widest hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+<span>Wiki</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 rounded-xl text-slate-400 dark:text-slate-500 font-['Manrope'] text-sm font-medium uppercase tracking-widest hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="lightbulb">lightbulb</span>
+<span>Ideas</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 rounded-xl text-slate-400 dark:text-slate-500 font-['Manrope'] text-sm font-medium uppercase tracking-widest hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="alarm">alarm</span>
+<span>Reminders</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 rounded-xl text-slate-400 dark:text-slate-500 font-['Manrope'] text-sm font-medium uppercase tracking-widest hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="receipt_long">receipt_long</span>
+<span>Billing</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 rounded-xl text-[#091627] dark:text-white font-bold font-['Manrope'] text-sm uppercase tracking-widest bg-surface-container-lowest shadow-sm" href="#">
+<span class="material-symbols-outlined" data-icon="distance" style="font-variation-settings: 'FILL' 1;">distance</span>
+<span>Mileage</span>
+</a>
+</nav>
+<div class="mt-auto">
+<button class="w-full py-4 px-6 rounded-full bg-gradient-to-br from-primary to-primary-container text-white font-bold flex items-center justify-center space-x-2 transition-all hover:opacity-90 active:scale-95">
+<span class="material-symbols-outlined">add</span>
+<span>New Artifact</span>
+</button>
+</div>
+</aside>
+<main class="ml-72 min-h-screen">
+<header class="sticky top-0 z-50 flex items-center justify-between px-12 py-6 w-full bg-[#fef8f3]/80 dark:bg-slate-950/80 backdrop-blur-3xl">
+<div class="flex items-center gap-8">
+<h1 class="text-2xl font-bold font-['Epilogue'] tracking-tight text-[#091627] dark:text-slate-100">Curator OS</h1>
+<div class="hidden md:flex items-center space-x-6">
+<a class="text-[#091627] dark:text-white font-semibold border-b-2 border-[#091627] transition-all py-1" href="#">Workspace</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-[#1e2b3c] transition-colors py-1" href="#">Collections</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-[#1e2b3c] transition-colors py-1" href="#">Analytics</a>
+</div>
+</div>
+<div class="flex items-center space-x-6">
+<div class="flex items-center bg-surface-container px-4 py-2 rounded-xl">
+<span class="material-symbols-outlined text-outline" data-icon="search">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm font-body ml-2 w-48" placeholder="Search logs..." type="text"/>
+</div>
+<div class="flex items-center space-x-4">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors" data-icon="notifications">notifications</button>
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors" data-icon="settings">settings</button>
+<div class="w-10 h-10 rounded-full bg-surface-container overflow-hidden">
+<img alt="User profile" class="w-full h-full object-cover" data-alt="professional portrait of a creative director in a neutral studio setting with warm lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgz235byc7Fj_OWvMYcBIDaqk9DhpsWrFu0He8AYFmr1RsEaBUXQctlKWP7wB5jQdbHq35mUVwpLCwCGCLd5UFfJ8L-RciMK6ibhAJUFONT620s7W10hphuqNmFvwTuNtix6K6SR0OnKxH5zcY9HTAveZ32_a-7GRGGCRm3fXo4c3pQXbP0mCiU92I45n8u3ctPTx5WGU4KBpDdFvr3Bqe2rPUujwChHa3d5ZX0zil1za7ntDThjkh6Uh5-bB-xhTF00sXLEZVYd66"/>
+</div>
+</div>
+</div>
+</header>
+<section class="px-12 py-10">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+<div>
+<span class="font-label text-xs uppercase tracking-[0.2em] text-on-surface-variant mb-2 block">Financial Records</span>
+<h2 class="font-headline text-4xl font-extrabold text-primary tracking-tight">Mileage Log</h2>
+</div>
+<div class="flex items-center gap-4">
+<button class="flex items-center gap-2 px-6 py-3 rounded-full bg-surface-container-high text-primary font-semibold hover:bg-surface-container-highest transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="filter_list">filter_list</span>
+<span>Filter Logs</span>
+</button>
+<button class="flex items-center gap-2 px-6 py-3 rounded-full bg-primary text-white font-semibold hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined text-sm" data-icon="ios_share">ios_share</span>
+<span>Export Sheets</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-10">
+<div class="bg-surface-container-low p-8 rounded-xl border border-outline-variant/10">
+<p class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant mb-4">Total Distance (YTD)</p>
+<p class="font-headline text-3xl font-bold text-primary">12,482 <span class="text-sm font-normal text-on-surface-variant">KM</span></p>
+<div class="mt-4 flex items-center gap-2 text-on-tertiary-container">
+<span class="material-symbols-outlined text-sm" data-icon="trending_up">trending_up</span>
+<span class="text-xs font-semibold">+12% vs last year</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-8 rounded-xl border border-outline-variant/10">
+<p class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant mb-4">Tax Deductible</p>
+<p class="font-headline text-3xl font-bold text-primary">$8,113.30</p>
+<div class="mt-4 flex items-center gap-2 text-secondary">
+<span class="material-symbols-outlined text-sm" data-icon="account_balance_wallet">account_balance_wallet</span>
+<span class="text-xs font-semibold">Estimated rebate</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-8 rounded-xl border border-outline-variant/10">
+<p class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant mb-4">Most Frequent Destination</p>
+<p class="font-headline text-2xl font-bold text-primary">North Studio</p>
+<div class="mt-4 flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-sm" data-icon="location_on">location_on</span>
+<span class="text-xs font-semibold">42 trips total</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-8 rounded-xl border border-outline-variant/10 relative overflow-hidden group">
+<img alt="Map background" class="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:scale-110 transition-transform duration-700" data-alt="minimalist clean digital map view with light beige and grey tones showing urban grid" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCz2m-jIUlTSQad3WmHNDGPo1-n8fgdrygFMv3TBuNSgjJZSrj2IxVYaotlmKiLq28To__7X5EE3FN-PUZJ0T0Ja0ITLqDbDd2LzeOEHLe_yoNFchA7Tv7Z8lVKqqzjwFosh1y8ELU6rDBM_HYxWg0DB-DXQyUZE7ryUPcRF2zk3HtuDxkCSApR54CTbFx82mfAWiW39gGPjCsueclpSO76i0JSabao_VcSmnpw56nNZaCuDeoTTmByTVBAlgYKhDjrTg8TTVkoeum2"/>
+<div class="relative z-10">
+<p class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant mb-4">Active Trip</p>
+<p class="font-headline text-2xl font-bold text-primary">On Route</p>
+<div class="mt-4 flex items-center gap-2">
+<span class="inline-block w-2 h-2 rounded-full bg-error animate-pulse"></span>
+<span class="text-xs font-bold text-error">Current: 14 KM</span>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-2 shadow-sm">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low">
+<th class="px-6 py-5 font-label text-[10px] uppercase tracking-widest text-on-surface-variant first:rounded-tl-lg">Date</th>
+<th class="px-6 py-5 font-label text-[10px] uppercase tracking-widest text-on-surface-variant">Route (Origin &amp; Destination)</th>
+<th class="px-6 py-5 font-label text-[10px] uppercase tracking-widest text-on-surface-variant">Purpose &amp; Project</th>
+<th class="px-6 py-5 font-label text-[10px] uppercase tracking-widest text-on-surface-variant">Odometer</th>
+<th class="px-6 py-5 font-label text-[10px] uppercase tracking-widest text-on-surface-variant">Distance</th>
+<th class="px-6 py-5 font-label text-[10px] uppercase tracking-widest text-on-surface-variant last:rounded-tr-lg">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/10">
+<tr class="hover:bg-surface-container-low/50 transition-colors group">
+<td class="px-6 py-6">
+<span class="block font-bold text-primary">Oct 24, 2023</span>
+<span class="text-xs text-on-surface-variant">Tuesday</span>
+</td>
+<td class="px-6 py-6">
+<div class="flex items-center gap-3">
+<div class="flex flex-col items-center">
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+<div class="w-px h-6 bg-outline-variant"></div>
+<span class="w-2 h-2 rounded-full border border-outline"></span>
+</div>
+<div>
+<p class="text-sm font-semibold text-primary">HQ - West Building</p>
+<p class="text-sm font-semibold text-primary">Creative District Loft</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-6">
+<div class="flex flex-col gap-1">
+<span class="text-sm text-primary font-medium">Site Audit &amp; Photography</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-secondary-container text-[10px] font-bold text-on-secondary-container w-fit uppercase tracking-tighter">Project: Horizon-24</span>
+</div>
+</td>
+<td class="px-6 py-6 font-mono text-xs text-on-surface-variant">
+<div class="flex flex-col">
+<span>Start: 124,502</span>
+<span>End: 124,514</span>
+</div>
+</td>
+<td class="px-6 py-6">
+<span class="font-headline font-bold text-primary">12.4 <span class="text-[10px] font-normal opacity-60">KM</span></span>
+</td>
+<td class="px-6 py-6">
+<button class="material-symbols-outlined text-outline-variant hover:text-primary transition-colors" data-icon="more_horiz">more_horiz</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/50 transition-colors group">
+<td class="px-6 py-6">
+<span class="block font-bold text-primary">Oct 22, 2023</span>
+<span class="text-xs text-on-surface-variant">Sunday</span>
+</td>
+<td class="px-6 py-6">
+<div class="flex items-center gap-3">
+<div class="flex flex-col items-center">
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+<div class="w-px h-6 bg-outline-variant"></div>
+<span class="w-2 h-2 rounded-full border border-outline"></span>
+</div>
+<div>
+<p class="text-sm font-semibold text-primary">Creative District Loft</p>
+<p class="text-sm font-semibold text-primary">The Collective Hub</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-6">
+<div class="flex flex-col gap-1">
+<span class="text-sm text-primary font-medium">Client Consultation</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-tertiary-fixed text-[10px] font-bold text-on-tertiary-fixed w-fit uppercase tracking-tighter">Project: Brand-Revamp</span>
+</div>
+</td>
+<td class="px-6 py-6 font-mono text-xs text-on-surface-variant">
+<div class="flex flex-col">
+<span>Start: 124,480</span>
+<span>End: 124,502</span>
+</div>
+</td>
+<td class="px-6 py-6">
+<span class="font-headline font-bold text-primary">22.0 <span class="text-[10px] font-normal opacity-60">KM</span></span>
+</td>
+<td class="px-6 py-6">
+<button class="material-symbols-outlined text-outline-variant hover:text-primary transition-colors" data-icon="more_horiz">more_horiz</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/50 transition-colors group">
+<td class="px-6 py-6">
+<span class="block font-bold text-primary">Oct 21, 2023</span>
+<span class="text-xs text-on-surface-variant">Saturday</span>
+</td>
+<td class="px-6 py-6">
+<div class="flex items-center gap-3">
+<div class="flex flex-col items-center">
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+<div class="w-px h-6 bg-outline-variant"></div>
+<span class="w-2 h-2 rounded-full border border-outline"></span>
+</div>
+<div>
+<p class="text-sm font-semibold text-primary">HQ - West Building</p>
+<p class="text-sm font-semibold text-primary">Airport (South)</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-6">
+<div class="flex flex-col gap-1">
+<span class="text-sm text-primary font-medium">Talent Pickup</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-secondary-container text-[10px] font-bold text-on-secondary-container w-fit uppercase tracking-tighter">Project: Winter-Campaign</span>
+</div>
+</td>
+<td class="px-6 py-6 font-mono text-xs text-on-surface-variant">
+<div class="flex flex-col">
+<span>Start: 124,435</span>
+<span>End: 124,480</span>
+</div>
+</td>
+<td class="px-6 py-6">
+<span class="font-headline font-bold text-primary">45.0 <span class="text-[10px] font-normal opacity-60">KM</span></span>
+</td>
+<td class="px-6 py-6">
+<button class="material-symbols-outlined text-outline-variant hover:text-primary transition-colors" data-icon="more_horiz">more_horiz</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/50 transition-colors group">
+<td class="px-6 py-6">
+<span class="block font-bold text-primary">Oct 19, 2023</span>
+<span class="text-xs text-on-surface-variant">Thursday</span>
+</td>
+<td class="px-6 py-6">
+<div class="flex items-center gap-3">
+<div class="flex flex-col items-center">
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+<div class="w-px h-6 bg-outline-variant"></div>
+<span class="w-2 h-2 rounded-full border border-outline"></span>
+</div>
+<div>
+<p class="text-sm font-semibold text-primary">Home Office</p>
+<p class="text-sm font-semibold text-primary">HQ - West Building</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-6">
+<div class="flex flex-col gap-1">
+<span class="text-sm text-primary font-medium">Internal Meeting</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-surface-container-high text-[10px] font-bold text-on-surface-variant w-fit uppercase tracking-tighter">General Admin</span>
+</div>
+</td>
+<td class="px-6 py-6 font-mono text-xs text-on-surface-variant">
+<div class="flex flex-col">
+<span>Start: 124,422</span>
+<span>End: 124,435</span>
+</div>
+</td>
+<td class="px-6 py-6">
+<span class="font-headline font-bold text-primary">13.0 <span class="text-[10px] font-normal opacity-60">KM</span></span>
+</td>
+<td class="px-6 py-6">
+<button class="material-symbols-outlined text-outline-variant hover:text-primary transition-colors" data-icon="more_horiz">more_horiz</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="p-6 border-t border-outline-variant/10 flex items-center justify-between">
+<p class="text-xs text-on-surface-variant font-medium">Showing 4 of 128 entries this period</p>
+<div class="flex gap-2">
+<button class="w-10 h-10 rounded-full border border-outline-variant/20 flex items-center justify-center hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="chevron_left">chevron_left</span>
+</button>
+<button class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold text-xs">1</button>
+<button class="w-10 h-10 rounded-full border border-outline-variant/20 flex items-center justify-center hover:bg-surface-container transition-colors text-xs font-bold">2</button>
+<button class="w-10 h-10 rounded-full border border-outline-variant/20 flex items-center justify-center hover:bg-surface-container transition-colors text-xs font-bold">3</button>
+<button class="w-10 h-10 rounded-full border border-outline-variant/20 flex items-center justify-center hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<section class="px-12 pb-20">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="bg-surface-container-low rounded-xl p-10 flex flex-col justify-between">
+<div>
+<h3 class="font-headline text-2xl font-bold text-primary mb-2">Automated Tracking</h3>
+<p class="text-on-surface-variant text-sm max-w-sm mb-6 leading-relaxed">Connect your vehicle's GPS or mobile app to automate every journey recording with zero manual input.</p>
+</div>
+<div class="flex items-center gap-4">
+<div class="p-4 bg-surface-container-lowest rounded-xl flex items-center gap-4 border border-outline-variant/5">
+<span class="material-symbols-outlined text-3xl text-primary" data-icon="directions_car">directions_car</span>
+<div>
+<p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Connected Car</p>
+<p class="text-sm font-semibold text-primary">Model S Plaid - Connected</p>
+</div>
+</div>
+<button class="px-6 py-4 rounded-full border-2 border-primary text-primary font-bold text-sm hover:bg-primary hover:text-white transition-all">
+                            Settings
+                        </button>
+</div>
+</div>
+<div class="bg-primary text-white rounded-xl p-10 relative overflow-hidden">
+<div class="relative z-10 flex flex-col h-full justify-between">
+<div>
+<h3 class="font-headline text-2xl font-bold mb-4">Tax Year 2023 Summary</h3>
+<p class="text-primary-fixed text-sm max-w-xs opacity-80 leading-relaxed">Your mileage logs are compliant with regional tax standards. Download the full audited report for your accountant.</p>
+</div>
+<div class="mt-8">
+<button class="flex items-center gap-3 px-8 py-4 rounded-full bg-surface-bright text-primary font-bold shadow-xl transition-transform hover:-translate-y-1">
+<span class="material-symbols-outlined" data-icon="download">download</span>
+<span>Download Audited PDF</span>
+</button>
+</div>
+</div>
+<div class="absolute -right-20 -bottom-20 w-64 h-64 bg-primary-container rounded-full opacity-30 blur-3xl"></div>
+</div>
+</div>
+</section>
+</main>
+</body></html>
