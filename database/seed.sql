@@ -17,165 +17,6 @@ INSERT INTO workspaces (
 )
 ON CONFLICT (id) DO NOTHING;
 
-INSERT INTO invoices (
-  id,
-  workspace_id,
-  project_id,
-  person_id,
-  invoice_number,
-  direction,
-  status,
-  issue_date,
-  due_date,
-  total_amount,
-  note,
-  created_at,
-  updated_at
-) VALUES
-(
-  'invoice-1',
-  'ws-1',
-  'project-1',
-  NULL,
-  'NR-2026-014',
-  'Outbound',
-  'Sent',
-  '2026-04-18',
-  '2026-05-02',
-  4200,
-  'First sponsor milestone invoice for Northern Routes.',
-  '2026-04-18T08:35:00Z',
-  '2026-04-18T08:35:00Z'
-),
-(
-  'invoice-2',
-  'ws-1',
-  'project-1',
-  'person-2',
-  'AP-2026-003',
-  'Inbound',
-  'Paid',
-  '2026-04-17',
-  '2026-04-21',
-  780,
-  'Contractor invoice for second camera field support.',
-  '2026-04-17T16:45:00Z',
-  '2026-04-18T11:20:00Z'
-)
-ON CONFLICT (id) DO NOTHING;
-
-INSERT INTO payments (
-  id,
-  workspace_id,
-  invoice_id,
-  amount,
-  paid_at,
-  method,
-  proof_document_id,
-  note,
-  created_at,
-  updated_at
-) VALUES
-(
-  'payment-1',
-  'ws-1',
-  'invoice-2',
-  780,
-  '2026-04-18',
-  'Bank transfer',
-  'document-5',
-  'Paid in full after field support wrap.',
-  '2026-04-18T11:22:00Z',
-  '2026-04-18T11:22:00Z'
-)
-ON CONFLICT (id) DO NOTHING;
-
-INSERT INTO documents (
-  id,
-  workspace_id,
-  linked_type,
-  linked_id,
-  file_name,
-  document_type,
-  mime_type,
-  storage_path,
-  status,
-  note,
-  created_at,
-  updated_at
-) VALUES
-(
-  'document-1',
-  'ws-1',
-  'Trip',
-  'trip-1',
-  'banff-trip-brief.svg',
-  'Brief',
-  'image/svg+xml',
-  'workspace/ws-1/trips/trip-1/banff-trip-brief.svg',
-  'Linked',
-  'Opening brief covering sponsor visuals, route plan, and field capture goals.',
-  '2026-04-11T16:00:00Z',
-  '2026-04-11T16:00:00Z'
-),
-(
-  'document-2',
-  'ws-1',
-  'Expense',
-  'expense-2',
-  'hotel-receipt-banff.svg',
-  'Receipt',
-  'image/svg+xml',
-  'workspace/ws-1/expenses/expense-2/hotel-receipt-banff.svg',
-  'Needs review',
-  'Receipt placeholder created so the team can track the missing upload against the expense record.',
-  '2026-04-18T09:02:00Z',
-  '2026-04-18T09:02:00Z'
-),
-(
-  'document-3',
-  'ws-1',
-  'Person',
-  'person-2',
-  'alex-park-contractor-agreement.svg',
-  'Agreement',
-  'image/svg+xml',
-  'workspace/ws-1/people/person-2/alex-park-contractor-agreement.svg',
-  'Pending signature',
-  'Contractor agreement draft created but still waiting for signed return copy.',
-  '2026-04-18T09:12:00Z',
-  '2026-04-18T09:12:00Z'
-),
-(
-  'document-4',
-  'ws-1',
-  'Invoice',
-  'invoice-1',
-  'nr-2026-014-invoice.svg',
-  'Invoice',
-  'image/svg+xml',
-  'workspace/ws-1/invoices/invoice-1/nr-2026-014-invoice.svg',
-  'Linked',
-  'Client-facing invoice for the first Northern Routes sponsor milestone.',
-  '2026-04-18T08:40:00Z',
-  '2026-04-18T08:40:00Z'
-),
-(
-  'document-5',
-  'ws-1',
-  'Payment',
-  'payment-1',
-  'alex-park-payment-proof.svg',
-  'Payment Proof',
-  'image/svg+xml',
-  'workspace/ws-1/payments/payment-1/alex-park-payment-proof.svg',
-  'Linked',
-  'Bank transfer confirmation for contractor payment.',
-  '2026-04-18T11:25:00Z',
-  '2026-04-18T11:25:00Z'
-)
-ON CONFLICT (id) DO NOTHING;
-
 INSERT INTO projects (
   id,
   workspace_id,
@@ -495,6 +336,165 @@ INSERT INTO people (
   ARRAY['project-2'],
   '2026-04-16T09:00:00Z',
   '2026-04-18T12:00:00Z'
+)
+ON CONFLICT (id) DO NOTHING;
+
+INSERT INTO invoices (
+  id,
+  workspace_id,
+  project_id,
+  person_id,
+  invoice_number,
+  direction,
+  status,
+  issue_date,
+  due_date,
+  total_amount,
+  note,
+  created_at,
+  updated_at
+) VALUES
+(
+  'invoice-1',
+  'ws-1',
+  'project-1',
+  NULL,
+  'NR-2026-014',
+  'Outbound',
+  'Sent',
+  '2026-04-18',
+  '2026-05-02',
+  4200,
+  'First sponsor milestone invoice for Northern Routes.',
+  '2026-04-18T08:35:00Z',
+  '2026-04-18T08:35:00Z'
+),
+(
+  'invoice-2',
+  'ws-1',
+  'project-1',
+  'person-2',
+  'AP-2026-003',
+  'Inbound',
+  'Paid',
+  '2026-04-17',
+  '2026-04-21',
+  780,
+  'Contractor invoice for second camera field support.',
+  '2026-04-17T16:45:00Z',
+  '2026-04-18T11:20:00Z'
+)
+ON CONFLICT (id) DO NOTHING;
+
+INSERT INTO payments (
+  id,
+  workspace_id,
+  invoice_id,
+  amount,
+  paid_at,
+  method,
+  proof_document_id,
+  note,
+  created_at,
+  updated_at
+) VALUES
+(
+  'payment-1',
+  'ws-1',
+  'invoice-2',
+  780,
+  '2026-04-18',
+  'Bank transfer',
+  'document-5',
+  'Paid in full after field support wrap.',
+  '2026-04-18T11:22:00Z',
+  '2026-04-18T11:22:00Z'
+)
+ON CONFLICT (id) DO NOTHING;
+
+INSERT INTO documents (
+  id,
+  workspace_id,
+  linked_type,
+  linked_id,
+  file_name,
+  document_type,
+  mime_type,
+  storage_path,
+  status,
+  note,
+  created_at,
+  updated_at
+) VALUES
+(
+  'document-1',
+  'ws-1',
+  'Trip',
+  'trip-1',
+  'banff-trip-brief.svg',
+  'Brief',
+  'image/svg+xml',
+  'workspace/ws-1/trips/trip-1/banff-trip-brief.svg',
+  'Linked',
+  'Opening brief covering sponsor visuals, route plan, and field capture goals.',
+  '2026-04-11T16:00:00Z',
+  '2026-04-11T16:00:00Z'
+),
+(
+  'document-2',
+  'ws-1',
+  'Expense',
+  'expense-2',
+  'hotel-receipt-banff.svg',
+  'Receipt',
+  'image/svg+xml',
+  'workspace/ws-1/expenses/expense-2/hotel-receipt-banff.svg',
+  'Needs review',
+  'Receipt placeholder created so the team can track the missing upload against the expense record.',
+  '2026-04-18T09:02:00Z',
+  '2026-04-18T09:02:00Z'
+),
+(
+  'document-3',
+  'ws-1',
+  'Person',
+  'person-2',
+  'alex-park-contractor-agreement.svg',
+  'Agreement',
+  'image/svg+xml',
+  'workspace/ws-1/people/person-2/alex-park-contractor-agreement.svg',
+  'Pending signature',
+  'Contractor agreement draft created but still waiting for signed return copy.',
+  '2026-04-18T09:12:00Z',
+  '2026-04-18T09:12:00Z'
+),
+(
+  'document-4',
+  'ws-1',
+  'Invoice',
+  'invoice-1',
+  'nr-2026-014-invoice.svg',
+  'Invoice',
+  'image/svg+xml',
+  'workspace/ws-1/invoices/invoice-1/nr-2026-014-invoice.svg',
+  'Linked',
+  'Client-facing invoice for the first Northern Routes sponsor milestone.',
+  '2026-04-18T08:40:00Z',
+  '2026-04-18T08:40:00Z'
+),
+(
+  'document-5',
+  'ws-1',
+  'Payment',
+  'payment-1',
+  'alex-park-payment-proof.svg',
+  'Payment Proof',
+  'image/svg+xml',
+  'workspace/ws-1/payments/payment-1/alex-park-payment-proof.svg',
+  'Linked',
+  'Bank transfer confirmation for contractor payment.',
+  '2026-04-18T11:25:00Z',
+  '2026-04-18T11:25:00Z'
 )
 ON CONFLICT (id) DO NOTHING;
 
